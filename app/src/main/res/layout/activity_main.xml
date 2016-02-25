@@ -11,7 +11,7 @@
     xmlns:tools="http://schemas.android.com/tools"
 
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
+    android:layout_height="wrap_content"
     android:orientation="vertical"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
@@ -26,55 +26,62 @@
         android:layout_width="355dp"
         android:layout_height="110dp"
         android:id="@+id/welcomeimageButton"
+        android:contentDescription="@string/welcomebutton"
         android:src="@mipmap/welcomebutton"
         />
 
     <ImageButton
         android:layout_marginTop="15dp"
-        android:layout_width="330dp"
-        android:layout_height="100dp"
+        android:layout_width="355dp"
+        android:layout_height="110dp"
         android:id="@+id/talksimageButton"
-        android:src="@drawable/logo"
+        android:contentDescription="@string/talksbutton"
+        android:src="@mipmap/welcomebutton"
         />
 
     <ImageButton
         android:layout_marginTop="15dp"
-        android:layout_width="330dp"
-        android:layout_height="100dp"
+        android:layout_width="355dp"
+        android:layout_height="110dp"
         android:id="@+id/refreshementsimageButton"
-        android:src="@drawable/logo"
+        android:contentDescription="@string/refreshementsbutton"
+        android:src="@mipmap/welcomebutton"
         />
 
     <ImageButton
         android:layout_marginTop="15dp"
-        android:layout_width="330dp"
-        android:layout_height="100dp"
+        android:layout_width="355dp"
+        android:layout_height="110dp"
         android:id="@+id/toursimageButton"
-        android:src="@drawable/logo"
+        android:contentDescription="@string/toursbutton"
+        android:src="@mipmap/welcomebutton"
         />
 
     <ImageButton
         android:layout_marginTop="15dp"
-        android:layout_width="330dp"
-        android:layout_height="100dp"
+        android:layout_width="355dp"
+        android:layout_height="110dp"
         android:id="@+id/gettingaroundimageButton"
-        android:src="@drawable/logo"
+        android:contentDescription="@string/gettingaroundbutton"
+        android:src="@mipmap/welcomebutton"
         />
 
     <ImageButton
         android:layout_marginTop="15dp"
-        android:layout_width="330dp"
-        android:layout_height="100dp"
+        android:layout_width="355dp"
+        android:layout_height="110dp"
         android:id="@+id/plannerimageButton"
-        android:src="@drawable/logo"
+        android:contentDescription="@string/plannerbutton"
+        android:src="@mipmap/welcomebutton"
         />
 
     <ImageButton
         android:layout_marginTop="15dp"
-        android:layout_width="330dp"
-        android:layout_height="100dp"
+        android:layout_width="355dp"
+        android:layout_height="110dp"
         android:id="@+id/disclaimersimageButton"
-        android:src="@drawable/logo"
+        android:contentDescription="@string/disclaimersbutton"
+        android:src="@mipmap/welcomebutton"
         />
 
 </LinearLayout>

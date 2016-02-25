@@ -1,3 +1,46 @@
 <resources>
+    <!-- App title Details-->
     <string name="app_name">Aberystwyth University Open Day</string>
+
+    <string name="welcomepage">Welcome To Aberystwyth</string>
+
+
+    <!-- Activity main strings mainly image button descriptions -->
+    <string name="welcomebutton">Image button to navigate to the welcome page</string>
+    <string name="talksbutton">Image button to navigate to the talks and events page</string>
+    <string name="refreshementsbutton">Image button to navigate to the page with information about the refreshements at Aberystwyth</string>
+    <string name="toursbutton">Image button to navigate to the campus tours page</string>
+    <string name="gettingaroundbutton">Image button to navigate to the page about getting around Aberystwyth</string>
+    <string name="plannerbutton">Image button to navigate to the personal planner page</string>
+    <string name="disclaimersbutton">Image button to navigate to view the disclaimers page</string>
+
+
+    <!-- Welcome activity string to store the welcome message -->
+    <string name="welcome">Welcome to our open day and to Aberystwyth University</string>
+    <string name="message">It isn’t always easy to decide what you want to study
+                            and where to go to university but we hope you will
+                            find everything you need during our Open Day, to
+                            help you with that choice. If you need any further
+                            help please get in touch with a staff member in our
+                            Admissions Office or in the relevant department,
+                            and they will be glad to assist</string>
+
+
+
+    <string name="message2">Aberystwyth is a well-established university with a
+                            long tradition of academic excellence, but it is also
+                            very forward looking. We’re small enough to be
+                            friendly and to allow contact across departments,
+                            but big enough to have a wide range of study
+                            programmes in the Sciences, the Arts and the Social
+                            Sciences, in professional and vocational subjects.</string>
+
+    <string name="message3">Aberystwyth is a vibrant university town in a
+                            stunning coastal location, with a dynamic social and
+                            cultural life centred around the University. There’s
+                            a tremendous range of opportunities for sports,
+                            societies, activities and volunteering available to
+                            you here.</string>
+
+
 </resources>
