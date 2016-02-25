@@ -1,8 +1,8 @@
 <resources>
     <!-- App title Details-->
     <string name="app_name">Aberystwyth University Open Day</string>
-
     <string name="welcomepage">Welcome To Aberystwyth</string>
+    <string name="departments">Departments At Aberystwyth</string>
 
 
     <!-- Activity main strings mainly image button descriptions -->
