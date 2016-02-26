@@ -27,16 +27,23 @@
         android:layout_height="110dp"
         android:id="@+id/welcomeimageButton"
         android:contentDescription="@string/welcomebutton"
-        android:src="@mipmap/welcomebutton"
+        android:src="@drawable/welcome"
+        android:padding="0dp"
+        android:scaleType="fitCenter"
+        android:adjustViewBounds="true"
+
         />
 
     <ImageButton
         android:layout_marginTop="15dp"
         android:layout_width="355dp"
-        android:layout_height="110dp"
+        android:layout_height="115dp"
         android:id="@+id/talksimageButton"
         android:contentDescription="@string/talksbutton"
-        android:src="@mipmap/welcomebutton"
+        android:src="@drawable/department"
+        android:padding="0dp"
+        android:scaleType="fitCenter"
+        android:adjustViewBounds="true"
         />
 
     <ImageButton
@@ -45,7 +52,10 @@
         android:layout_height="110dp"
         android:id="@+id/refreshementsimageButton"
         android:contentDescription="@string/refreshementsbutton"
-        android:src="@mipmap/welcomebutton"
+        android:src="@drawable/refreshments"
+        android:padding="0dp"
+        android:scaleType="fitCenter"
+        android:adjustViewBounds="true"
         />
 
     <ImageButton
@@ -54,7 +64,10 @@
         android:layout_height="110dp"
         android:id="@+id/toursimageButton"
         android:contentDescription="@string/toursbutton"
-        android:src="@mipmap/welcomebutton"
+        android:src="@drawable/tours"
+        android:padding="0dp"
+        android:scaleType="fitCenter"
+        android:adjustViewBounds="true"
         />
 
     <ImageButton
@@ -63,7 +76,10 @@
         android:layout_height="110dp"
         android:id="@+id/gettingaroundimageButton"
         android:contentDescription="@string/gettingaroundbutton"
-        android:src="@mipmap/welcomebutton"
+        android:src="@drawable/gettingaround"
+        android:padding="0dp"
+        android:scaleType="fitCenter"
+        android:adjustViewBounds="true"
         />
 
     <ImageButton
@@ -72,7 +88,10 @@
         android:layout_height="110dp"
         android:id="@+id/plannerimageButton"
         android:contentDescription="@string/plannerbutton"
-        android:src="@mipmap/welcomebutton"
+        android:src="@drawable/planner"
+        android:padding="0dp"
+        android:scaleType="fitCenter"
+        android:adjustViewBounds="true"
         />
 
     <ImageButton
@@ -81,7 +100,10 @@
         android:layout_height="110dp"
         android:id="@+id/disclaimersimageButton"
         android:contentDescription="@string/disclaimersbutton"
-        android:src="@mipmap/welcomebutton"
+        android:src="@drawable/safety"
+        android:padding="0dp"
+        android:scaleType="fitCenter"
+        android:adjustViewBounds="true"
         />
 
 </LinearLayout>
