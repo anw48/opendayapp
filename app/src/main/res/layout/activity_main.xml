@@ -28,10 +28,6 @@
         android:id="@+id/welcomeimageButton"
         android:contentDescription="@string/welcomebutton"
         android:src="@drawable/welcome"
-        android:padding="0dp"
-        android:scaleType="fitCenter"
-        android:adjustViewBounds="true"
-
         />
 
     <ImageButton
@@ -41,9 +37,6 @@
         android:id="@+id/talksimageButton"
         android:contentDescription="@string/talksbutton"
         android:src="@drawable/department"
-        android:padding="0dp"
-        android:scaleType="fitCenter"
-        android:adjustViewBounds="true"
         />
 
     <ImageButton
@@ -53,9 +46,6 @@
         android:id="@+id/refreshementsimageButton"
         android:contentDescription="@string/refreshementsbutton"
         android:src="@drawable/refreshments"
-        android:padding="0dp"
-        android:scaleType="fitCenter"
-        android:adjustViewBounds="true"
         />
 
     <ImageButton
@@ -65,9 +55,6 @@
         android:id="@+id/toursimageButton"
         android:contentDescription="@string/toursbutton"
         android:src="@drawable/tours"
-        android:padding="0dp"
-        android:scaleType="fitCenter"
-        android:adjustViewBounds="true"
         />
 
     <ImageButton
@@ -77,9 +64,6 @@
         android:id="@+id/gettingaroundimageButton"
         android:contentDescription="@string/gettingaroundbutton"
         android:src="@drawable/gettingaround"
-        android:padding="0dp"
-        android:scaleType="fitCenter"
-        android:adjustViewBounds="true"
         />
 
     <ImageButton
@@ -89,9 +73,6 @@
         android:id="@+id/plannerimageButton"
         android:contentDescription="@string/plannerbutton"
         android:src="@drawable/planner"
-        android:padding="0dp"
-        android:scaleType="fitCenter"
-        android:adjustViewBounds="true"
         />
 
     <ImageButton
@@ -101,9 +82,6 @@
         android:id="@+id/disclaimersimageButton"
         android:contentDescription="@string/disclaimersbutton"
         android:src="@drawable/safety"
-        android:padding="0dp"
-        android:scaleType="fitCenter"
-        android:adjustViewBounds="true"
         />
 
 </LinearLayout>
