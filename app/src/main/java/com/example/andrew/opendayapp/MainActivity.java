@@ -20,17 +20,6 @@ public class MainActivity extends Activity implements View.OnClickListener {
 
         departmentsbutton = (ImageButton) findViewById(R.id.talksimageButton);
         departmentsbutton.setOnClickListener(this);
-
-     /**
-        welcomebutton = (ImageButton) findViewById(R.id.welcomeimageButton);
-        welcomebutton.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View arg0) {
-                Intent myIntent = new Intent(MainActivity.this,
-                        WelcomeActivity.class);
-                startActivity(myIntent);
-            }
-        });
-    */
       }
 
 

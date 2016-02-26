@@ -3,6 +3,7 @@
     <string name="app_name">Aberystwyth University Open Day</string>
     <string name="welcomepage">Welcome To Aberystwyth</string>
     <string name="departments">Departments At Aberystwyth</string>
+    <string name="academicdepartments">Departments At Aberystwyth</string>
 
 
     <!-- Activity main strings mainly image button descriptions -->
@@ -41,6 +42,18 @@
                             a tremendous range of opportunities for sports,
                             societies, activities and volunteering available to
                             you here.</string>
+
+    <!-- Welcome activity string to store the welcome message -->
+    <string name="academic">Button description for academic departments</string>
+    <string name="accomodation">Button description for academic departments</string>
+    <string name="admissions">Button description for academic departments</string>
+    <string name="careers">Button description for academic departments</string>
+    <string name="finance">Button description for academic departments</string>
+    <string name="support">Button description for academic departments</string>
+    <string name="studentsunion">Button description for academic departments</string>
+    <string name="studyabroad">Button description for academic departments</string>
+    <string name="welsh">Button description for academic departments</string>
+    <string name="sports">Button description for academic departments</string>
 
 
 </resources>
