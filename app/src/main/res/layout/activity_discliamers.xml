@@ -1,0 +1,98 @@
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <LinearLayout
+
+        xmlns:tools="http://schemas.android.com/tools"
+
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        tools:context="com.example.andrew.opendayapp.MainActivity"
+        android:weightSum="1">
+
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/emergencyheading"
+            android:text="@string/emergencyheading"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:textColor="#56318e"
+
+            />
+
+        <TextView
+            android:layout_marginTop="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/emergencymessage"
+            android:text="@string/emergencymessage"
+            android:textColor="#000000"
+            android:textSize="20dp"
+            android:layout_below="@id/emergencyheading"
+            />
+
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/safetyheading"
+            android:text="@string/safetyheading"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:textColor="#56318e"
+            android:layout_below="@id/emergencymessage"
+
+            />
+
+        <TextView
+            android:layout_marginTop="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/safetymessage"
+            android:text="@string/safetymessage"
+            android:textColor="#000000"
+            android:textSize="20dp"
+            android:layout_below="@id/safetyheading"
+            />
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/buildingheading"
+            android:text="@string/workheading"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:textColor="#56318e"
+            android:layout_below="@id/safetymessage"
+
+            />
+
+        <TextView
+            android:layout_marginTop="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/buildingmessage"
+            android:text="@string/buildingmessage"
+            android:textColor="#000000"
+            android:textSize="20dp"
+            android:layout_below="@id/buildingheading"
+            />
+
+
+
+
+
+</LinearLayout>
+</ScrollView>

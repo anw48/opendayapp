@@ -4,6 +4,7 @@
     <string name="welcomepage">Welcome To Aberystwyth</string>
     <string name="departments">Departments At Aberystwyth</string>
     <string name="academicdepartments">Departments At Aberystwyth</string>
+    <string name="disclaimers">Health And Safety</string>
 
 
     <!-- Activity main strings mainly image button descriptions -->
@@ -26,8 +27,6 @@
                             Admissions Office or in the relevant department,
                             and they will be glad to assist</string>
 
-
-
     <string name="message2">Aberystwyth is a well-established university with a
                             long tradition of academic excellence, but it is also
                             very forward looking. We’re small enough to be
@@ -43,17 +42,47 @@
                             societies, activities and volunteering available to
                             you here.</string>
 
-    <!-- Welcome activity string to store the welcome message -->
+    <!-- Buton descriptions for department events activity -->
     <string name="academic">Button description for academic departments</string>
-    <string name="accomodation">Button description for academic departments</string>
-    <string name="admissions">Button description for academic departments</string>
-    <string name="careers">Button description for academic departments</string>
-    <string name="finance">Button description for academic departments</string>
-    <string name="support">Button description for academic departments</string>
-    <string name="studentsunion">Button description for academic departments</string>
-    <string name="studyabroad">Button description for academic departments</string>
-    <string name="welsh">Button description for academic departments</string>
-    <string name="sports">Button description for academic departments</string>
+    <string name="accomodation">Button description for accomodation office</string>
+    <string name="admissions">Button description for admissions office</string>
+    <string name="careers">Button description for careers office</string>
+    <string name="finance">Button description for finance department</string>
+    <string name="support">Button description for student support services</string>
+    <string name="studentsunion">Button description for the students union</string>
+    <string name="studyabroad">Button description for study abroad office</string>
+    <string name="welsh">Button description for studying through the medium of welsh</string>
+    <string name="sports">Button description for sports at Aberystwyth</string>
+
+
+    <!-- Text views for disclaimerspage -->
+
+    <string name="emergencyheading">In The Event Of An Emergency</string>
+    <string name="safetyheading">Safety</string>
+    <string name="workheading">Building Work</string>
+
+    <string name="emergencymessage">Please contact the nearest member of staff
+                                    immediately. Instructions in case of fire are
+                                    posted in every building, but if they are not to
+                                    hand then please vacate the building by the
+                                    nearest exit, do not use the lifts, and remain
+                                    outside until informed by a member of University
+                                    staff that it is safe to re-enter.</string>
+
+    <string name="safetymessage">In the interests of your own safety, please do
+                                not touch any materials or apparatus unless
+                                specifically invited to do so by a member of staff.</string>
+
+    <string name="buildingmessage">The University is frequently upgrading
+                                    and improving facilities for students and
+                                    consequently there is some building work taking
+                                    place on the Penglais Campus. We apologise for
+                                    any inconvienence. </string>
+
+
+
+
+
 
 
 </resources>

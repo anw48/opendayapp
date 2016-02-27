@@ -23,12 +23,17 @@
         <activity
             android:name=".DepartmentActivity"
             android:label="@string/departments"
-            android:parentActivityName=".MainActivity"/>
-
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".AcademicDepartments"
             android:label="@string/academicdepartments"
-            android:parentActivityName=".DepartmentActivity"/>
+            android:parentActivityName=".DepartmentActivity" />
+        <activity
+            android:name=".DiscliamersActivity"
+            android:label="@string/disclaimers"
+            android:parentActivityName=".MainActivity"/>
     </application>
+
+
 
 </manifest>

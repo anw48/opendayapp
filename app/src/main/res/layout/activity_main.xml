@@ -27,7 +27,10 @@
         android:layout_height="110dp"
         android:id="@+id/welcomeimageButton"
         android:contentDescription="@string/welcomebutton"
-        android:src="@drawable/welcome"
+        android:src="@mipmap/welcomebutton"
+        android:padding="2dp"
+        android:scaleType="fitCenter"
+        android:adjustViewBounds="true"
         />
 
     <ImageButton
@@ -36,7 +39,10 @@
         android:layout_height="115dp"
         android:id="@+id/talksimageButton"
         android:contentDescription="@string/talksbutton"
-        android:src="@drawable/department"
+        android:src="@mipmap/department"
+        android:padding="2dp"
+        android:scaleType="fitCenter"
+        android:adjustViewBounds="true"
         />
 
     <ImageButton
@@ -45,7 +51,10 @@
         android:layout_height="110dp"
         android:id="@+id/refreshementsimageButton"
         android:contentDescription="@string/refreshementsbutton"
-        android:src="@drawable/refreshments"
+        android:src="@mipmap/refreshments"
+        android:padding="2dp"
+        android:scaleType="fitCenter"
+        android:adjustViewBounds="true"
         />
 
     <ImageButton
@@ -54,7 +63,10 @@
         android:layout_height="110dp"
         android:id="@+id/toursimageButton"
         android:contentDescription="@string/toursbutton"
-        android:src="@drawable/tours"
+        android:src="@mipmap/tours"
+        android:padding="2dp"
+        android:scaleType="fitCenter"
+        android:adjustViewBounds="true"
         />
 
     <ImageButton
@@ -63,7 +75,10 @@
         android:layout_height="110dp"
         android:id="@+id/gettingaroundimageButton"
         android:contentDescription="@string/gettingaroundbutton"
-        android:src="@drawable/gettingaround"
+        android:src="@mipmap/gettingaround"
+        android:padding="2dp"
+        android:scaleType="fitCenter"
+        android:adjustViewBounds="true"
         />
 
     <ImageButton
@@ -72,7 +87,10 @@
         android:layout_height="110dp"
         android:id="@+id/plannerimageButton"
         android:contentDescription="@string/plannerbutton"
-        android:src="@drawable/planner"
+        android:src="@mipmap/planner"
+        android:padding="2dp"
+        android:scaleType="fitCenter"
+        android:adjustViewBounds="true"
         />
 
     <ImageButton
@@ -81,7 +99,10 @@
         android:layout_height="110dp"
         android:id="@+id/disclaimersimageButton"
         android:contentDescription="@string/disclaimersbutton"
-        android:src="@drawable/safety"
+        android:src="@mipmap/safety"
+        android:padding="2dp"
+        android:scaleType="fitCenter"
+        android:adjustViewBounds="true"
         />
 
 </LinearLayout>
