@@ -5,6 +5,7 @@
     <string name="departments">Departments At Aberystwyth</string>
     <string name="academicdepartments">Departments At Aberystwyth</string>
     <string name="disclaimers">Health And Safety</string>
+    <string name="planner">Personal Day Planner</string>
 
 
     <!-- Activity main strings mainly image button descriptions -->
@@ -78,11 +79,6 @@
                                     consequently there is some building work taking
                                     place on the Penglais Campus. We apologise for
                                     any inconvienence. </string>
-
-
-
-
-
 
 
 </resources>

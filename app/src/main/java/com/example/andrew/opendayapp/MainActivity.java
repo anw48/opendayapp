@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.ImageButton;
 
 public class MainActivity extends Activity implements View.OnClickListener {
-    ImageButton welcomebutton, departmentsbutton, disclaimersbutton;
+    ImageButton welcomebutton, departmentsbutton, disclaimersbutton, plannerbutton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +23,9 @@ public class MainActivity extends Activity implements View.OnClickListener {
 
         disclaimersbutton = (ImageButton) findViewById(R.id.disclaimersimageButton);
         disclaimersbutton.setOnClickListener(this);
+
+        plannerbutton = (ImageButton) findViewById(R.id.plannerimageButton);
+        plannerbutton.setOnClickListener(this);
       }
 
 
@@ -49,6 +52,13 @@ public class MainActivity extends Activity implements View.OnClickListener {
             {
                 Intent myIntent = new Intent(MainActivity.this,
                         DiscliamersActivity.class);
+                startActivity(myIntent);
+                break;
+            }
+            case R.id.plannerimageButton:
+            {
+                Intent myIntent = new Intent(MainActivity.this,
+                        PlannerActivity.class);
                 startActivity(myIntent);
                 break;
             }

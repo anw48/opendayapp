@@ -31,9 +31,10 @@
         <activity
             android:name=".DiscliamersActivity"
             android:label="@string/disclaimers"
+            android:parentActivityName=".MainActivity" />
+        <activity android:name=".PlannerActivity"
+            android:label="@string/planner"
             android:parentActivityName=".MainActivity"/>
     </application>
-
-
 
 </manifest>
