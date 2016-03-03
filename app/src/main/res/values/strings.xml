@@ -6,6 +6,7 @@
     <string name="academicdepartments">Departments At Aberystwyth</string>
     <string name="disclaimers">Health And Safety</string>
     <string name="planner">Personal Day Planner</string>
+    <string name="contact">Contact Us</string>
 
 
     <!-- Activity main strings mainly image button descriptions -->
@@ -15,6 +16,7 @@
     <string name="toursbutton">Image button to navigate to the campus tours page</string>
     <string name="gettingaroundbutton">Image button to navigate to the page about getting around Aberystwyth</string>
     <string name="plannerbutton">Image button to navigate to the personal planner page</string>
+    <string name="contactbutton">Image button to navigate to view a contact us page</string>
     <string name="disclaimersbutton">Image button to navigate to view the disclaimers page</string>
 
 

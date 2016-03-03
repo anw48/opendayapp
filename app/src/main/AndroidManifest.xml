@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.andrew.opendayapp">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/logo"
@@ -32,8 +34,12 @@
             android:name=".DiscliamersActivity"
             android:label="@string/disclaimers"
             android:parentActivityName=".MainActivity" />
-        <activity android:name=".PlannerActivity"
+        <activity
+            android:name=".PlannerActivity"
             android:label="@string/planner"
+            android:parentActivityName=".MainActivity" />
+        <activity android:name=".Contact_Activity"
+            android:label="@string/contact"
             android:parentActivityName=".MainActivity"/>
     </application>
 

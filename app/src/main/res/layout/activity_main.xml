@@ -92,6 +92,17 @@
         android:scaleType="fitCenter"
         android:adjustViewBounds="true"
         />
+    <ImageButton
+        android:layout_marginTop="15dp"
+        android:layout_width="355dp"
+        android:layout_height="110dp"
+        android:id="@+id/contactimageButton"
+        android:contentDescription="@string/contactbutton"
+        android:src="@mipmap/welcomebutton"
+        android:padding="2dp"
+        android:scaleType="fitCenter"
+        android:adjustViewBounds="true"
+        />
 
     <ImageButton
         android:layout_marginTop="15dp"
