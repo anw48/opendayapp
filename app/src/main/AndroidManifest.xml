@@ -38,8 +38,13 @@
             android:name=".PlannerActivity"
             android:label="@string/planner"
             android:parentActivityName=".MainActivity" />
-        <activity android:name=".Contact_Activity"
+        <activity
+            android:name=".Contact_Activity"
             android:label="@string/contact"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".Getting_Around_Activity"
+            android:label="@string/gettingaround"
             android:parentActivityName=".MainActivity"/>
     </application>
 
