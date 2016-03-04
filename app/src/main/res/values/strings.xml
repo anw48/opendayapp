@@ -84,4 +84,48 @@
                                     any inconvienence. </string>
 
 
+    <!-- Text views for getting around page  -->
+
+    <string name="carheading">Arriving by car</string>
+    <string name="carbody">Aberystwyth is easily accessible by road. Whichever way you\'re approaching from
+                            you will experience beautiful scenery. From the east the A44 climbs through the
+                            Cambrian Hills and down to the coast, and from the north or south the A487 offers
+                            spectacular views over Cardigan Bay.</string>
+    <string name="addressheading">Campus post codes</string>
+    <string name="campusaddress">Penglais Campus:   SY23 3BY
+                                Llanbadarn Campus:   SY23 3AS
+                                Gogerddan Campus:   SY23 3EB
+                                Old College:   SY23 2AY</string>
+
+
+    <string name="trainheading">Arriving by train</string>
+    <string name="trainbody">There are regular train services to Aberystwyth from north Wales and the Midlands
+                            (travelling from the east all services pass through Shrewsbury).
+                            Please refer to the National Rail Enquiries web site for train times and route options.</string>
+
+    <string name="busheading">Arriving by bus</string>
+    <string name="busbody">There are regular Mid Wales Travel buses between Aberystwyth and all three University campuses.</string>
+
+    <string name="penglaisheading">Buses passing the Penglais campus</string>
+    <string name="penglaisbody">03 Bus Service
+                                \n301 Bus Service
+                                \n302 Bus Service</string>
+
+    <string name="llanbadarnheading">Busses passing the Llanbadarn campus </string>
+    <string name="llanbadarnbody">301 Bus Service
+                                   \n302 Bus Service
+                                    \n305 Bus Service
+                                    \n306 Bus Service</string>
+
+    <string name="gogerddanheading">Busses passing the Gogerddan campus </string>
+    <string name="gogerddanbody">510 Bus Service
+                                    \n526 Bus Service</string>
+
+    <!-- Image button descriptions for getting around page -->
+    <string name="carbutton">Image button for loading information about arriving by car </string>
+    <string name="trainbutton">Image button for loading information about arriving by train </string>
+    <string name="busbutton">Image button for loading information about arriving by bus </string>
+    <string name="mapbutton">Image button for loading the map </string>
+
+
 </resources>

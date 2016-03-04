@@ -25,7 +25,7 @@
             android:id="@+id/emergencyheading"
             android:text="@string/emergencyheading"
             android:textStyle="bold"
-            android:textSize="20dp"
+            android:textSize="20sp"
             android:textColor="#56318e"
 
             />
@@ -37,8 +37,7 @@
             android:id="@+id/emergencymessage"
             android:text="@string/emergencymessage"
             android:textColor="#000000"
-            android:textSize="20dp"
-            android:layout_below="@id/emergencyheading"
+            android:textSize="20sp"
             />
 
 
@@ -49,9 +48,8 @@
             android:id="@+id/safetyheading"
             android:text="@string/safetyheading"
             android:textStyle="bold"
-            android:textSize="20dp"
+            android:textSize="20sp"
             android:textColor="#56318e"
-            android:layout_below="@id/emergencymessage"
 
             />
 
@@ -62,8 +60,7 @@
             android:id="@+id/safetymessage"
             android:text="@string/safetymessage"
             android:textColor="#000000"
-            android:textSize="20dp"
-            android:layout_below="@id/safetyheading"
+            android:textSize="20sp"
             />
 
         <TextView
@@ -73,9 +70,8 @@
             android:id="@+id/buildingheading"
             android:text="@string/workheading"
             android:textStyle="bold"
-            android:textSize="20dp"
+            android:textSize="20sp"
             android:textColor="#56318e"
-            android:layout_below="@id/safetymessage"
 
             />
 
@@ -86,8 +82,7 @@
             android:id="@+id/buildingmessage"
             android:text="@string/buildingmessage"
             android:textColor="#000000"
-            android:textSize="20dp"
-            android:layout_below="@id/buildingheading"
+            android:textSize="20sp"
             />
 
 

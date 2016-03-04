@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
+    tools:context="com.example.andrew.opendayapp.BusActivity">
+
+
+
+
+
+
+    <!-- Heading by bus  -->
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/busheading"
+        android:text="@string/busheading"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:textColor="#56318e"
+        />
+
+    <!-- Body by bus  -->
+
+    <TextView
+        android:layout_marginTop="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/busbody"
+        android:text="@string/busbody"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        />
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/pengliasheading"
+        android:text="@string/penglaisheading"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:textColor="#56318e"
+        />
+
+    <!-- Body by bus  -->
+
+    <TextView
+        android:layout_marginTop="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/penglaisbody"
+        android:text="@string/penglaisbody"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        />
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/llanbadarnheading"
+        android:text="@string/llanbadarnheading"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:textColor="#56318e"
+        />
+
+    <!-- Body by bus  -->
+
+    <TextView
+        android:layout_marginTop="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/llanbadarnbody"
+        android:text="@string/llanbadarnbody"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        />
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/gogerddanheading"
+        android:text="@string/gogerddanheading"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:textColor="#56318e"
+        />
+
+    <!-- Body by bus  -->
+
+    <TextView
+        android:layout_marginTop="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/gogerddanbody"
+        android:text="@string/gogerddanbody"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        />
+
+</LinearLayout>

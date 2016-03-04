@@ -45,7 +45,19 @@
         <activity
             android:name=".Getting_Around_Activity"
             android:label="@string/gettingaround"
-            android:parentActivityName=".MainActivity"/>
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".CarActivity"
+            android:label="@string/carheading"
+            android:parentActivityName=".Getting_Around_Activity" />
+        <activity
+            android:name=".TrainActivity"
+            android:label="@string/trainheading"
+            android:parentActivityName=".Getting_Around_Activity" />
+        <activity
+            android:name=".BusActivity"
+            android:label="@string/busheading"
+            android:parentActivityName=".Getting_Around_Activity"/>
     </application>
 
 </manifest>

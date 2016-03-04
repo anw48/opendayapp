@@ -17,10 +17,53 @@
         tools:context="com.example.andrew.opendayapp.MainActivity"
         android:weightSum="1">
 
+        <ImageButton
+            android:layout_marginTop="15dp"
+            android:layout_width="355dp"
+            android:layout_height="110dp"
+            android:id="@+id/mapImageButton"
+            android:contentDescription="@string/disclaimersbutton"
+            android:src="@mipmap/safety"
+            android:padding="2dp"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            />
 
+        <ImageButton
+            android:layout_marginTop="15dp"
+            android:layout_width="355dp"
+            android:layout_height="110dp"
+            android:id="@+id/carImageButton"
+            android:contentDescription="@string/disclaimersbutton"
+            android:src="@mipmap/safety"
+            android:padding="2dp"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            />
 
+        <ImageButton
+            android:layout_marginTop="15dp"
+            android:layout_width="355dp"
+            android:layout_height="110dp"
+            android:id="@+id/trainImageButton"
+            android:contentDescription="@string/disclaimersbutton"
+            android:src="@mipmap/safety"
+            android:padding="2dp"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            />
 
-
+        <ImageButton
+            android:layout_marginTop="15dp"
+            android:layout_width="355dp"
+            android:layout_height="110dp"
+            android:id="@+id/busImageButton"
+            android:contentDescription="@string/disclaimersbutton"
+            android:src="@mipmap/safety"
+            android:padding="2dp"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            />
 
 
 
