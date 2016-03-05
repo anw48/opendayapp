@@ -48,7 +48,7 @@ public class Getting_Around_Activity extends Activity implements View.OnClickLis
         switch (v.getId()) {
             case R.id.mapImageButton: {
                 Intent myIntent = new Intent(Getting_Around_Activity.this,
-                        WelcomeActivity.class);
+                        MapsActivity.class);
                 startActivity(myIntent);
                 break;
             }
