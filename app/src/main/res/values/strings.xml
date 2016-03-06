@@ -126,7 +126,7 @@
     <string name="trainbutton">Image button for loading information about arriving by train </string>
     <string name="busbutton">Image button for loading information about arriving by bus </string>
     <string name="mapbutton">Image button for loading the map </string>
-    <string name="title_activity_maps">Map</string>
+    <string name="title_activity_maps">Campus Map</string>
 
 
 </resources>

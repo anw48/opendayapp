@@ -9,7 +9,9 @@ import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
@@ -56,7 +58,17 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mMap.getUiSettings().setZoomControlsEnabled(true);
         mMap.getUiSettings().setZoomGesturesEnabled(true);
 
-        mMap.moveCamera( CameraUpdateFactory.newLatLngZoom(new LatLng(52.415549, -4.063668) , 16.0f) );
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(52.415549, -4.063668), 16.0f));
 
+
+        Marker aber = mMap.addMarker(new MarkerOptions()
+                    .position(new LatLng(52.415549, -4.063668))
+                    .title("Aberystwyth University"));
+                   // .icon(BitmapDescriptorFactory.fromResource(R.drawable.arrow)));
+
+
+        Marker cs = mMap.addMarker(new MarkerOptions()
+                .position(new LatLng(52.416216, -4.065523))
+                .title("Computer Science"));
     }
 }
