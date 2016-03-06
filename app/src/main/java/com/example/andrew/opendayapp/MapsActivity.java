@@ -61,6 +61,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(52.415549, -4.063668), 16.0f));
 
 
+/**
         Marker aber = mMap.addMarker(new MarkerOptions()
                     .position(new LatLng(52.415549, -4.063668))
                     .title("Aberystwyth University"));
@@ -70,5 +71,22 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         Marker cs = mMap.addMarker(new MarkerOptions()
                 .position(new LatLng(52.416216, -4.065523))
                 .title("Computer Science Department"));
+
+  */
+
+        String[][] markers = {
+                { "52.415549", "-4.063668", "Aberystwyth University" },
+                { "52.416216", "-4.065523", "Computer Science Department" },
+                { "53.416216", "-5.065523", "Earth Sciences Department" },
+                { "51.416216", "-7.065523", "History Department" } };
+
+        for (int i = 0; i < markers.length; i++) {
+
+            Marker aber = mMap.addMarker(new MarkerOptions()
+                    .position(new LatLng(Double.parseDouble(markers[i][0]),Double.parseDouble (markers[i][1])))
+                    .title(markers[i][2]));
+
+        }
+
     }
 }
