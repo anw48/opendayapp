@@ -69,6 +69,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
         Marker cs = mMap.addMarker(new MarkerOptions()
                 .position(new LatLng(52.416216, -4.065523))
-                .title("Computer Science"));
+                .title("Computer Science Department"));
     }
 }
