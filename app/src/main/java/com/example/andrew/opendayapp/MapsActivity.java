@@ -61,24 +61,27 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(52.415549, -4.063668), 16.0f));
 
 
-/**
-        Marker aber = mMap.addMarker(new MarkerOptions()
-                    .position(new LatLng(52.415549, -4.063668))
-                    .title("Aberystwyth University"));
-                   // .icon(BitmapDescriptorFactory.fromResource(R.drawable.arrow)));
 
-
-        Marker cs = mMap.addMarker(new MarkerOptions()
-                .position(new LatLng(52.416216, -4.065523))
-                .title("Computer Science Department"));
-
-  */
 
         String[][] markers = {
-                { "52.415549", "-4.063668", "Aberystwyth University" },
-                { "52.416216", "-4.065523", "Computer Science Department" },
-                { "53.416216", "-5.065523", "Earth Sciences Department" },
-                { "51.416216", "-7.065523", "History Department" } };
+                { "52.413572", "-4.077513", "Art Department" },
+                { "52.415707", "-4.066443", "IBERS" },
+                { "52.416269", "-4.065568", "Computer Science Departmet" },
+                { "52.417590", "-4.063489", "Education and Lifelong Learning Department" },
+                { "52.417125", "-4.064581", "Department Of English And Creative Writing" },
+                { "52.416522", "-4.066432", "Geography & Earth Sciences Department" },
+                { "52.417048", "-4.064439", "Department Of History & Welsh History" },
+                { "52.410130", "-4.052488", "Department Information Studies" },
+                { "52.415245", "-4.063916", "International Politics Department" },
+                { "52.410880", "-4.054024", "Law and Criminology Department" },
+                { "52.413602", "-4.064690", "School Of Management & Business" },
+                { "52.416013", "-4.065482", "Institute of Mathematical and Physical Sciences" },
+                { "52.416721", "-4.064321", "Modern Languages Department" },
+                { "52.417654", "-4.063603", "Psychology Department" },
+                { "52.416995", "-4.062832", "Theatre, Film & Television Studies Department" },
+                { "52.416721", "-4.064321", "Department of Welsh and Celtic Studies" },
+                { "52.413602", "-4.064690", "Department of Sport and Exercise Science" }
+        };
 
         for (int i = 0; i < markers.length; i++) {
 

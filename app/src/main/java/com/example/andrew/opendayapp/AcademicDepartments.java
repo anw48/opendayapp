@@ -36,6 +36,7 @@ public class AcademicDepartments extends Activity {
         departmentList.add(createDepartment("department","Psychology"));
         departmentList.add(createDepartment("department","Theatre, Film & Television Studies"));
         departmentList.add(createDepartment("department","Department of Welsh and Celtic Studies"));
+        departmentList.add(createDepartment("department","Department of Sport and Exercise Science"));
 
 
     }
