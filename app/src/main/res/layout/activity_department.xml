@@ -25,7 +25,7 @@
             android:layout_height="110dp"
             android:id="@+id/academic"
             android:contentDescription="@string/academic"
-            android:src="@mipmap/welcomebutton"
+            android:src="@drawable/welcomebutton"
             />
         <ImageButton
             android:layout_marginTop="15dp"
@@ -33,7 +33,7 @@
             android:layout_height="110dp"
             android:id="@+id/accomoodation"
             android:contentDescription="@string/accomodation"
-            android:src="@mipmap/welcomebutton"
+            android:src="@drawable/welcomebutton"
             />
         <ImageButton
             android:layout_marginTop="15dp"
@@ -41,7 +41,7 @@
             android:layout_height="110dp"
             android:id="@+id/admissions"
             android:contentDescription="@string/admissions"
-            android:src="@mipmap/welcomebutton"
+            android:src="@drawable/welcomebutton"
             />
         <ImageButton
             android:layout_marginTop="15dp"
@@ -49,7 +49,7 @@
             android:layout_height="110dp"
             android:id="@+id/careers"
             android:contentDescription="@string/careers"
-            android:src="@mipmap/welcomebutton"
+            android:src="@drawable/welcomebutton"
             />
         <ImageButton
             android:layout_marginTop="15dp"
@@ -57,7 +57,7 @@
             android:layout_height="110dp"
             android:id="@+id/finance"
             android:contentDescription="@string/finance"
-            android:src="@mipmap/welcomebutton"
+            android:src="@drawable/welcomebutton"
             />
         <ImageButton
             android:layout_marginTop="15dp"
@@ -65,7 +65,7 @@
             android:layout_height="110dp"
             android:id="@+id/support"
             android:contentDescription="@string/support"
-            android:src="@mipmap/welcomebutton"
+            android:src="@drawable/welcomebutton"
             />
         <ImageButton
             android:layout_marginTop="15dp"
@@ -73,7 +73,7 @@
             android:layout_height="110dp"
             android:id="@+id/studentsunion"
             android:contentDescription="@string/studentsunion"
-            android:src="@mipmap/welcomebutton"
+            android:src="@drawable/welcomebutton"
             />
         <ImageButton
             android:layout_marginTop="15dp"
@@ -81,7 +81,7 @@
             android:layout_height="110dp"
             android:id="@+id/studyabroad"
             android:contentDescription="@string/studyabroad"
-            android:src="@mipmap/welcomebutton"
+            android:src="@drawable/welcomebutton"
             />
         <ImageButton
             android:layout_marginTop="15dp"
@@ -89,7 +89,7 @@
             android:layout_height="110dp"
             android:id="@+id/welsh"
             android:contentDescription="@string/welsh"
-            android:src="@mipmap/welcomebutton"
+            android:src="@drawable/welcomebutton"
             />
         <ImageButton
             android:layout_marginTop="15dp"
@@ -97,7 +97,7 @@
             android:layout_height="110dp"
             android:id="@+id/sports"
             android:contentDescription="@string/sports"
-            android:src="@mipmap/welcomebutton"
+            android:src="@drawable/welcomebutton"
             />
 
 </LinearLayout>
