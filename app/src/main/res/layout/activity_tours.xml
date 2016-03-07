@@ -1,0 +1,106 @@
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <LinearLayout
+
+        xmlns:tools="http://schemas.android.com/tools"
+
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        tools:context="com.example.andrew.opendayapp.MainActivity"
+        android:weightSum="1">
+
+        <!-- Penglias Campus tours text views -->
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/penglaistoursheading"
+            android:text="@string/penglaistoursheading"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textColor="#56318e" />
+
+        <TextView
+            android:layout_marginTop="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/pengliastours"
+            android:text="@string/penglaistours"
+            android:textColor="#000000"
+            android:textSize="20sp"/>
+
+        <!-- Accommodation tours text views -->
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/accomoodationtoursheading"
+            android:text="@string/accomodationtoursheading"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textColor="#56318e" />
+
+        <TextView
+            android:layout_marginTop="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/accomoodationtours"
+            android:text="@string/accomodationtours"
+            android:textColor="#000000"
+            android:textSize="20sp"/>
+
+        <!--  Library tours text views -->
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/libraryheading"
+            android:text="@string/librarytoursheading"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textColor="#56318e" />
+
+        <TextView
+            android:layout_marginTop="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/librarytours"
+            android:text="@string/librarytours"
+            android:textColor="#000000"
+            android:textSize="20sp"/>
+
+        <!-- Students union tours text views -->
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/suheading"
+            android:text="@string/studentsuniontoursheading"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textColor="#56318e" />
+
+        <TextView
+            android:layout_marginTop="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/sutours"
+            android:text="@string/studentsuniontours"
+            android:textColor="#000000"
+            android:textSize="20sp"/>
+
+
+
+
+
+
+</LinearLayout>
+</ScrollView>

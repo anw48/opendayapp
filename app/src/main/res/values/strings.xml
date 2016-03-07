@@ -8,6 +8,7 @@
     <string name="planner">Personal Day Planner</string>
     <string name="contact">Contact Us</string>
     <string name="gettingaround">Getting Around</string>
+    <string name="campustours">Campus Tours</string>
 
 
     <!-- Activity main strings mainly image button descriptions -->
@@ -127,6 +128,41 @@
     <string name="busbutton">Image button for loading information about arriving by bus </string>
     <string name="mapbutton">Image button for loading the map </string>
     <string name="title_activity_maps">Campus Map</string>
+
+
+    <!-- Campus tours strings -->
+
+    <string name="penglaistoursheading">Penglias Campus Tours</string>
+    <string name="accomodationtoursheading">Accomodation Tours</string>
+    <string name="librarytoursheading">Hugh Owen Library Tours</string>
+    <string name="studentsuniontoursheading">Students Union Tours</string>
+
+    <string name="penglaistours">Student-led Campus tours (available through the medium of English
+                                    or Welsh), lasting approximately 45-60 minutes. Tours start from the
+                                    concourse area in front of the Arts Centre at:\n
+                                    \n
+                                    10.00am, 11.00am, 12.00pm, 1.00pm, 2.00pm and 3.00pm</string>
+    <string name="accomodationtours">Guided tours of the following locations are available every half hour from 10am, the last tour
+                                        departing at 4.30pm:\n
+                                        \n
+                                        Penbryn, Pentre Jane Morgan, Fferm Penglais, Seafront Residences, Welsh Medium Accomodation</string>
+    <string name="librarytours">Tours leave the Library Enquiry
+                                Desk 4 at 10.30am, 2.00pm  &amp;
+                                3.00pm and last approximately
+                                20 minutes</string>
+    <string name="studentsuniontours">Student officer-led tours, lasting
+                                        approximately 15 minutes, will
+                                        start from the Students’ Union
+                                        main entrance 12 at: 9.30am,
+                                        10.00am, 10.30am, 11.00am,
+                                        12.00pm, 1.00pm, 1.30pm,
+                                        2.00pm, 2.30pm and 3.00pm.\n
+                                        \n
+                                        Please call at reception for a tour
+                                        of the building and the chance to
+                                        find out more about student life
+                                        at Aberystwyth.</string>
+
 
 
 </resources>

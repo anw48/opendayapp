@@ -66,8 +66,6 @@
             android:label="@string/busheading"
             android:parentActivityName=".Getting_Around_Activity" />
 
-
-
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -83,7 +81,11 @@
         <activity
             android:name=".MapsActivity"
             android:label="@string/title_activity_maps"
-            android:parentActivityName=".Getting_Around_Activity"/>
+            android:parentActivityName=".Getting_Around_Activity" />
+        <activity
+            android:name=".ToursActivity"
+            android:label="@string/campustours"
+            android:parentActivityName=".MainActivity"/>
     </application>
 
 </manifest>

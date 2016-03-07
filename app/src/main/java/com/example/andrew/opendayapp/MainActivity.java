@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.ImageButton;
 
 public class MainActivity extends Activity implements View.OnClickListener {
-    ImageButton welcomebutton, departmentsbutton, disclaimersbutton, plannerbutton, contactbutton, gettingaroundbutton;
+    ImageButton welcomebutton, departmentsbutton, disclaimersbutton, plannerbutton, contactbutton, gettingaroundbutton, toursbutton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +32,11 @@ public class MainActivity extends Activity implements View.OnClickListener {
 
         gettingaroundbutton = (ImageButton) findViewById(R.id.gettingaroundimageButton);
         gettingaroundbutton.setOnClickListener(this);
+
+        toursbutton = (ImageButton) findViewById(R.id.toursimageButton);
+        toursbutton.setOnClickListener(this);
+
+
       }
 
 
@@ -45,6 +50,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
                 Intent myIntent = new Intent(MainActivity.this,
                         WelcomeActivity.class);
                 startActivity(myIntent);
+
                 break;
             }
             case R.id.talksimageButton:
@@ -82,9 +88,17 @@ public class MainActivity extends Activity implements View.OnClickListener {
                 startActivity(myIntent);
                 break;
             }
+            case R.id.toursimageButton:
+            {
+                Intent myIntent = new Intent(MainActivity.this,
+                        ToursActivity.class);
+                startActivity(myIntent);
+                break;
+            }
 
 
         }
+
     }
 
 
