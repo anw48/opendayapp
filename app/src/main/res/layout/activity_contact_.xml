@@ -17,7 +17,7 @@
        android:layout_height="wrap_content"
        android:layout_marginBottom="15dp"
        android:gravity="center"
-       android:text="Fill out th field below to send an email to our team. This will use your phons email app"
+       android:text="@string/contactmessage"
        />
 
 

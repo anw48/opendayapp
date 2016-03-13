@@ -59,11 +59,32 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mMap.getUiSettings().setZoomGesturesEnabled(true);
 
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(52.415549, -4.063668), 16.0f));
+        getAcademicMarkers();
+        getAccommodatiomMarkers();
 
+    }
 
+    public void getAccommodatiomMarkers(){
+        String accomomdationmarkers[][] = {
+                { "52.418143", "-4.064024", "Penbryn " },
+                { "52.420100", "-4.062829", "Pentre Jane Morgan" },
+                { "52.420837", "-4.084336", "Seafront Residences" },
+                { "52.418221", "-4.061256", "Cwrt Mawr" },
+                { "52.417275", "-4.061907", "Rosser" },
+                { "52.416408", "-4.061049", "Trefloyne" },
+                { "52.421765", "-4.060265", "Fferm Penglais" }
+        };
+        for (int i = 0; i <accomomdationmarkers.length; i++){
+            Marker accommodation = mMap.addMarker(new MarkerOptions()
+                .position(new LatLng(Double.parseDouble(accomomdationmarkers[i][0]),Double.parseDouble(accomomdationmarkers[i][1])))
+                .title(accomomdationmarkers[i][2])
+                .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_AZURE)));
+        }
+    }
 
+    public void getAcademicMarkers(){
 
-        String[][] markers = {
+        String[][] academicmarkers = {
                 { "52.413572", "-4.077513", "Art Department" },
                 { "52.415707", "-4.066443", "IBERS" },
                 { "52.416269", "-4.065568", "Computer Science Departmet" },
@@ -83,13 +104,12 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 { "52.413602", "-4.064690", "Department of Sport and Exercise Science" }
         };
 
-        for (int i = 0; i < markers.length; i++) {
+        for (int i = 0; i < academicmarkers.length; i++) {
 
             Marker aber = mMap.addMarker(new MarkerOptions()
-                    .position(new LatLng(Double.parseDouble(markers[i][0]),Double.parseDouble (markers[i][1])))
-                    .title(markers[i][2]));
+                    .position(new LatLng(Double.parseDouble(academicmarkers[i][0]), Double.parseDouble (academicmarkers[i][1])))
+                    .title(academicmarkers[i][2]));
 
         }
-
     }
 }

@@ -16,58 +16,53 @@
         android:paddingLeft="@dimen/activity_horizontal_margin"
         android:paddingRight="@dimen/activity_horizontal_margin"
         android:paddingTop="@dimen/activity_vertical_margin"
-        tools:context="com.example.andrew.opendayapp.CarActivity"
+        tools:context="com.example.andrew.opendayapp.WelcomeActivity"
         android:weightSum="1"
-        android:orientation="vertical">
+        android:orientation="horizontal">
 
-    <!-- Heading by car  -->
     <TextView
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="1dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/carheading"
-        android:text="@string/carheading"
+        android:id="@+id/welcome"
+        android:text="@string/welcome"
         android:textStyle="bold"
-        android:textSize="20sp"
+        android:textSize="15dp"
         android:textColor="#56318e"
+
         />
 
-    <!-- Body by car  -->
-
     <TextView
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="5dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/carbody"
-        android:text="@string/carbody"
+        android:id="@+id/message"
+        android:text="@string/message"
         android:textColor="#000000"
-        android:textSize="20sp"
-        />
-
-
-    <TextView
-        android:layout_marginTop="10dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/addressheading"
-        android:text="@string/addressheading"
-        android:textStyle="bold"
-        android:textSize="20sp"
-        android:textColor="#56318e"
+        android:textSize="16dp"
+        android:layout_below="@id/welcome"
         />
 
     <TextView
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="5dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/campusaddress"
-        android:text="@string/campusaddress"
+        android:id="@+id/message2"
+        android:text="@string/message2"
         android:textColor="#000000"
-        android:textSize="20sp"
-        android:lineSpacingExtra="10dp"
+        android:textSize="16dp"
+        android:layout_below="@id/message"
         />
-
-
+    <TextView
+        android:layout_marginTop="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/message3"
+        android:text="@string/message3"
+        android:textColor="#000000"
+        android:textSize="16dp"
+        android:layout_below="@id/message2"
+        />
 
 
 

@@ -9,96 +9,39 @@
 
         xmlns:tools="http://schemas.android.com/tools"
 
-        android:layout_width="fill_parent"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:paddingBottom="@dimen/activity_vertical_margin"
         android:paddingLeft="@dimen/activity_horizontal_margin"
         android:paddingRight="@dimen/activity_horizontal_margin"
         android:paddingTop="@dimen/activity_vertical_margin"
-        tools:context="com.example.andrew.opendayapp.MainActivity"
+        tools:context="com.example.andrew.opendayapp.DepartmentActivity"
         android:weightSum="1">
 
-        <ImageButton
-            android:layout_marginTop="15dp"
-            android:layout_width="355dp"
-            android:layout_height="110dp"
-            android:id="@+id/academic"
-            android:contentDescription="@string/academic"
-            android:src="@drawable/welcomebutton"
+
+        <ListView
+            android:id="@+id/list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+
+        <TextView
+            android:id="@+id/deptid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="5dp"
+            android:paddingLeft="5dp"
+            android:textSize="16sp"
             />
-        <ImageButton
-            android:layout_marginTop="15dp"
-            android:layout_width="355dp"
-            android:layout_height="110dp"
-            android:id="@+id/accomoodation"
-            android:contentDescription="@string/accomodation"
-            android:src="@drawable/welcomebutton"
-            />
-        <ImageButton
-            android:layout_marginTop="15dp"
-            android:layout_width="355dp"
-            android:layout_height="110dp"
-            android:id="@+id/admissions"
-            android:contentDescription="@string/admissions"
-            android:src="@drawable/welcomebutton"
-            />
-        <ImageButton
-            android:layout_marginTop="15dp"
-            android:layout_width="355dp"
-            android:layout_height="110dp"
-            android:id="@+id/careers"
-            android:contentDescription="@string/careers"
-            android:src="@drawable/welcomebutton"
-            />
-        <ImageButton
-            android:layout_marginTop="15dp"
-            android:layout_width="355dp"
-            android:layout_height="110dp"
-            android:id="@+id/finance"
-            android:contentDescription="@string/finance"
-            android:src="@drawable/welcomebutton"
-            />
-        <ImageButton
-            android:layout_marginTop="15dp"
-            android:layout_width="355dp"
-            android:layout_height="110dp"
-            android:id="@+id/support"
-            android:contentDescription="@string/support"
-            android:src="@drawable/welcomebutton"
-            />
-        <ImageButton
-            android:layout_marginTop="15dp"
-            android:layout_width="355dp"
-            android:layout_height="110dp"
-            android:id="@+id/studentsunion"
-            android:contentDescription="@string/studentsunion"
-            android:src="@drawable/welcomebutton"
-            />
-        <ImageButton
-            android:layout_marginTop="15dp"
-            android:layout_width="355dp"
-            android:layout_height="110dp"
-            android:id="@+id/studyabroad"
-            android:contentDescription="@string/studyabroad"
-            android:src="@drawable/welcomebutton"
-            />
-        <ImageButton
-            android:layout_marginTop="15dp"
-            android:layout_width="355dp"
-            android:layout_height="110dp"
-            android:id="@+id/welsh"
-            android:contentDescription="@string/welsh"
-            android:src="@drawable/welcomebutton"
-            />
-        <ImageButton
-            android:layout_marginTop="15dp"
-            android:layout_width="355dp"
-            android:layout_height="110dp"
-            android:id="@+id/sports"
-            android:contentDescription="@string/sports"
-            android:src="@drawable/welcomebutton"
-            />
+
+
 
 </LinearLayout>
 </ScrollView>

@@ -2,32 +2,32 @@
 
 <ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent" >
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" >
 
 
-    <LinearLayout
+    <RelativeLayout
 
     xmlns:tools="http://schemas.android.com/tools"
 
-    android:layout_width="fill_parent"
-    android:layout_height="wrap_content"
-    android:orientation="vertical"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.example.andrew.opendayapp.MainActivity"
-    android:weightSum="1">
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        tools:context="com.example.andrew.opendayapp.MainActivity"
+        android:weightSum="1"
+        android:orientation="vertical">
 
 
     <ImageButton
         android:layout_marginTop="5dp"
-        android:layout_width="355dp"
+        android:layout_width="match_parent"
         android:layout_height="110dp"
         android:id="@+id/welcomeimageButton"
         android:contentDescription="@string/welcomebutton"
-        android:src="@drawable/welcomebutton"
+        android:background="@drawable/welcome"
         android:padding="2dp"
         android:scaleType="fitCenter"
         android:adjustViewBounds="true"
@@ -35,86 +35,95 @@
 
     <ImageButton
         android:layout_marginTop="15dp"
-        android:layout_width="355dp"
+        android:layout_width="match_parent"
         android:layout_height="115dp"
         android:id="@+id/talksimageButton"
         android:contentDescription="@string/talksbutton"
-        android:src="@drawable/department"
+        android:background="@drawable/department"
         android:padding="2dp"
         android:scaleType="fitCenter"
         android:adjustViewBounds="true"
+        android:layout_below="@id/welcomeimageButton"
         />
 
     <ImageButton
         android:layout_marginTop="15dp"
-        android:layout_width="355dp"
+        android:layout_width="match_parent"
         android:layout_height="110dp"
         android:id="@+id/refreshementsimageButton"
         android:contentDescription="@string/refreshementsbutton"
-        android:src="@drawable/refreshments"
+        android:background="@drawable/refreshments"
         android:padding="2dp"
         android:scaleType="fitCenter"
         android:adjustViewBounds="true"
+        android:layout_below="@id/talksimageButton"
         />
 
     <ImageButton
         android:layout_marginTop="15dp"
-        android:layout_width="355dp"
+        android:layout_width="match_parent"
         android:layout_height="110dp"
         android:id="@+id/toursimageButton"
         android:contentDescription="@string/toursbutton"
-        android:src="@drawable/tours"
+        android:background="@drawable/tours"
         android:padding="2dp"
         android:scaleType="fitCenter"
         android:adjustViewBounds="true"
+        android:layout_below="@id/refreshementsimageButton"
         />
 
     <ImageButton
         android:layout_marginTop="15dp"
-        android:layout_width="355dp"
+        android:layout_width="match_parent"
         android:layout_height="110dp"
         android:id="@+id/gettingaroundimageButton"
         android:contentDescription="@string/gettingaroundbutton"
-        android:src="@drawable/gettingaround"
+        android:background="@drawable/gettingaround"
         android:padding="2dp"
         android:scaleType="fitCenter"
         android:adjustViewBounds="true"
+        android:layout_below="@id/toursimageButton"
         />
 
     <ImageButton
         android:layout_marginTop="15dp"
-        android:layout_width="355dp"
+        android:layout_width="match_parent"
         android:layout_height="110dp"
         android:id="@+id/plannerimageButton"
         android:contentDescription="@string/plannerbutton"
-        android:src="@drawable/planner"
+        android:background="@drawable/planner"
         android:padding="2dp"
         android:scaleType="fitCenter"
         android:adjustViewBounds="true"
+        android:layout_below="@id/gettingaroundimageButton"
+
         />
+
     <ImageButton
         android:layout_marginTop="15dp"
-        android:layout_width="355dp"
+        android:layout_width="match_parent"
         android:layout_height="110dp"
         android:id="@+id/contactimageButton"
         android:contentDescription="@string/contactbutton"
-        android:src="@drawable/welcomebutton"
+        android:background="@drawable/welcome"
         android:padding="2dp"
         android:scaleType="fitCenter"
         android:adjustViewBounds="true"
+        android:layout_below="@id/plannerimageButton"
         />
 
     <ImageButton
         android:layout_marginTop="15dp"
-        android:layout_width="355dp"
+        android:layout_width="match_parent"
         android:layout_height="110dp"
         android:id="@+id/disclaimersimageButton"
         android:contentDescription="@string/disclaimersbutton"
-        android:src="@drawable/safety"
+        android:background="@drawable/safety"
         android:padding="2dp"
         android:scaleType="fitCenter"
         android:adjustViewBounds="true"
+        android:layout_below="@id/contactimageButton"
         />
 
-</LinearLayout>
+</RelativeLayout>
 </ScrollView>
