@@ -18,8 +18,8 @@ import javax.net.ssl.HttpsURLConnection;
 
 public class WebRequest {
     static String response = null;
-    public final static int GETRequest = 1;
-    public final static int POSTRequest = 2;
+    public final static int GET = 1;
+    public final static int POST = 2;
 
     //Constructor with no parameter
     public WebRequest() {
@@ -51,10 +51,10 @@ public class WebRequest {
             conn.setConnectTimeout(15001);
             conn.setDoInput(true);
             conn.setDoOutput(true);
-            if (requestmethod == POSTRequest) {
+            if (requestmethod == POST) {
                 conn.setRequestMethod("POST");
-            } else if (requestmethod == GETRequest) {
-                conn.setRequestMethod("GETRequest");
+            } else if (requestmethod == GET) {
+                conn.setRequestMethod("GET");
             }
 
             if (params != null) {

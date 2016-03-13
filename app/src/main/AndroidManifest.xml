@@ -12,8 +12,8 @@
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
     <application
-        android:debuggable="true"
         android:allowBackup="true"
+        android:debuggable="true"
         android:icon="@drawable/logo"
         android:supportsRtl="true"
         android:theme="@style/AppBaseTheme">
@@ -86,12 +86,16 @@
         <activity
             android:name=".ToursActivity"
             android:label="@string/campustours"
-            android:parentActivityName=".MainActivity"/>
-        <!-- ATTENTION: This was auto-generated to add Google Play services to your project for
-             App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information. -->
+            android:parentActivityName=".MainActivity" />
+        <!--
+             ATTENTION: This was auto-generated to add Google Play services to your project for
+             App Indexing.  See https://g.co/AppIndexing/AndroidStudio for more information.
+        -->
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
+
+        <activity android:name=".DepartmentInfoActivity"></activity>
     </application>
 
 </manifest>
