@@ -6,7 +6,7 @@
     android:layout_height="wrap_content" >
 
 
-    <RelativeLayout
+    <LinearLayout
 
         xmlns:tools="http://schemas.android.com/tools"
 
@@ -116,5 +116,5 @@
         android:textSize="20sp"
         />
 
-</RelativeLayout>
+</LinearLayout>
     </ScrollView>

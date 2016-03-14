@@ -105,7 +105,7 @@
             android:layout_height="110dp"
             android:id="@+id/contactimageButton"
             android:contentDescription="@string/contactbutton"
-            android:background="@drawable/welcome"
+            android:background="@drawable/contact"
             android:padding="2dp"
             android:scaleType="fitCenter"
             android:adjustViewBounds="true"
