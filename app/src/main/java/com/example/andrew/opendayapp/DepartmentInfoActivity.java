@@ -20,9 +20,9 @@ public class DepartmentInfoActivity extends Activity {
         // 1. get passed intent
         Intent intent = getIntent();
         // 2. get message value from intent
-        String name = intent.getStringExtra("name");
+        String my_data = intent.getStringExtra("my_data");
         // 3. show message on textView
-        ((TextView)findViewById(R.id.name)).setText(name);
+        ((TextView)findViewById(R.id.name)).setText(my_data);
         // 4. get bundle from intent
         Bundle bundle = intent.getExtras();
         // 5. get status value from bundle

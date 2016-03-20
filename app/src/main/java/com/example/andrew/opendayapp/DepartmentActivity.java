@@ -129,9 +129,6 @@ public class DepartmentActivity extends ListActivity implements AdapterView.OnIt
                     DepartmentActivity.this, departmentlist,
                     R.layout.activity_department, new String[]{TAG_NAME}, new int[]{R.id.name});
 
-            setListAdapter(adapter);
-
-
 
 
             ListView lv = getListView();
@@ -145,18 +142,27 @@ public class DepartmentActivity extends ListActivity implements AdapterView.OnIt
 
                     Intent myIntent = new Intent(DepartmentActivity.this, DepartmentInfoActivity.class);
 
+
+
                     //myIntent.putExtra("test", R.id.name);
-                    myIntent.putExtra("name",TAG_NAME );// NEED TO REFERENCE NAME AT BOTTOM OF THIS FILE RATHER THAN TOP
+                    myIntent.putExtra("my_data", TAG_NAME);// NEED TO REFERENCE NAME AT BOTTOM OF THIS FILE RATHER THAN TOP
                     Bundle extras = new Bundle();
                     extras.putString("status", "Data Received!");
-
-                    // 4. add bundle to intent
                     myIntent.putExtras(extras);
-
                     startActivity(myIntent);
 
                 }
             });
+
+
+
+
+
+            setListAdapter(adapter);
+
+
+
+
 
         }
 
@@ -171,7 +177,7 @@ public class DepartmentActivity extends ListActivity implements AdapterView.OnIt
 
     }
 
-    String test;
+
 
     private ArrayList<HashMap<String, String>> ParseJSON(String json) {
         if (json != null) {
@@ -216,7 +222,7 @@ public class DepartmentActivity extends ListActivity implements AdapterView.OnIt
                     department.put(TAG_LOCATION, location);
                     department.put(TAG_START_TIME, start_time);
                     department.put(TAG_END_TIME, end_time);
-
+////hello
 
                     // adding student to students list
                     departmentlist.add(department);

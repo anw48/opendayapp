@@ -72,7 +72,7 @@ public class PlannerActivity extends Activity {
                 String str;
                 StringBuilder buf=new StringBuilder();
                 while ((str = reader.readLine()) != null) {
-                    buf.append(str+"n");
+                    buf.append(str);
 
                 }
 
