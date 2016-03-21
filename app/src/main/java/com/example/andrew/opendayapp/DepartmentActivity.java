@@ -32,20 +32,14 @@ import java.util.HashMap;
 public class DepartmentActivity extends ListActivity implements AdapterView.OnItemClickListener {
 
 
-    private static String url = "http://ten32.co.uk/landare/get_all_departments.php";
+    private static String url = "http://ten32.co.uk/openday/get_all_departments.php";
 
 
-   private static final String TAG_EVENT_INFO = "events";
+    private static final String TAG_DEPARTMENT_INFO = "Departments";
     private static final String TAG_DEPT_ID = "dept_id";
-    private static final String TAG_EVENT_ID = "event_id";
     private static final String TAG_NAME = "name";
     private static final String TAG_DESCRIPTION = "description";
     private static final String TAG_IMAGE_NAME = "image_name";
-    private static final String TAG_EVENT_NAME = "event_name";
-    private static final String TAG_START_TIME = "start_time";
-    private static final String TAG_END_TIME = "end_time";
-    private static final String TAG_LOCATION = "location";
-    private static final String TAG_EVENT_DESCRIPTION = "event_description";
 
 
 
@@ -56,14 +50,8 @@ public class DepartmentActivity extends ListActivity implements AdapterView.OnIt
         setTitle(getResources().getString(R.string.departments));
         getActionBar().setDisplayHomeAsUpEnabled(true);
 
-
-
         new GetDepartments().execute();
-
     }
-
-
-
 
     public boolean onOptionsItemSelected(MenuItem item) {
 
@@ -75,19 +63,9 @@ public class DepartmentActivity extends ListActivity implements AdapterView.OnIt
         return false;
     }
 
-
-
-
-
-
-
-
-
-
     private class GetDepartments extends AsyncTask<Void, Void, Void> {
 
         ArrayList<HashMap<String, String>> departmentlist;
-
         ProgressDialog pDialog;
 
         @Override
@@ -108,14 +86,8 @@ public class DepartmentActivity extends ListActivity implements AdapterView.OnIt
 
             departmentlist = ParseJSON(jsonStr);
 
-
-
-
-
             return null;
-
         }
-
 
         @Override
         protected void onPostExecute(Void result) {
@@ -130,8 +102,6 @@ public class DepartmentActivity extends ListActivity implements AdapterView.OnIt
                     DepartmentActivity.this, departmentlist,
                     R.layout.activity_department, new String[]{TAG_NAME}, new int[]{R.id.name});
 
-
-
             ListView lv = getListView();
             lv.setTextFilterEnabled(true);
 
@@ -139,46 +109,34 @@ public class DepartmentActivity extends ListActivity implements AdapterView.OnIt
                 public void onItemClick(AdapterView<?> parent, View view,
                                         int position, long id) {
 
-
-
                     Intent myIntent = new Intent(DepartmentActivity.this, DepartmentInfoActivity.class);
 
+                    String name = departmentlist.get(position).get(TAG_NAME);
+                    String deptid = departmentlist.get(position).get(TAG_DEPT_ID);
+                    String description = departmentlist.get(position).get(TAG_DESCRIPTION);
+                    String image = departmentlist.get(position).get(TAG_IMAGE_NAME);
 
+                    myIntent.putExtra("id", deptid);
+                    myIntent.putExtra("name", name);
+                    myIntent.putExtra("description", description);
+                    myIntent.putExtra("image", image);
 
-                    //myIntent.putExtra("test", R.id.name);
-                    myIntent.putExtra("my_data", TAG_NAME);// NEED TO REFERENCE NAME AT BOTTOM OF THIS FILE RATHER THAN TOP
                     Bundle extras = new Bundle();
                     extras.putString("status", "Data Received!");
                     myIntent.putExtras(extras);
                     startActivity(myIntent);
-
                 }
             });
 
-
-
-
-
             setListAdapter(adapter);
-
-
-
-
-
         }
-
     }
-
-
 
     @Override
     public void onItemClick(AdapterView<?> adapter, View arg1, int position, long arg3) {
         // TODO Auto-generated method stub
         String item = adapter.getItemAtPosition(position).toString();
-
     }
-
-
 
     private ArrayList<HashMap<String, String>> ParseJSON(String json) {
         if (json != null) {
@@ -189,7 +147,7 @@ public class DepartmentActivity extends ListActivity implements AdapterView.OnIt
                 JSONObject jsonObj = new JSONObject(json);
 
                 // Getting JSON Array node
-                JSONArray departments = jsonObj.getJSONArray(TAG_EVENT_INFO);
+                JSONArray departments = jsonObj.getJSONArray(TAG_DEPARTMENT_INFO);
 
                 // looping through All Students
                 for (int i = 0; i < departments.length(); i++) {
@@ -199,14 +157,6 @@ public class DepartmentActivity extends ListActivity implements AdapterView.OnIt
                     String name = c.getString(TAG_NAME);
                     String descrption = c.getString(TAG_DESCRIPTION);
                     String image_name = c.getString(TAG_IMAGE_NAME);
-                    String event_id = c.getString(TAG_EVENT_ID);
-                    String event_name = c.getString(TAG_EVENT_NAME);
-                    String event_description = c.getString(TAG_EVENT_DESCRIPTION);
-                    String start_time = c.getString(TAG_START_TIME);
-                    String end_time = c.getString(TAG_END_TIME);
-                    String location = c.getString(TAG_LOCATION);
-
-
 
 
                     // tmp hashmap for single student
@@ -217,15 +167,10 @@ public class DepartmentActivity extends ListActivity implements AdapterView.OnIt
                     department.put(TAG_NAME, name);
                     department.put(TAG_DESCRIPTION, descrption);
                     department.put(TAG_IMAGE_NAME, image_name);
-                    department.put(TAG_EVENT_ID, event_id);
-                    department.put(TAG_EVENT_NAME, event_name);
-                    department.put(TAG_EVENT_DESCRIPTION, event_description);
-                    department.put(TAG_LOCATION, location);
-                    department.put(TAG_START_TIME, start_time);
-                    department.put(TAG_END_TIME, end_time);
-////he
+
 
                     // adding student to students list
+
                     departmentlist.add(department);
                 }
                 return departmentlist;
@@ -238,11 +183,6 @@ public class DepartmentActivity extends ListActivity implements AdapterView.OnIt
             return null;
         }
     }
-
-
-
-
-
 }
 
 
