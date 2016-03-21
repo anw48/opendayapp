@@ -14,7 +14,7 @@ import android.widget.ImageButton;
 import java.util.Locale;
 
 public class MainActivity extends Activity implements View.OnClickListener {
-    ImageButton welcomebutton, departmentsbutton, disclaimersbutton, plannerbutton, contactbutton, gettingaroundbutton, toursbutton;
+    ImageButton welcomebutton, departmentsbutton, disclaimersbutton, plannerbutton, contactbutton, gettingaroundbutton, toursbutton, testbutton;
     Locale myLocale;
 
     @Override
@@ -44,6 +44,9 @@ public class MainActivity extends Activity implements View.OnClickListener {
 
         toursbutton = (ImageButton) findViewById(R.id.toursimageButton);
         toursbutton.setOnClickListener(this);
+
+        testbutton = (ImageButton) findViewById(R.id.refreshementsimageButton);
+        testbutton.setOnClickListener(this);
 
 
       }
@@ -101,6 +104,13 @@ public class MainActivity extends Activity implements View.OnClickListener {
             {
                 Intent myIntent = new Intent(MainActivity.this,
                         ToursActivity.class);
+                startActivity(myIntent);
+                break;
+            }
+            case R.id.refreshementsimageButton:
+            {
+                Intent myIntent = new Intent(MainActivity.this,
+                        AcademicDepartments.class);
                 startActivity(myIntent);
                 break;
             }
