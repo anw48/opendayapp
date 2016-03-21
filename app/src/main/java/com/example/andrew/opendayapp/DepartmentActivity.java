@@ -53,6 +53,7 @@ public class DepartmentActivity extends ListActivity implements AdapterView.OnIt
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_department);
+        setTitle(getResources().getString(R.string.departments));
         getActionBar().setDisplayHomeAsUpEnabled(true);
 
 
@@ -222,7 +223,7 @@ public class DepartmentActivity extends ListActivity implements AdapterView.OnIt
                     department.put(TAG_LOCATION, location);
                     department.put(TAG_START_TIME, start_time);
                     department.put(TAG_END_TIME, end_time);
-////hello
+////he
 
                     // adding student to students list
                     departmentlist.add(department);

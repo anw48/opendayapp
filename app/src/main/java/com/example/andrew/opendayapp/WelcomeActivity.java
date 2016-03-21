@@ -11,6 +11,7 @@ public class WelcomeActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_welcome);
+        setTitle(getResources().getString(R.string.welcomepage));
         getActionBar().setDisplayHomeAsUpEnabled(true);//reference
     }
 

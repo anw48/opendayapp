@@ -1,0 +1,159 @@
+<resources>
+    <!-- App title Details-->
+    <string name="app_name">Aberystwyth University Open Day</string>
+    <string name="welcomepage">Welcome To Aberystwyth</string>
+    <string name="departments">Departments At Aberystwyth</string>
+    <string name="academicdepartments">Departments At Aberystwyth</string>
+    <string name="disclaimers">Health And Safety</string>
+    <string name="planner">Personal Day Planner</string>
+    <string name="contact">Contact Us</string>
+    <string name="gettingaround">Getting Around</string>
+    <string name="campustours">Campus Tours</string>
+    <string name="departmentinfo">Department Information</string>
+
+
+    <!-- Activity main strings mainly image button descriptions -->
+    <string name="welcomebutton">Image button to navigate to the welcome page</string>
+    <string name="talksbutton">Image button to navigate to the talks and events page</string>
+    <string name="refreshementsbutton">Image button to navigate to the page with information about the refreshements at Aberystwyth</string>
+    <string name="toursbutton">Image button to navigate to the campus tours page</string>
+    <string name="gettingaroundbutton">Image button to navigate to the page about getting around Aberystwyth</string>
+    <string name="plannerbutton">Image button to navigate to the personal planner page</string>
+    <string name="contactbutton">Image button to navigate to view a contact us page</string>
+    <string name="disclaimersbutton">Image button to navigate to view the disclaimers page</string>
+
+
+    <!-- Welcome activity string to store the welcome message -->
+    <string name="welcome">Welcome to our open day and to Aberystwyth University</string>
+    <string name="message">It isn’t always easy to decide what you want to study
+                            and where to go to university but we hope you will
+                            find everything you need during our Open Day, to
+                            help you with that choice. If you need any further
+                            help please get in touch with a staff member in our
+                            Admissions Office or in the relevant department,
+                            and they will be glad to assist</string>
+
+    <string name="message2">Aberystwyth is a well-established university with a
+                            long tradition of academic excellence, but it is also
+                            very forward looking. We’re small enough to be
+                            friendly and to allow contact across departments,
+                            but big enough to have a wide range of study
+                            programmes in the Sciences, the Arts and the Social
+                            Sciences, in professional and vocational subjects.</string>
+
+    <string name="message3">Aberystwyth is a vibrant university town in a
+                            stunning coastal location, with a dynamic social and
+                            cultural life centred around the University. There’s
+                            a tremendous range of opportunities for sports,
+                            societies, activities and volunteering available to
+                            you here.</string>
+
+
+
+    <!-- Text views for disclaimerspage -->
+
+    <string name="emergencyheading">In The Event Of An Emergency</string>
+    <string name="safetyheading">Safety</string>
+    <string name="workheading">Building Work</string>
+
+    <string name="emergencymessage">Please contact the nearest member of staff
+                                    immediately. Instructions in case of fire are
+                                    posted in every building, but if they are not to
+                                    hand then please vacate the building by the
+                                    nearest exit, do not use the lifts, and remain
+                                    outside until informed by a member of University
+                                    staff that it is safe to re-enter.</string>
+
+    <string name="safetymessage">In the interests of your own safety, please do
+                                not touch any materials or apparatus unless
+                                specifically invited to do so by a member of staff.</string>
+
+    <string name="buildingmessage">The University is frequently upgrading
+                                    and improving facilities for students and
+                                    consequently there is some building work taking
+                                    place on the Penglais Campus. We apologise for
+                                    any inconvienence. </string>
+
+
+    <!-- Text views for getting around page  -->
+
+    <string name="carheading">Arriving by car</string>
+    <string name="carbody">Aberystwyth is easily accessible by road. Whichever way you\'re approaching from
+                            you will experience beautiful scenery. From the east the A44 climbs through the
+                            Cambrian Hills and down to the coast, and from the north or south the A487 offers
+                            spectacular views over Cardigan Bay.</string>
+    <string name="addressheading">Campus post codes</string>
+    <string name="campusaddress">Penglais Campus:   SY23 3BY
+                                Llanbadarn Campus:   SY23 3AS
+                                Gogerddan Campus:   SY23 3EB\n
+                                Old College:   SY23 2AY</string>
+
+
+    <string name="trainheading">Arriving by train</string>
+    <string name="trainbody">There are regular train services to Aberystwyth from north Wales and the Midlands
+                            (travelling from the east all services pass through Shrewsbury).
+                            Please refer to the National Rail Enquiries web site for train times and route options.</string>
+
+    <string name="busheading">Arriving by bus</string>
+    <string name="busbody">There are regular Mid Wales Travel buses between Aberystwyth and all three University campuses.</string>
+
+    <string name="penglaisheading">Buses passing the Penglais campus</string>
+    <string name="penglaisbody">03 Bus Service
+                                \n301 Bus Service
+                                \n302 Bus Service</string>
+
+    <string name="llanbadarnheading">Busses passing the Llanbadarn campus </string>
+    <string name="llanbadarnbody">301 Bus Service
+                                   \n302 Bus Service
+                                    \n305 Bus Service
+                                    \n306 Bus Service</string>
+
+    <string name="gogerddanheading">Busses passing the Gogerddan campus </string>
+    <string name="gogerddanbody">510 Bus Service
+                                    \n526 Bus Service</string>
+
+    <!-- Image button descriptions for getting around page -->
+    <string name="carbutton">Image button for loading information about arriving by car </string>
+    <string name="trainbutton">Image button for loading information about arriving by train </string>
+    <string name="busbutton">Image button for loading information about arriving by bus </string>
+    <string name="mapbutton">Image button for loading the map </string>
+    <string name="title_activity_maps">Campus Map</string>
+
+
+    <!-- Campus tours strings -->
+
+    <string name="penglaistoursheading">Penglais Campus Tours</string>
+    <string name="accomodationtoursheading">Accomodation Tours</string>
+    <string name="librarytoursheading">Hugh Owen Library Tours</string>
+    <string name="studentsuniontoursheading">Students Union Tours</string>
+
+    <string name="penglaistours">Student-led Campus tours (available through the medium of English
+                                    or Welsh), lasting approximately 45-60 minutes. Tours start from the
+                                    concourse area in front of the Arts Centre at:\n
+                                    \n
+                                    10.00am, 11.00am, 12.00pm, 1.00pm, 2.00pm and 3.00pm</string>
+    <string name="accomodationtours">Guided tours of the following locations are available every half hour from 10am, the last tour
+                                        departing at 4.30pm:\n
+                                        \n
+                                        Penbryn, Pentre Jane Morgan, Fferm Penglais, Seafront Residences, Welsh Medium Accomodation</string>
+    <string name="librarytours">Tours leave the Library Enquiry
+                                Desk at 10.30am, 2.00pm  &amp;
+                                3.00pm and last approximately
+                                20 minutes</string>
+    <string name="studentsuniontours">Student officer-led tours, lasting
+                                        approximately 15 minutes, will
+                                        start from the Students’ Union
+                                        main entrance at:\n
+                                        9.30am, 10.00am, 10.30am, 11.00am,
+                                        12.00pm, 1.00pm, 1.30pm,
+                                        2.00pm, 2.30pm and 3.00pm.\n
+                                        \n
+                                        Please call at reception for a tour
+                                        of the building and the chance to
+                                        find out more about student life
+                                        at Aberystwyth.</string>
+
+    <string name="contactmessage">Fill out the field below to send an email to our team. This will use your phones email app</string>
+
+
+</resources>

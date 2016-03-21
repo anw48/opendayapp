@@ -1,0 +1,145 @@
+<resources>
+    <!-- App title Details-->
+    <string name="app_name">Diwrnod Agored Prifysgol Aberystwyth</string>
+    <string name="welcomepage"> Croeso i Brifysgol Aberystwyth</string>
+    <string name="departments">Adrannau Yn Aberystwyth</string>
+    <string name="academicdepartments">Adrannau Academaidd Yn Aberystwyth</string>
+    <string name="disclaimers">Iechyd a Diogelwch</string>
+    <string name="planner">Cynllunydd Dydd Personol</string>
+    <string name="contact">Cysylltwch â ni</string>
+    <string name="gettingaround">Symud o gwmpas</string>
+    <string name="campustours">Teithiau Campws</string>
+    <string name="departmentinfo">Gwybodaeth Adran</string>
+
+
+    <!-- Activity main strings mainly image button descriptions  dont need to translate not seen -->
+    <string name="welcomebutton">Image button to navigate to the welcome page</string>
+    <string name="talksbutton">Image button to navigate to the talks and events page</string>
+    <string name="refreshementsbutton">Image button to navigate to the page with information about the refreshements at Aberystwyth</string>
+    <string name="toursbutton">Image button to navigate to the campus tours page</string>
+    <string name="gettingaroundbutton">Image button to navigate to the page about getting around Aberystwyth</string>
+    <string name="plannerbutton">Image button to navigate to the personal planner page</string>
+    <string name="contactbutton">Image button to navigate to view a contact us page</string>
+    <string name="disclaimersbutton">Image button to navigate to view the disclaimers page</string>
+
+
+    <!-- Welcome activity string to store the welcome message -->
+    <string name="welcome">Croeso i ein diwrnod agored ac i Brifysgol Aberystwyth</string>
+    <string name="message">Nid yw bob amser yn hawdd i benderfynu beth rydych am ei astudio
+                         a ble i fynd i brifysgol ond rydym yn gobeithio y byddwch yn dod o
+                        hyd i bopeth sydd angen i chi yn ystod ein Diwrnod Agored, i\'ch helpu
+                        gyda y dewis hwnnw. Os oes angen unrhyw gymorth pellach cysylltwch ag
+                        aelod staff yn ein Swyddfa Derbyniadau neu yn yr adran berthnasol, a byddant yn falch o gynorthwyo</string>
+
+    <string name="message2">Aberystwyth yn brifysgol sefydlu\'n dda gyda draddodiad hir o ragoriaeth academaidd, ond mae hefyd yn ymlaen yn edrych. Rydym yn ddigon bach i fod yn
+        gyfeillgar ac i ganiatáu cyswllt ar draws adrannau,
+        ond yn ddigon mawr i gael ystod eang o astudiaeth
+        rhaglenni yn y Gwyddorau, y Celfyddydau a\'r Cymdeithasol
+        Gwyddorau, mewn pynciau proffesiynol a galwedigaethol.</string>
+
+    <string name="message3">Mae Aberystwyth yn dref prifysgol fywiog mewn
+        lleoliad arfordirol trawiadol, gyda gymdeithasol deinamig a
+        bywyd diwylliannol ganoli o amgylch y Brifysgol. Mae
+        amrywiaeth aruthrol o gyfleoedd ar gyfer chwaraeon,
+        cymdeithasau, gweithgareddau a gwirfoddoli sydd ar gael i ti yma.</string>
+
+
+
+    <!-- Text views for disclaimerspage -->
+
+    <string name="emergencyheading">Yn Achos Argyfwng</string>
+    <string name="safetyheading">diogelwch</string>
+    <string name="workheading">Gwaith adeiladu</string>
+
+    <string name="emergencymessage">Cysylltwch â\'r aelod agosaf o\'r staff ar unwaith. Cyfarwyddiadau os bydd tân yn
+        postio ym mhob adeilad, ond os nad ydynt yn i llaw yna fynd allan o\'r adeilad drwy\'r
+        allanfa agosaf, peidiwch â defnyddio\'r lifftiau, ac yn parhau i fod y tu allan nes hysbysu gan aelod o Brifysgol
+        staff ei bod yn ddiogel i ail-ymuno.</string>
+
+    <string name="safetymessage">Er lles eich diogelwch eich hun, os gwelwch yn dda yn ei wneud
+        â chyffwrdd unrhyw ddeunyddiau neu gyfarpar oni bai
+        gwahodd yn benodol i wneud hynny gan aelod o\'r staff.</string>
+
+    <string name="buildingmessage">Mae\'r Brifysgol yn aml yn uwchraddio a gwella cyfleusterau ar gyfer myfyrwyr,
+        ac o ganlyniad mae rhywfaint o waith adeiladu yn digwydd ar Gampws Penglais. Ymddiheurwn am unrhyw anghyfleustra. </string>
+
+
+    <!-- Text views for getting around page  -->
+
+    <string name="carheading">Cyrraedd mewn car</string>
+    <string name="carbody">Aberystwyth yn hawdd ei gyrraedd ar y ffordd. Pa bynnag ffordd rydych \ chi\'n dod o gyfeiriad
+        byddwch yn profi golygfeydd prydferth. O\'r dwyrain mae\'r A44 yn dringo drwy\'r Hills Cambrian ac i lawr at yr arfordir, ac o\'r gogledd neu\'r de cynigion A487
+        golygfeydd ysblennydd dros Fae Ceredigion.</string>
+    <string name="addressheading">codau post campws</string>
+    <string name="campusaddress">campws Penglais:   SY23 3BY
+                                campws Llanbadarn:   SY23 3AS
+                                campws Gogerddan:   SY23 3EB\n
+                                Yr hen Goleg:   SY23 2AY</string>
+
+
+    <string name="trainheading">Cyrraedd ar y trên</string>
+    <string name="trainbody">Mae gwasanaethau trên rheolaidd i Aberystwyth o ogledd Cymru a Chanolbarth Lloegr
+        (Teithio o\'r dwyrain pob gwasanaeth yn mynd drwy Amwythig).
+        Cyfeiriwch at y wefan Ymholiadau National Rail ar gyfer amseroedd trenau a dewisiadau llwybr.</string>
+
+    <string name="busheading">Cyrraedd ar y bws</string>
+    <string name="busbody">Mae bysiau Mid Wales Travel rheolaidd rhwng Aberystwyth a\'r thri champws y Brifysgol.</string>
+
+    <string name="penglaisheading">Bysiau heibio campws Penglais</string>
+    <string name="penglaisbody">03 Gwasanaeth Bws
+                                \n301 Gwasanaeth Bws
+                                \n302 Gwasanaeth Bws</string>
+
+    <string name="llanbadarnheading">Bysiau heibio campws Llanbadarn </string>
+    <string name="llanbadarnbody">301 Gwasanaeth Bws
+                                   \n302 Gwasanaeth Bws
+                                    \n305 Gwasanaeth Bws
+                                    \n306 Gwasanaeth Bws</string>
+
+    <string name="gogerddanheading">Bysiau heibio campws Gogerddan</string>
+    <string name="gogerddanbody">510 Gwasanaeth Bws
+                                    \n526 Gwasanaeth Bws</string>
+
+    <!-- Image button descriptions for getting around page don't need to translate not seen -->
+    <string name="carbutton">Image button for loading information about arriving by car </string>
+    <string name="trainbutton">Image button for loading information about arriving by train </string>
+    <string name="busbutton">Image button for loading information about arriving by bus </string>
+    <string name="mapbutton">Image button for loading the map </string>
+
+
+    <string name="title_activity_maps">Map Campws</string>
+
+
+    <!-- Campus tours strings -->
+
+    <string name="penglaistoursheading">Penglais Teithiau Campws</string>
+    <string name="accomodationtoursheading">Teithiau llety</string>
+    <string name="librarytoursheading">Owen Teithiau Llyfrgell Hugh</string>
+    <string name="studentsuniontoursheading">Teithiau Undeb y Myfyrwyr</string>
+
+    <string name="penglaistours">Teithiau o\'r campws a arweinir gan fyfyrwyr (ar gael trwy gyfrwng y Saesneg
+        neu Gymraeg), yn para tua 45-60 munud. Teithiau yn dechrau o\'r
+        ardal cyntedd o flaen Canolfan y Celfyddydau yn:\n
+        \n
+        10.00am, 11.00am, 12.00pm, 1.00pm, 2.00pm and 3.00pm</string>
+
+    <string name="accomodationtours">teithiau tywys o\'r lleoliadau canlynol ar gael bob hanner awr o 10am, mae\'r daith olaf
+        gadael am 4.30pm:\n
+        \n
+        Penbryn, Pentre Jane Morgan, Fferm Penglais, Preswylfeydd Glan y Môr</string>
+
+    <string name="librarytours">Teithiau yn gadael y Ymholiad Llyfrgell
+        Desg am 10.30am, 2.00pm &amp; 3.00pm a diwethaf oddeutu 20 munud</string>
+
+    <string name="studentsuniontours">teithiau a arweinir gan swyddog Myfyrwyr, parhaol
+        tua 15 munud, bydd dechrau o Undeb y Myfyrwyr brif fynedfa yn: \n
+        09:30, 10.00am, 10.30am, 11:00,
+        12:00, 01:00, 13:30,14:00, 2.30pm a 3.00pm. \n
+        \n
+        Ffoniwch y dderbynfa am daith yr adeilad a\'r cyfle i
+        gael gwybod mwy am fywyd myfyriwr yn Aberystwyth.</string>
+
+    <string name="contactmessage">Llenwch y maes isod i anfon e-bost at ein tîm. Bydd hwn yn defnyddio eich app ffonau e-bost</string>
+
+
+</resources>

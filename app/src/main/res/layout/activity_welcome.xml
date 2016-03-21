@@ -1,14 +1,21 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:orientation="vertical"
-    tools:context="com.example.andrew.opendayapp.WelcomeActivity">
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <LinearLayout
+
+        xmlns:tools="http://schemas.android.com/tools"
+
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        tools:context="com.example.andrew.opendayapp.WelcomeActivity"
+        android:weightSum="1">
 
     <TextView
         android:layout_marginTop="1dp"
@@ -17,7 +24,7 @@
         android:id="@+id/welcome"
         android:text="@string/welcome"
         android:textStyle="bold"
-        android:textSize="15dp"
+        android:textSize="20sp"
         android:textColor="#56318e"
 
         />
@@ -29,7 +36,7 @@
         android:id="@+id/message"
         android:text="@string/message"
         android:textColor="#000000"
-        android:textSize="16dp"
+        android:textSize="18sp"
         android:layout_below="@id/welcome"
         />
 
@@ -40,7 +47,7 @@
         android:id="@+id/message2"
         android:text="@string/message2"
         android:textColor="#000000"
-        android:textSize="16dp"
+        android:textSize="18sp"
         android:layout_below="@id/message"
         />
     <TextView
@@ -50,10 +57,11 @@
         android:id="@+id/message3"
         android:text="@string/message3"
         android:textColor="#000000"
-        android:textSize="16dp"
+        android:textSize="18sp"
         android:layout_below="@id/message2"
         />
 
 
 
 </LinearLayout>
+</ScrollView>

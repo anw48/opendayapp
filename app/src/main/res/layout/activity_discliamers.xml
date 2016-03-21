@@ -37,7 +37,7 @@
             android:id="@+id/emergencymessage"
             android:text="@string/emergencymessage"
             android:textColor="#000000"
-            android:textSize="20sp"
+            android:textSize="18sp"
             />
 
 
@@ -60,7 +60,7 @@
             android:id="@+id/safetymessage"
             android:text="@string/safetymessage"
             android:textColor="#000000"
-            android:textSize="20sp"
+            android:textSize="18sp"
             />
 
         <TextView
@@ -82,7 +82,7 @@
             android:id="@+id/buildingmessage"
             android:text="@string/buildingmessage"
             android:textColor="#000000"
-            android:textSize="20sp"
+            android:textSize="18sp"
             />
 
 

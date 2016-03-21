@@ -14,7 +14,7 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.andrew.opendayapp.DepartmentActivity"
     android:weightSum="1">
-    >
+
 
 
 

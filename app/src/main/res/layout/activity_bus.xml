@@ -45,7 +45,7 @@
         android:id="@+id/busbody"
         android:text="@string/busbody"
         android:textColor="#000000"
-        android:textSize="20sp"
+        android:textSize="18sp"
         />
 
     <TextView
@@ -68,7 +68,7 @@
         android:id="@+id/penglaisbody"
         android:text="@string/penglaisbody"
         android:textColor="#000000"
-        android:textSize="20sp"
+        android:textSize="18sp"
         />
 
     <TextView
@@ -91,7 +91,7 @@
         android:id="@+id/llanbadarnbody"
         android:text="@string/llanbadarnbody"
         android:textColor="#000000"
-        android:textSize="20sp"
+        android:textSize="18sp"
         />
     <TextView
         android:layout_marginTop="10dp"
@@ -113,7 +113,7 @@
         android:id="@+id/gogerddanbody"
         android:text="@string/gogerddanbody"
         android:textColor="#000000"
-        android:textSize="20sp"
+        android:textSize="18sp"
         />
 
 </LinearLayout>

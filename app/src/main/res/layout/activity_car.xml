@@ -41,7 +41,7 @@
         android:id="@+id/carbody"
         android:text="@string/carbody"
         android:textColor="#000000"
-        android:textSize="20sp"
+        android:textSize="18sp"
         android:layout_below="@+id/carheading"
         />
 
@@ -67,7 +67,7 @@
         android:id="@+id/campusaddress"
         android:text="@string/campusaddress"
         android:textColor="#000000"
-        android:textSize="20sp"
+        android:textSize="18sp"
         android:lineSpacingExtra="10dp"
         android:layout_alignBottom="@+id/carbody"
         android:layout_alignParentLeft="true"

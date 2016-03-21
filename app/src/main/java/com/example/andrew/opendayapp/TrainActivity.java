@@ -11,6 +11,7 @@ public class TrainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_train);
+        setTitle(getResources().getString(R.string.trainheading));
         getActionBar().setDisplayHomeAsUpEnabled(true);
     }
 

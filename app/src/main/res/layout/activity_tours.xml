@@ -35,7 +35,7 @@
             android:id="@+id/pengliastours"
             android:text="@string/penglaistours"
             android:textColor="#000000"
-            android:textSize="20sp"/>
+            android:textSize="18sp"/>
 
         <!-- Accommodation tours text views -->
         <TextView
@@ -55,7 +55,7 @@
             android:id="@+id/accomoodationtours"
             android:text="@string/accomodationtours"
             android:textColor="#000000"
-            android:textSize="20sp"/>
+            android:textSize="18sp"/>
 
         <!--  Library tours text views -->
         <TextView
@@ -75,7 +75,7 @@
             android:id="@+id/librarytours"
             android:text="@string/librarytours"
             android:textColor="#000000"
-            android:textSize="20sp"/>
+            android:textSize="18sp"/>
 
         <!-- Students union tours text views -->
         <TextView
@@ -95,7 +95,7 @@
             android:id="@+id/sutours"
             android:text="@string/studentsuniontours"
             android:textColor="#000000"
-            android:textSize="20sp"/>
+            android:textSize="18sp"/>
 
 
 

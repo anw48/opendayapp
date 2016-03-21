@@ -16,6 +16,7 @@ public class Getting_Around_Activity extends Activity implements View.OnClickLis
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_getting_around_);
+        setTitle(getResources().getString(R.string.gettingaround));
         getActionBar().setDisplayHomeAsUpEnabled(true);
 
         mapbutton = (ImageButton) findViewById(R.id.mapImageButton);

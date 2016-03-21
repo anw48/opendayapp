@@ -22,6 +22,7 @@ public class PlannerActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_planner);
+        setTitle(getResources().getString(R.string.planner));
         getActionBar().setDisplayHomeAsUpEnabled(true);
         txtEditor=(EditText)findViewById(R.id.plannertextbox);
         readFileInEditor();
