@@ -46,12 +46,20 @@ public class Event_List_Activity extends ListActivity implements AdapterView.OnI
     private static final String TAG_DESCRIPTION = "description";
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_department);
+        setContentView(R.layout.activity_event__list_);
         setTitle(getResources().getString(R.string.departments));
         getActionBar().setDisplayHomeAsUpEnabled(true);
+
+
+        Intent intent = getIntent();
+        final String id = intent.getStringExtra("deptid");
+        ((TextView)findViewById(R.id.passid)).setText(id);
+        Bundle bundle = intent.getExtras();
+
 
         new GetDepartments().execute();
 
@@ -110,7 +118,7 @@ public class Event_List_Activity extends ListActivity implements AdapterView.OnI
                 public void onItemClick(AdapterView<?> parent, View view,
                                         int position, long id) {
 
-                    Intent myIntent = new Intent(Event_List_Activity.this, DepartmentInfoActivity.class);
+                    Intent myIntent = new Intent(Event_List_Activity.this, Event_Info_Activity.class);
 
                     String eventid = eventlist.get(position).get(TAG_EVENT_ID);
                     String name = eventlist.get(position).get(TAG_EVENT_NAME);

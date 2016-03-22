@@ -22,14 +22,13 @@ public class DepartmentInfoActivity extends Activity {
         getActionBar().setDisplayHomeAsUpEnabled(true);
 
 
-        // 1. get passed intent
+
         Intent intent = getIntent();
-        // 2. get message value from intent
-        String id = intent.getStringExtra("deptid");
+        final String id = intent.getStringExtra("deptid");
         String name = intent.getStringExtra("name");
         String description = intent.getStringExtra("description");
         String image = intent.getStringExtra("image");
-        // 3. show message on textView
+
         ((TextView)findViewById(R.id.deptid)).setText(id);
         ((TextView)findViewById(R.id.name)).setText(name);
         ((TextView)findViewById(R.id.description)).setText(description);
@@ -41,7 +40,6 @@ public class DepartmentInfoActivity extends Activity {
         imgView.setImageResource(resID);
 
         Bundle bundle = intent.getExtras();
-        // 5. get status value from bundle
         String status = bundle.getString("status");
 
 
@@ -49,7 +47,14 @@ public class DepartmentInfoActivity extends Activity {
         final Button button = (Button) findViewById(R.id.buttonevents);
         button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent myIntent = new Intent(DepartmentInfoActivity.this, AcademicDepartments.class);
+
+
+
+                Intent myIntent = new Intent(DepartmentInfoActivity.this, Event_List_Activity.class);
+                myIntent.putExtra("id",id);
+
+                Bundle extras = new Bundle();
+                myIntent.putExtras(extras);
                 startActivity(myIntent);
 
             }

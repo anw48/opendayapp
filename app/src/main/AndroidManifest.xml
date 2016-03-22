@@ -106,7 +106,10 @@
             android:parentActivityName=".MainActivity" />
         <activity
             android:name=".Event_List_Activity"
-            android:parentActivityName=".MainActivity"/>
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".Event_Info_Activity"
+            android:parentActivityName=".Event_List_Activity"/>
     </application>
 
 </manifest>
