@@ -27,20 +27,20 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
-////////
+
 public class DepartmentActivity extends ListActivity implements AdapterView.OnItemClickListener {
 
 
     private static String url = "http://ten32.co.uk/openday/get_all_departments.php";
-
 
     private static final String TAG_DEPARTMENT_INFO = "Departments";
     private static final String TAG_DEPT_ID = "dept_id";
     private static final String TAG_NAME = "name";
     private static final String TAG_DESCRIPTION = "description";
     private static final String TAG_IMAGE_NAME = "image_name";
-
 
 
     @Override
@@ -51,7 +51,9 @@ public class DepartmentActivity extends ListActivity implements AdapterView.OnIt
         getActionBar().setDisplayHomeAsUpEnabled(true);
 
         new GetDepartments().execute();
+
     }
+
 
     public boolean onOptionsItemSelected(MenuItem item) {
 
@@ -69,7 +71,7 @@ public class DepartmentActivity extends ListActivity implements AdapterView.OnIt
         ProgressDialog pDialog;
 
         @Override
-        protected void onPreExecute(){
+        protected void onPreExecute() {
             super.onPreExecute();
             pDialog = new ProgressDialog(DepartmentActivity.this);
             pDialog.setMessage("Please wait information is being retrieved");
@@ -79,13 +81,9 @@ public class DepartmentActivity extends ListActivity implements AdapterView.OnIt
         @Override
         protected Void doInBackground(Void... arg0) {
             WebRequest webreq = new WebRequest();
-
             String jsonStr = webreq.makeWebServiceCall(url, WebRequest.GET);
-
             Log.d("Response: ", "> " + jsonStr);
-
             departmentlist = ParseJSON(jsonStr);
-
             return null;
         }
 

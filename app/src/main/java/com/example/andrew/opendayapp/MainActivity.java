@@ -68,7 +68,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
             case R.id.talksimageButton:
             {
                 Intent myIntent = new Intent(MainActivity.this,
-                        DepartmentActivity.class);
+                        Department_Home_Activity.class);
                 startActivity(myIntent);
                 break;
             }
@@ -110,7 +110,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
             case R.id.refreshementsimageButton:
             {
                 Intent myIntent = new Intent(MainActivity.this,
-                        AcademicDepartments.class);
+                        Event_List_Activity.class);
                 startActivity(myIntent);
                 break;
             }

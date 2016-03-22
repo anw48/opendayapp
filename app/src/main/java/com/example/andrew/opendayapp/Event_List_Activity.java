@@ -1,8 +1,10 @@
 package com.example.andrew.opendayapp;
 
+import android.app.Activity;
 import android.app.ListActivity;
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.NavUtils;
@@ -13,6 +15,8 @@ import android.widget.AdapterView;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
+import android.widget.TextView;
+import android.widget.Toast;
 
 
 import junit.framework.Test;
@@ -20,21 +24,26 @@ import junit.framework.Test;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+
 import java.util.ArrayList;
 import java.util.HashMap;
-
-public class AcademicDepartments extends ListActivity implements AdapterView.OnItemClickListener {
-
-
-    private static String url = "http://ten32.co.uk/openday/get_academic_departments.php";
+import java.util.List;
+import java.util.Map;
 
 
-    private static final String TAG_DEPARTMENT_INFO = "AcademicDepartments";
+public class Event_List_Activity extends ListActivity implements AdapterView.OnItemClickListener {
+
+
+    private static String url = "http://ten32.co.uk/openday/get_all_academic_events.php";
+
+    private static final String TAG_EVENT_INFO = "AcademicEvents";
+    private static final String TAG_EVENT_ID = "event_id";
     private static final String TAG_DEPT_ID = "dept_id";
-    private static final String TAG_NAME = "name";
+    private static final String TAG_EVENT_NAME = "event_name";
+    private static final String TAG_START_TIME = "Start_time";
+    private static final String TAG_END_TIME = "end_time";
+    private static final String TAG_LOCATION = "location";
     private static final String TAG_DESCRIPTION = "description";
-    private static final String TAG_IMAGE_NAME = "image_name";
-
 
 
     @Override
@@ -45,7 +54,9 @@ public class AcademicDepartments extends ListActivity implements AdapterView.OnI
         getActionBar().setDisplayHomeAsUpEnabled(true);
 
         new GetDepartments().execute();
+
     }
+
 
     public boolean onOptionsItemSelected(MenuItem item) {
 
@@ -59,13 +70,13 @@ public class AcademicDepartments extends ListActivity implements AdapterView.OnI
 
     private class GetDepartments extends AsyncTask<Void, Void, Void> {
 
-        ArrayList<HashMap<String, String>> departmentlist;
+        ArrayList<HashMap<String, String>> eventlist;
         ProgressDialog pDialog;
 
         @Override
-        protected void onPreExecute(){
+        protected void onPreExecute() {
             super.onPreExecute();
-            pDialog = new ProgressDialog(AcademicDepartments.this);
+            pDialog = new ProgressDialog(Event_List_Activity.this);
             pDialog.setMessage("Please wait information is being retrieved");
             pDialog.show();
         }
@@ -73,13 +84,9 @@ public class AcademicDepartments extends ListActivity implements AdapterView.OnI
         @Override
         protected Void doInBackground(Void... arg0) {
             WebRequest webreq = new WebRequest();
-
             String jsonStr = webreq.makeWebServiceCall(url, WebRequest.GET);
-
             Log.d("Response: ", "> " + jsonStr);
-
-            departmentlist = ParseJSON(jsonStr);
-
+            eventlist = ParseJSON(jsonStr);
             return null;
         }
 
@@ -93,8 +100,8 @@ public class AcademicDepartments extends ListActivity implements AdapterView.OnI
              * Updating parsed JSON data into ListView
              * */
             ListAdapter adapter = new SimpleAdapter(
-                    AcademicDepartments.this, departmentlist,
-                    R.layout.activity_department, new String[]{TAG_NAME}, new int[]{R.id.name});
+                    Event_List_Activity.this, eventlist,
+                    R.layout.activity_event__list_, new String[]{TAG_EVENT_NAME}, new int[]{R.id.name});
 
             ListView lv = getListView();
             lv.setTextFilterEnabled(true);
@@ -103,17 +110,23 @@ public class AcademicDepartments extends ListActivity implements AdapterView.OnI
                 public void onItemClick(AdapterView<?> parent, View view,
                                         int position, long id) {
 
-                    Intent myIntent = new Intent(AcademicDepartments.this, DepartmentInfoActivity.class);
+                    Intent myIntent = new Intent(Event_List_Activity.this, DepartmentInfoActivity.class);
 
-                    String name = departmentlist.get(position).get(TAG_NAME);
-                    String deptid = departmentlist.get(position).get(TAG_DEPT_ID);
-                    String description = departmentlist.get(position).get(TAG_DESCRIPTION);
-                    String image = departmentlist.get(position).get(TAG_IMAGE_NAME);
+                    String eventid = eventlist.get(position).get(TAG_EVENT_ID);
+                    String name = eventlist.get(position).get(TAG_EVENT_NAME);
+                    String deptid = eventlist.get(position).get(TAG_DEPT_ID);
+                    String start = eventlist.get(position).get(TAG_START_TIME);
+                    String end = eventlist.get(position).get(TAG_END_TIME);
+                    String location = eventlist.get(position).get(TAG_LOCATION);
+                    String description = eventlist.get(position).get(TAG_DESCRIPTION);
 
+                    myIntent.putExtra("eventid", eventid);
                     myIntent.putExtra("id", deptid);
                     myIntent.putExtra("name", name);
                     myIntent.putExtra("description", description);
-                    myIntent.putExtra("image", image);
+                    myIntent.putExtra("start", start);
+                    myIntent.putExtra("end", end);
+                    myIntent.putExtra("location", location);
 
 
                     Bundle extras = new Bundle();
@@ -137,38 +150,45 @@ public class AcademicDepartments extends ListActivity implements AdapterView.OnI
         if (json != null) {
             try {
                 // Hashmap for ListView
-                ArrayList<HashMap<String, String>> departmentlist = new ArrayList<HashMap<String, String>>();
+                ArrayList<HashMap<String, String>> eventlist = new ArrayList<HashMap<String, String>>();
 
                 JSONObject jsonObj = new JSONObject(json);
 
                 // Getting JSON Array node
-                JSONArray departments = jsonObj.getJSONArray(TAG_DEPARTMENT_INFO);
+                JSONArray events = jsonObj.getJSONArray(TAG_EVENT_INFO);
 
                 // looping through All Students
-                for (int i = 0; i < departments.length(); i++) {
-                    JSONObject c = departments.getJSONObject(i);
+                for (int i = 0; i < events.length(); i++) {
+                    JSONObject c = events.getJSONObject(i);
 
+                    String event_id = c.getString(TAG_EVENT_ID);
                     String dept_id = c.getString(TAG_DEPT_ID);
-                    String name = c.getString(TAG_NAME);
+                    String event_name = c.getString(TAG_EVENT_NAME);
+                    String start_time = c.getString(TAG_START_TIME);
+                    String end_time = c.getString(TAG_END_TIME);
+                    String location = c.getString(TAG_LOCATION);
                     String descrption = c.getString(TAG_DESCRIPTION);
-                    String image_name = c.getString(TAG_IMAGE_NAME);
 
 
                     // tmp hashmap for single student
-                    HashMap<String, String> department = new HashMap<String, String>();
+                    HashMap<String, String> event = new HashMap<String, String>();
 
                     // adding each child node to HashMap key => value
-                    department.put(TAG_DEPT_ID, dept_id);
-                    department.put(TAG_NAME, name);
-                    department.put(TAG_DESCRIPTION, descrption);
-                    department.put(TAG_IMAGE_NAME, image_name);
+                    event.put(TAG_EVENT_ID, event_id);
+                    event.put(TAG_DEPT_ID, dept_id);
+                    event.put(TAG_EVENT_NAME, event_name);
+                    event.put(TAG_START_TIME, start_time);
+                    event.put(TAG_END_TIME, end_time);
+                    event.put(TAG_LOCATION, location);
+                    event.put(TAG_DESCRIPTION, descrption);
+
 
 
                     // adding student to students list
 
-                    departmentlist.add(department);
+                    eventlist.add(event);
                 }
-                return departmentlist;
+                return eventlist;
             } catch (JSONException e) {
                 e.printStackTrace();
                 return null;
@@ -178,9 +198,6 @@ public class AcademicDepartments extends ListActivity implements AdapterView.OnI
             return null;
         }
     }
-
-
-
 }
 
 

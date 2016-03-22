@@ -2,6 +2,7 @@ package com.example.andrew.opendayapp;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.support.v4.app.NavUtils;
 import android.view.MenuItem;
@@ -32,6 +33,13 @@ public class DepartmentInfoActivity extends Activity {
         ((TextView)findViewById(R.id.deptid)).setText(id);
         ((TextView)findViewById(R.id.name)).setText(name);
         ((TextView)findViewById(R.id.description)).setText(description);
+
+        ImageView imgView = (ImageView) findViewById(R.id.image);
+
+        int resID = getResources().getIdentifier(image, "drawable", getPackageName());
+
+        imgView.setImageResource(resID);
+
         Bundle bundle = intent.getExtras();
         // 5. get status value from bundle
         String status = bundle.getString("status");
