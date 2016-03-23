@@ -2,7 +2,6 @@ package com.example.andrew.opendayapp;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.support.v4.app.NavUtils;
 import android.view.MenuItem;
@@ -10,21 +9,20 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
-public class DepartmentInfoActivity extends Activity {
+public class AcademicDepartmentInfoActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_department_info);
+        setContentView(R.layout.activity_academic_department_info);
         setTitle(getResources().getString(R.string.departmentinfo));
         getActionBar().setDisplayHomeAsUpEnabled(true);
 
 
 
         Intent intent = getIntent();
-        final String id = intent.getStringExtra("deptid");
+        final String id = intent.getStringExtra("id");
         String name = intent.getStringExtra("name");
         String description = intent.getStringExtra("description");
         String image = intent.getStringExtra("image");
@@ -50,8 +48,8 @@ public class DepartmentInfoActivity extends Activity {
 
 
 
-                Intent myIntent = new Intent(DepartmentInfoActivity.this, Event_List_Activity.class);
-                myIntent.putExtra("id",id);
+                Intent myIntent = new Intent(AcademicDepartmentInfoActivity.this, Academic_Event_List_Activity.class);
+                myIntent.putExtra("id", id);
 
                 Bundle extras = new Bundle();
                 myIntent.putExtras(extras);

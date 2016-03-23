@@ -2,14 +2,17 @@
     <!-- App title Details-->
     <string name="app_name">Diwrnod Agored Prifysgol Aberystwyth</string>
     <string name="welcomepage"> Croeso i Brifysgol Aberystwyth</string>
-    <string name="departments">Adrannau Yn Aberystwyth</string>
-    <string name="academicdepartments">Adrannau Academaidd Yn Aberystwyth</string>
+    <string name="departments">Adrannau Di Academaidd</string>
+    <string name="academicdepartments">Adrannau academaidd</string>
     <string name="disclaimers">Iechyd a Diogelwch</string>
     <string name="planner">Cynllunydd Dydd Personol</string>
     <string name="contact">Cysylltwch â ni</string>
     <string name="gettingaround">Symud o gwmpas</string>
     <string name="campustours">Teithiau Campws</string>
     <string name="departmentinfo">Gwybodaeth Adran</string>
+    <string name="eventlist">Digwyddiadau heddiw</string>
+    <string name="eventinfo">Gwybodaeth am y digwyddiad</string>
+    <string name="eventhome">Adrannau Yn Aberystwyth</string>
 
 
     <!-- Activity main strings mainly image button descriptions  dont need to translate not seen -->

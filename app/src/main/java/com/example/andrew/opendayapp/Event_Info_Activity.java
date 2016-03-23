@@ -13,6 +13,8 @@ public class Event_Info_Activity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_event_info);
+        setTitle(getResources().getString(R.string.eventinfo));
+
         getActionBar().setDisplayHomeAsUpEnabled(true);
 
 

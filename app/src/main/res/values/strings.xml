@@ -2,14 +2,17 @@
     <!-- App title Details-->
     <string name="app_name">Aberystwyth University Open Day</string>
     <string name="welcomepage">Welcome To Aberystwyth</string>
-    <string name="departments">Departments At Aberystwyth</string>
-    <string name="academicdepartments">Departments At Aberystwyth</string>
+    <string name="departments">Non Academic Departments</string>
+    <string name="academicdepartments">Academic Departments</string>
     <string name="disclaimers">Health And Safety</string>
     <string name="planner">Personal Day Planner</string>
     <string name="contact">Contact Us</string>
     <string name="gettingaround">Getting Around</string>
     <string name="campustours">Campus Tours</string>
     <string name="departmentinfo">Department Information</string>
+    <string name="eventlist">Todays Events</string>
+    <string name="eventinfo">Event Information</string>
+    <string name="eventhome">Departments At Aberystwyth</string>
 
 
     <!-- Activity main strings mainly image button descriptions -->

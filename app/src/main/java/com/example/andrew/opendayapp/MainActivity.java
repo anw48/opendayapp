@@ -107,13 +107,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
                 startActivity(myIntent);
                 break;
             }
-            case R.id.refreshementsimageButton:
-            {
-                Intent myIntent = new Intent(MainActivity.this,
-                        Event_List_Activity.class);
-                startActivity(myIntent);
-                break;
-            }
+
 
 
         }

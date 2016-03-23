@@ -16,6 +16,7 @@ public class Department_Home_Activity extends Activity implements View.OnClickLi
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_department__home_);
+        setTitle(getResources().getString(R.string.eventhome));
         getActionBar().setDisplayHomeAsUpEnabled(true);
 
 

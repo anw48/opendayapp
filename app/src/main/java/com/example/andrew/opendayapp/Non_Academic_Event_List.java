@@ -4,7 +4,6 @@ import android.app.Activity;
 import android.app.ListActivity;
 import android.app.ProgressDialog;
 import android.content.Intent;
-import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.NavUtils;
@@ -16,10 +15,6 @@ import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.TextView;
-import android.widget.Toast;
-
-
-import junit.framework.Test;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -27,14 +22,11 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+
+public class Non_Academic_Event_List extends ListActivity implements AdapterView.OnItemClickListener {
 
 
-public class Event_List_Activity extends ListActivity implements AdapterView.OnItemClickListener {
-
-
-    private static String url = "http://ten32.co.uk/openday/get_all_academic_events.php";
+    private static String url;
 
     private static final String TAG_EVENT_INFO = "AcademicEvents";
     private static final String TAG_EVENT_ID = "event_id";
@@ -46,25 +38,24 @@ public class Event_List_Activity extends ListActivity implements AdapterView.OnI
     private static final String TAG_DESCRIPTION = "description";
 
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_event__list_);
-        setTitle(getResources().getString(R.string.departments));
+        setContentView(R.layout.activity_non_academic_event_list);
+        setTitle(getResources().getString(R.string.eventlist));
+
+
         getActionBar().setDisplayHomeAsUpEnabled(true);
-
-
         Intent intent = getIntent();
-        final String id = intent.getStringExtra("deptid");
-        ((TextView)findViewById(R.id.passid)).setText(id);
+        final String id = intent.getStringExtra("id");
+        ((TextView) findViewById(R.id.passid)).setText(id);
         Bundle bundle = intent.getExtras();
+
+        url = "http://ten32.co.uk/openday/eventstest.php?id=" + id;//change url and locale
 
 
         new GetDepartments().execute();
-
     }
-
 
     public boolean onOptionsItemSelected(MenuItem item) {
 
@@ -84,7 +75,7 @@ public class Event_List_Activity extends ListActivity implements AdapterView.OnI
         @Override
         protected void onPreExecute() {
             super.onPreExecute();
-            pDialog = new ProgressDialog(Event_List_Activity.this);
+            pDialog = new ProgressDialog(Non_Academic_Event_List.this);
             pDialog.setMessage("Please wait information is being retrieved");
             pDialog.show();
         }
@@ -108,8 +99,8 @@ public class Event_List_Activity extends ListActivity implements AdapterView.OnI
              * Updating parsed JSON data into ListView
              * */
             ListAdapter adapter = new SimpleAdapter(
-                    Event_List_Activity.this, eventlist,
-                    R.layout.activity_event__list_, new String[]{TAG_EVENT_NAME}, new int[]{R.id.name});
+                    Non_Academic_Event_List.this, eventlist,
+                    R.layout.activity_academic_event__list_, new String[]{TAG_EVENT_NAME}, new int[]{R.id.name});
 
             ListView lv = getListView();
             lv.setTextFilterEnabled(true);
@@ -118,7 +109,7 @@ public class Event_List_Activity extends ListActivity implements AdapterView.OnI
                 public void onItemClick(AdapterView<?> parent, View view,
                                         int position, long id) {
 
-                    Intent myIntent = new Intent(Event_List_Activity.this, Event_Info_Activity.class);
+                    Intent myIntent = new Intent(Non_Academic_Event_List.this, Event_Info_Activity.class);
 
                     String eventid = eventlist.get(position).get(TAG_EVENT_ID);
                     String name = eventlist.get(position).get(TAG_EVENT_NAME);
@@ -191,7 +182,6 @@ public class Event_List_Activity extends ListActivity implements AdapterView.OnI
                     event.put(TAG_DESCRIPTION, descrption);
 
 
-
                     // adding student to students list
 
                     eventlist.add(event);
@@ -207,6 +197,3 @@ public class Event_List_Activity extends ListActivity implements AdapterView.OnI
         }
     }
 }
-
-
-

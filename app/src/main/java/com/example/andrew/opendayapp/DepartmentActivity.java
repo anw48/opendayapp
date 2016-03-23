@@ -107,7 +107,7 @@ public class DepartmentActivity extends ListActivity implements AdapterView.OnIt
                 public void onItemClick(AdapterView<?> parent, View view,
                                         int position, long id) {
 
-                    Intent myIntent = new Intent(DepartmentActivity.this, DepartmentInfoActivity.class);
+                    Intent myIntent = new Intent(DepartmentActivity.this, Nonacademic_Info_Activity.class);
 
                     String name = departmentlist.get(position).get(TAG_NAME);
                     String deptid = departmentlist.get(position).get(TAG_DEPT_ID);

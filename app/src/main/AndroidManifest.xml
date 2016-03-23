@@ -98,18 +98,34 @@
             android:value="@integer/google_play_services_version" />
 
         <activity
-            android:name=".DepartmentInfoActivity"
+            android:name=".AcademicDepartmentInfoActivity"
             android:label="@string/departmentinfo"
-            android:parentActivityName=".DepartmentActivity" />
+            android:parentActivityName=".AcademicDepartments"
+            android:launchMode="singleTop"/>
         <activity
             android:name=".Department_Home_Activity"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".MainActivity"
+            android:label="@string/eventhome"/>
+
         <activity
-            android:name=".Event_List_Activity"
-            android:parentActivityName=".MainActivity" />
+            android:name=".Academic_Event_List_Activity"
+            android:parentActivityName=".AcademicDepartmentInfoActivity"
+            android:launchMode="singleTop"
+            android:label="@string/eventlist"/>
         <activity
             android:name=".Event_Info_Activity"
-            android:parentActivityName=".Event_List_Activity"/>
+            android:label="@string/eventinfo"
+            android:parentActivityName=".Academic_Event_List_Activity" />
+        <activity
+            android:name=".Nonacademic_Info_Activity"
+            android:parentActivityName=".DepartmentActivity"
+            android:launchMode="singleTop"
+            android:label="@string/departmentinfo"/>
+        <activity
+            android:name=".Non_Academic_Event_List"
+            android:parentActivityName=".Nonacademic_Info_Activity"
+            android:label="@string/eventlist"
+            android:launchMode="singleTop"/>
     </application>
 
 </manifest>
