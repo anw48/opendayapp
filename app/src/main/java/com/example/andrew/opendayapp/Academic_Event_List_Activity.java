@@ -22,12 +22,15 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Locale;
 
 
 public class Academic_Event_List_Activity extends ListActivity implements AdapterView.OnItemClickListener {
 
 
     private static String url;
+
+    Locale location;
 
     private static final String TAG_EVENT_INFO = "AcademicEvents";
     private static final String TAG_EVENT_ID = "event_id";
@@ -53,10 +56,21 @@ public class Academic_Event_List_Activity extends ListActivity implements Adapte
         ((TextView)findViewById(R.id.passid)).setText(id);
         Bundle bundle = intent.getExtras();
 
-url = "http://ten32.co.uk/openday/eventstest.php?id=" + id ;//change url and locale
+        findLocale();
+
+        String locationparam = location.toString();
+
+
+        url = getString(R.string.serverurl) + "get_all_academic_events.php?code=" + locationparam + "&id=" + id;
 
 
         new GetDepartments().execute();
+
+    }
+
+    public void findLocale(){
+
+        location = getResources().getConfiguration().locale;
 
     }
 

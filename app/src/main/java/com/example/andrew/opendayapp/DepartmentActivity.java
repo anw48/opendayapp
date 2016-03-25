@@ -55,7 +55,7 @@ public class DepartmentActivity extends ListActivity implements AdapterView.OnIt
         findLocale();
         String param = location.toString();
 
-        url = getString(R.string.nonacademicdepartmentsurl) + param;
+        url = getString(R.string.serverurl) +"get_all_departments.php?code=" + param;
 
         new GetDepartments().execute();
 
@@ -124,12 +124,10 @@ public class DepartmentActivity extends ListActivity implements AdapterView.OnIt
                     String name = departmentlist.get(position).get(TAG_NAME);
                     String deptid = departmentlist.get(position).get(TAG_DEPT_ID);
                     String description = departmentlist.get(position).get(TAG_DESCRIPTION);
-                    String image = departmentlist.get(position).get(TAG_IMAGE_NAME);
 
                     myIntent.putExtra("id", deptid);
                     myIntent.putExtra("name", name);
                     myIntent.putExtra("description", description);
-                    myIntent.putExtra("image", image);
 
                     Bundle extras = new Bundle();
                     extras.putString("status", "Data Received!");
@@ -166,7 +164,6 @@ public class DepartmentActivity extends ListActivity implements AdapterView.OnIt
                     String dept_id = c.getString(TAG_DEPT_ID);
                     String name = c.getString(TAG_NAME);
                     String descrption = c.getString(TAG_DESCRIPTION);
-                    String image_name = c.getString(TAG_IMAGE_NAME);
 
 
                     // tmp hashmap for single student
@@ -176,7 +173,7 @@ public class DepartmentActivity extends ListActivity implements AdapterView.OnIt
                     department.put(TAG_DEPT_ID, dept_id);
                     department.put(TAG_NAME, name);
                     department.put(TAG_DESCRIPTION, descrption);
-                    department.put(TAG_IMAGE_NAME, image_name);
+
 
 
                     // adding student to students list

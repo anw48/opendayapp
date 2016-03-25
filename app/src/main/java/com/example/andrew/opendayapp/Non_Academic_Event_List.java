@@ -22,11 +22,13 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Locale;
 
 public class Non_Academic_Event_List extends ListActivity implements AdapterView.OnItemClickListener {
 
 
     private static String url;
+    Locale location;
 
     private static final String TAG_EVENT_INFO = "AcademicEvents";
     private static final String TAG_EVENT_ID = "event_id";
@@ -51,7 +53,12 @@ public class Non_Academic_Event_List extends ListActivity implements AdapterView
         ((TextView) findViewById(R.id.passid)).setText(id);
         Bundle bundle = intent.getExtras();
 
-        url = "http://ten32.co.uk/openday/eventstest.php?id=" + id;//change url and locale
+
+        findLocale();
+
+        String locationparams = location.toString();
+
+        url = getString(R.string.serverurl) + "get_all_nonacademic_events.php?code=" + locationparams + "&id=" + id ;
 
 
         new GetDepartments().execute();
@@ -66,6 +73,13 @@ public class Non_Academic_Event_List extends ListActivity implements AdapterView
         }
         return false;
     }
+
+    public void findLocale(){
+
+        location = getResources().getConfiguration().locale;
+
+    }
+
 
     private class GetDepartments extends AsyncTask<Void, Void, Void> {
 

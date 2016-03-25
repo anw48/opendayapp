@@ -14,7 +14,7 @@ public class Nonacademic_Info_Activity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_nonacademic_info_);
+        setContentView(R.layout.activity_nonacademic_info);
         setTitle(getResources().getString(R.string.departmentinfo));
 
         getActionBar().setDisplayHomeAsUpEnabled(true);

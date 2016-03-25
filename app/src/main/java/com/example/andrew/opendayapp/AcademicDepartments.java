@@ -50,7 +50,7 @@ public class AcademicDepartments extends ListActivity implements AdapterView.OnI
         findLocale();
         String param = location.toString();
 
-        urlparam = getString(R.string.academicdepartmentsurl)+ param;
+        urlparam = getString(R.string.serverurl)+ "get_academic_departments.php?code=" + param;
 
 
 
