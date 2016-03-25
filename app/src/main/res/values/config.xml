@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="academicdepartmentsurl">http://ten32.co.uk/openday/get_academic_departments.php?code=</string>
+
+    <string name="nonacademicdepartmentsurl">http://ten32.co.uk/openday/get_all_departments.php?code=</string>
+
+
+</resources>

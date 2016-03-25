@@ -28,13 +28,15 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Locale;
 import java.util.Map;
 
 
 public class DepartmentActivity extends ListActivity implements AdapterView.OnItemClickListener {
 
 
-    private static String url = "http://ten32.co.uk/openday/get_all_departments.php";
+    private String url;
+    Locale location;
 
     private static final String TAG_DEPARTMENT_INFO = "Departments";
     private static final String TAG_DEPT_ID = "dept_id";
@@ -50,8 +52,18 @@ public class DepartmentActivity extends ListActivity implements AdapterView.OnIt
         setTitle(getResources().getString(R.string.departments));
         getActionBar().setDisplayHomeAsUpEnabled(true);
 
+        findLocale();
+        String param = location.toString();
+
+        url = getString(R.string.nonacademicdepartmentsurl) + param;
+
         new GetDepartments().execute();
 
+    }
+
+    public void findLocale() {
+
+        location = getResources().getConfiguration().locale;
     }
 
 

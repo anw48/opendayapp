@@ -2,6 +2,7 @@ package com.example.andrew.opendayapp;
 
 import android.app.ListActivity;
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -22,12 +23,13 @@ import org.json.JSONException;
 import org.json.JSONObject;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Locale;
 
 public class AcademicDepartments extends ListActivity implements AdapterView.OnItemClickListener {
 
+    private static String urlparam;
 
-    private static String url = "http://ten32.co.uk/openday/get_academic_departments.php";
-
+    Locale location;
 
     private static final String TAG_DEPARTMENT_INFO = "AcademicDepartments";
     private static final String TAG_DEPT_ID = "dept_id";
@@ -44,8 +46,23 @@ public class AcademicDepartments extends ListActivity implements AdapterView.OnI
         setTitle(getResources().getString(R.string.academicdepartments));
         getActionBar().setDisplayHomeAsUpEnabled(true);
 
+
+        findLocale();
+        String param = location.toString();
+
+        urlparam = getString(R.string.academicdepartmentsurl)+ param;
+
+
+
         new GetDepartments().execute();
     }
+
+    public void findLocale(){
+
+        location  = getResources().getConfiguration().locale;
+    }
+
+
 
     public boolean onOptionsItemSelected(MenuItem item) {
 
@@ -74,7 +91,7 @@ public class AcademicDepartments extends ListActivity implements AdapterView.OnI
         protected Void doInBackground(Void... arg0) {
             WebRequest webreq = new WebRequest();
 
-            String jsonStr = webreq.makeWebServiceCall(url, WebRequest.GET);
+            String jsonStr = webreq.makeWebServiceCall(urlparam, WebRequest.GET);
 
             Log.d("Response: ", "> " + jsonStr);
 
