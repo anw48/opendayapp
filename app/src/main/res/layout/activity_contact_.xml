@@ -38,9 +38,16 @@
 
     <Button
         android:id="@+id/send"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:text="Send"/>
+        android:layout_width="match_parent"
+        android:text="@string/sendbutton"
+        android:textColor="#56318e"
+        android:textSize="20sp"
+        android:layout_height="30dp"
+        android:background="@layout/buttonshape"
+        android:paddingTop="5dp"
+
+
+        />
 
 
 

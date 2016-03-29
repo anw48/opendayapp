@@ -2,6 +2,7 @@
 <resources>
 
     <string name="serverurl">http://ten32.co.uk/openday/</string>
+    <string name="email">mail@andrewwynnewilliams.co.uk</string>
 
 
 </resources>

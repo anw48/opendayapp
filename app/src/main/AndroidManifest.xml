@@ -100,32 +100,43 @@
         <activity
             android:name=".AcademicDepartmentInfoActivity"
             android:label="@string/departmentinfo"
-            android:parentActivityName=".AcademicDepartments"
-            android:launchMode="singleTop"/>
+            android:launchMode="singleTop"
+            android:parentActivityName=".AcademicDepartments" />
         <activity
             android:name=".Department_Home_Activity"
-            android:parentActivityName=".MainActivity"
-            android:label="@string/eventhome"/>
-
+            android:label="@string/eventhome"
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".Academic_Event_List_Activity"
-            android:parentActivityName=".AcademicDepartmentInfoActivity"
+            android:label="@string/eventlist"
             android:launchMode="singleTop"
-            android:label="@string/eventlist"/>
+            android:parentActivityName=".AcademicDepartmentInfoActivity" />
         <activity
             android:name=".Event_Info_Activity"
             android:label="@string/eventinfo"
             android:parentActivityName=".Academic_Event_List_Activity" />
         <activity
             android:name=".Nonacademic_Info_Activity"
-            android:parentActivityName=".DepartmentActivity"
+            android:label="@string/departmentinfo"
             android:launchMode="singleTop"
-            android:label="@string/departmentinfo"/>
+            android:parentActivityName=".DepartmentActivity" />
         <activity
             android:name=".Non_Academic_Event_List"
-            android:parentActivityName=".Nonacademic_Info_Activity"
             android:label="@string/eventlist"
-            android:launchMode="singleTop"/>
+            android:launchMode="singleTop"
+            android:parentActivityName=".Nonacademic_Info_Activity" />
+        <activity
+            android:name=".Student_Experience_Activity"
+            android:parentActivityName=".MainActivity"
+            android:label="@string/studentexperiencetitle"/>
+        <activity
+            android:name=".Accommodation_Activity"
+            android:parentActivityName=".MainActivity"
+            android:label="@string/accommodationlist"/>
+        <activity
+            android:name=".Accommodation_Info_Activity"
+            android:parentActivityName=".Accommodation_Activity"
+            android:label="@string/accommodationinfo"/>
     </application>
 
 </manifest>

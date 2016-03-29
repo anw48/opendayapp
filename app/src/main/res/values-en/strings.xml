@@ -10,7 +10,7 @@
     <string name="gettingaround">Getting Around</string>
     <string name="campustours">Campus Tours</string>
     <string name="departmentinfo">Department Information</string>
-    <string name="eventlist">Todays Events</string>
+    <string name="eventlist">Today&amp;s Events</string>
     <string name="eventinfo">Event Information</string>
     <string name="eventhome">Departments At Aberystwyth</string>
 
@@ -35,7 +35,6 @@
                             help please get in touch with a staff member in our
                             Admissions Office or in the relevant department,
                             and they will be glad to assist</string>
-
     <string name="message2">Aberystwyth is a well-established university with a
                             long tradition of academic excellence, but it is also
                             very forward looking. We’re small enough to be
@@ -43,7 +42,6 @@
                             but big enough to have a wide range of study
                             programmes in the Sciences, the Arts and the Social
                             Sciences, in professional and vocational subjects.</string>
-
     <string name="message3">Aberystwyth is a vibrant university town in a
                             stunning coastal location, with a dynamic social and
                             cultural life centred around the University. There’s
@@ -126,7 +124,7 @@
     <!-- Campus tours strings -->
 
     <string name="penglaistoursheading">Penglais Campus Tours</string>
-    <string name="accomodationtoursheading">Accomodation Tours</string>
+    <string name="accomodationtoursheading">Accommodation Tours</string>
     <string name="librarytoursheading">Hugh Owen Library Tours</string>
     <string name="studentsuniontoursheading">Students Union Tours</string>
 
@@ -138,7 +136,7 @@
     <string name="accomodationtours">Guided tours of the following locations are available every half hour from 10am, the last tour
                                         departing at 4.30pm:\n
                                         \n
-                                        Penbryn, Pentre Jane Morgan, Fferm Penglais, Seafront Residences, Welsh Medium Accomodation</string>
+                                        Penbryn, Pentre Jane Morgan, Fferm Penglais, Seafront Residences, Welsh Medium Accommodation</string>
     <string name="librarytours">Tours leave the Library Enquiry
                                 Desk at 10.30am, 2.00pm  &amp;
                                 3.00pm and last approximately
@@ -158,5 +156,21 @@
 
     <string name="contactmessage">Fill out the field below to send an email to our team. This will use your phones email app</string>
 
+
+    <!-- Button strings -->
+    <string name="savebutton">Save</string>
+    <string name="eventsbutton">View Events</string>
+    <string name="sendbutton">Send</string>
+
+
+    <!--Student experience page strings-->
+
+    <string name="studentexperiencedescription">Here at Aberystwyth we pride ourselves on our student experience.
+                                                The following buttons will provide some information on what we provide to
+                                                make your time at Aberystwyth university an unforgetable experience.</string>
+
+    <string name="studentexperiencetitle">Student Experience</string>
+    <string name="accommodationlist">Our Accommodation</string>
+    <string name="accommodationinfo">Accommodation Information</string>
 
 </resources>

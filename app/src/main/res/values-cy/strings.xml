@@ -119,21 +119,17 @@
     <string name="accomodationtoursheading">Teithiau llety</string>
     <string name="librarytoursheading">Owen Teithiau Llyfrgell Hugh</string>
     <string name="studentsuniontoursheading">Teithiau Undeb y Myfyrwyr</string>
-
     <string name="penglaistours">Teithiau o\'r campws a arweinir gan fyfyrwyr (ar gael trwy gyfrwng y Saesneg
         neu Gymraeg), yn para tua 45-60 munud. Teithiau yn dechrau o\'r
         ardal cyntedd o flaen Canolfan y Celfyddydau yn:\n
         \n
         10.00am, 11.00am, 12.00pm, 1.00pm, 2.00pm and 3.00pm</string>
-
     <string name="accomodationtours">teithiau tywys o\'r lleoliadau canlynol ar gael bob hanner awr o 10am, mae\'r daith olaf
         gadael am 4.30pm:\n
         \n
         Penbryn, Pentre Jane Morgan, Fferm Penglais, Preswylfeydd Glan y Môr</string>
-
     <string name="librarytours">Teithiau yn gadael y Ymholiad Llyfrgell
         Desg am 10.30am, 2.00pm &amp; 3.00pm a diwethaf oddeutu 20 munud</string>
-
     <string name="studentsuniontours">teithiau a arweinir gan swyddog Myfyrwyr, parhaol
         tua 15 munud, bydd dechrau o Undeb y Myfyrwyr brif fynedfa yn: \n
         09:30, 10.00am, 10.30am, 11:00,
@@ -144,5 +140,20 @@
 
     <string name="contactmessage">Llenwch y maes isod i anfon e-bost at ein tîm. Bydd hwn yn defnyddio eich app ffonau e-bost</string>
 
+
+    <!-- Button strings -->
+    <string name="savebutton">Arbed</string>
+    <string name="eventsbutton">Gweld Digwyddiadau</string>
+    <string name="sendbutton">Anfon</string>
+
+
+    <!--Student experience page strings-->
+
+    <string name="studentexperiencedescription">Yma yn Aberystwyth rydym yn ymfalchïo yn ein profiad myfyrwyr.
+Bydd y botymau canlynol yn rhoi rhywfaint o wybodaeth am yr hyn rydym yn ei ddarparu i wneud eich cyfnod yn y brifysgol Aberystwyth yn brofiad bythgofiadwy.</string>
+
+    <string name="studentexperiencetitle">Profiad Myfyrwyr</string>
+    <string name="accommodationlist">Mae ein Llety</string>
+    <string name="accommodationinfo">Gwybodaeth llety</string>
 
 </resources>
