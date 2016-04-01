@@ -117,7 +117,7 @@ public class Refreshments_Activity extends ListActivity implements AdapterView.O
                 public void onItemClick(AdapterView<?> parent, View view,
                                         int position, long id) {
 
-                    Intent myIntent = new Intent(Refreshments_Activity.this, Refreshments_Activity.class);
+                    Intent myIntent = new Intent(Refreshments_Activity.this, Refreshment_Info_Activity.class);
 
                     String accommodationid = refreshmentlist.get(position).get(TAG_ID);
                     String name = refreshmentlist.get(position).get(TAG_NAME);

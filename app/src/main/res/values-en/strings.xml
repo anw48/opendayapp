@@ -173,4 +173,8 @@
     <string name="accommodationlist">Our Accommodation</string>
     <string name="accommodationinfo">Accommodation Information</string>
 
+    <string name="refreshmentstitle">Refreshments At Aberystwyth</string>
+    <string name="refreshmentinfo">Refreshment Information</string>
+
+
 </resources>

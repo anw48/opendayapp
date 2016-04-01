@@ -156,4 +156,8 @@ Bydd y botymau canlynol yn rhoi rhywfaint o wybodaeth am yr hyn rydym yn ei ddar
     <string name="accommodationlist">Mae ein Llety</string>
     <string name="accommodationinfo">Gwybodaeth llety</string>
 
+    <string name="refreshmentstitle">Lluniaeth Yn Aberystwyth</string>
+    <string name="refreshmentinfo">Gwybodaeth lluniaeth</string>
+
+
 </resources>
