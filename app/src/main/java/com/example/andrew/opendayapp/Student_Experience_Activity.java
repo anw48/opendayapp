@@ -39,7 +39,7 @@ public class Student_Experience_Activity extends Activity implements View.OnClic
             }
             case R.id.refreshementsimageButton: {
                 Intent myIntent = new Intent(Student_Experience_Activity.this,
-                        AcademicDepartments.class);
+                        Refreshments_Activity.class);
                 startActivity(myIntent);
 
                 break;

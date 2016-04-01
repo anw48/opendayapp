@@ -127,16 +127,24 @@
             android:parentActivityName=".Nonacademic_Info_Activity" />
         <activity
             android:name=".Student_Experience_Activity"
-            android:parentActivityName=".MainActivity"
-            android:label="@string/studentexperiencetitle"/>
+            android:label="@string/studentexperiencetitle"
+            android:parentActivityName=".MainActivity" />
         <activity
             android:name=".Accommodation_Activity"
-            android:parentActivityName=".MainActivity"
-            android:label="@string/accommodationlist"/>
+            android:label="@string/accommodationlist"
+            android:parentActivityName=".Student_Experience_Activity" />
         <activity
             android:name=".Accommodation_Info_Activity"
-            android:parentActivityName=".Accommodation_Activity"
-            android:label="@string/accommodationinfo"/>
+            android:label="@string/accommodationinfo"
+            android:parentActivityName=".Accommodation_Activity" />
+        <activity
+            android:name=".Refreshments_Activity"
+            android:label="@string/refreshmentstitle"
+            android:parentActivityName=".Student_Experience_Activity" />
+        <activity
+            android:name=".Refreshment_Info_Activity"
+            android:label="@string/refreshmentinfo"
+            android:parentActivityName=".Refreshments_Activity"/>
     </application>
 
 </manifest>
