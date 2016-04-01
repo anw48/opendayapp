@@ -50,7 +50,7 @@
         android:layout_height="wrap_content">
         <TextView
             android:id="@+id/opentimetitle"
-            android:text="Start Time:"
+            android:text="Opening Time:"
             android:textColor="#56318e"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -75,7 +75,7 @@
         android:layout_height="wrap_content">
         <TextView
             android:id="@+id/closetimetitle"
-            android:text="End Time:"
+            android:text="Closing Time:"
             android:textColor="#56318e"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

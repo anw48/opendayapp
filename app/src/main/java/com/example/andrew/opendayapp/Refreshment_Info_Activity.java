@@ -27,7 +27,7 @@ public class Refreshment_Info_Activity extends Activity {
         String open = intent.getStringExtra("open");
         String close = intent.getStringExtra("close");
 
-        ((TextView)findViewById(R.id.deptid)).setText(id);
+        ((TextView)findViewById(R.id.id)).setText(id);
         ((TextView)findViewById(R.id.name)).setText(name);
         ((TextView)findViewById(R.id.description)).setText(description);
         ((TextView)findViewById(R.id.opentime)).setText(open);
