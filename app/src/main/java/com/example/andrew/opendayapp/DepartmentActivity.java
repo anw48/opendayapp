@@ -142,7 +142,7 @@ public class DepartmentActivity extends ListActivity implements AdapterView.OnIt
 
     @Override
     public void onItemClick(AdapterView<?> adapter, View arg1, int position, long arg3) {
-        // TODO Auto-generated method stub
+
         String item = adapter.getItemAtPosition(position).toString();
     }
 

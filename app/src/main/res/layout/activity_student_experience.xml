@@ -11,6 +11,7 @@
     tools:context="com.example.andrew.opendayapp.Student_Experience_Activity">
 
 <TextView
+    android:id="@+id/studentexperienceheader"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:text="@string/studentexperiencedescription"

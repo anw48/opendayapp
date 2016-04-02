@@ -146,7 +146,7 @@ public class AcademicDepartments extends ListActivity implements AdapterView.OnI
 
     @Override
     public void onItemClick(AdapterView<?> adapter, View arg1, int position, long arg3) {
-        // TODO Auto-generated method stub
+
         String item = adapter.getItemAtPosition(position).toString();
     }
 

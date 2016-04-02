@@ -155,7 +155,7 @@ public class Non_Academic_Event_List extends ListActivity implements AdapterView
 
     @Override
     public void onItemClick(AdapterView<?> adapter, View arg1, int position, long arg3) {
-        // TODO Auto-generated method stub
+
         String item = adapter.getItemAtPosition(position).toString();
     }
 
