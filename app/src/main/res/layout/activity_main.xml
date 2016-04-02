@@ -21,6 +21,18 @@
         android:orientation="vertical">
 
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/greeting"
+        android:text="@string/greeting"
+        android:textSize="15dp"
+        android:textColor="#56318e"
+        android:paddingBottom="5dp"
+        android:textStyle="bold"
+        android:textAlignment="center"/>
+
+
     <ImageButton
         android:layout_marginTop="5dp"
         android:layout_width="match_parent"
@@ -31,6 +43,7 @@
         android:padding="2dp"
         android:scaleType="fitCenter"
         android:adjustViewBounds="true"
+        android:layout_below="@id/greeting"
         />
 
     <ImageButton

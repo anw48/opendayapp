@@ -16,6 +16,12 @@
     <string name="title_activity_maps">Campus Map</string>
 
 
+    <string name="welshoption">Welsh</string>
+    <string name="englishoption">English</string>
+
+    <string name="greeting">Welcome to the Aberystwyth University open day</string>
+
+
     <!-- Activity main strings mainly image button descriptions -->
     <string name="welcomebutton">Image button to navigate to the welcome page</string>
     <string name="talksbutton">Image button to navigate to the talks and events page</string>
@@ -122,6 +128,8 @@
     <string name="trainbutton">Image button for loading information about arriving by train </string>
     <string name="busbutton">Image button for loading information about arriving by bus </string>
     <string name="mapbutton">Image button for loading the map </string>
+
+
 
 
     <!-- Campus tours strings -->

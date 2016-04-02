@@ -14,6 +14,8 @@
     <string name="eventinfo">Gwybodaeth am y digwyddiad</string>
     <string name="eventhome">Adrannau Yn Aberystwyth</string>
 
+    <string name="greeting">Croeso i r diwrnod agored Prifysgol Aberystwyth</string>
+
 
     <!-- Activity main strings mainly image button descriptions  dont need to translate not seen -->
     <string name="welcomebutton">Image button to navigate to the welcome page</string>

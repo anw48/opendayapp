@@ -13,12 +13,12 @@
         android:id="@+id/english"
         android:orderInCategory="2"
         app:showAsAction="never"
-        android:title="English"/>
+        android:title="@string/englishoption"/>
     <item
         android:id="@+id/welsh"
         android:orderInCategory="3"
         app:showAsAction="never"
-        android:title="Cymraeg"/>
+        android:title="@string/welshoption"/>
     </group>
 
 </menu>

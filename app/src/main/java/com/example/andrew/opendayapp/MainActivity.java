@@ -49,72 +49,62 @@ public class MainActivity extends Activity implements View.OnClickListener {
         testbutton.setOnClickListener(this);
 
 
-      }
+    }
 
 
-    public void onClick(View v){
+    public void onClick(View v) {
 
 
-        switch(v.getId())
-        {
-            case R.id.welcomeimageButton:
-            {
+        switch (v.getId()) {
+            case R.id.welcomeimageButton: {
                 Intent myIntent = new Intent(MainActivity.this,
                         WelcomeActivity.class);
                 startActivity(myIntent);
 
                 break;
             }
-            case R.id.talksimageButton:
-            {
+            case R.id.talksimageButton: {
                 Intent myIntent = new Intent(MainActivity.this,
                         Department_Home_Activity.class);
                 startActivity(myIntent);
                 break;
             }
-            case R.id.disclaimersimageButton:
-            {
+            case R.id.disclaimersimageButton: {
                 Intent myIntent = new Intent(MainActivity.this,
                         DiscliamersActivity.class);
                 startActivity(myIntent);
                 break;
             }
-            case R.id.plannerimageButton:
-            {
+            case R.id.plannerimageButton: {
                 Intent myIntent = new Intent(MainActivity.this,
                         PlannerActivity.class);
                 startActivity(myIntent);
                 break;
             }
-            case R.id.contactimageButton:
-            {
+            case R.id.contactimageButton: {
                 Intent myIntent = new Intent(MainActivity.this,
                         Contact_Activity.class);
                 startActivity(myIntent);
                 break;
             }
-            case R.id.gettingaroundimageButton:
-            {
+            case R.id.gettingaroundimageButton: {
                 Intent myIntent = new Intent(MainActivity.this,
                         Getting_Around_Activity.class);
                 startActivity(myIntent);
                 break;
             }
-            case R.id.toursimageButton:
-            {
+            case R.id.toursimageButton: {
                 Intent myIntent = new Intent(MainActivity.this,
                         ToursActivity.class);
                 startActivity(myIntent);
                 break;
             }
-            case R.id.refreshementsimageButton:
-            {
+            case R.id.refreshementsimageButton: {
                 Intent myIntent = new Intent(MainActivity.this,
                         Student_Experience_Activity.class);
                 startActivity(myIntent);
                 break;
             }
-
 
 
         }
@@ -126,29 +116,24 @@ public class MainActivity extends Activity implements View.OnClickListener {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_main, menu);
-        menu.findItem(R.id.title);
         return true;
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
 
-
-        switch (item.getItemId()) {
-            case R.id.english:
-                if (item.isChecked()) item.setChecked(false);
-                else item.setChecked(true);
-                setLocale("en");
-                return true;
-            case R.id.welsh:
-                if (item.isChecked()) item.setChecked(false);
-                else item.setChecked(true);
-                setLocale("cy");
-                return true;
-            default:
-                return super.onOptionsItemSelected(item);
+        if (item.getItemId()==R.id.english) {
+            setLocale("en");
+            return true;
         }
-    }
+
+        if (item.getItemId()==R.id.welsh) {
+            setLocale("cy");
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
+        }
+
 
     public void setLocale(String lang) {
 
@@ -163,10 +148,7 @@ public class MainActivity extends Activity implements View.OnClickListener {
     }
 
 
-
-
-
-    }
+}
 
 
 
