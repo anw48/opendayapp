@@ -12,6 +12,7 @@ import static android.support.test.espresso.action.ViewActions.click;
 import static android.support.test.espresso.action.ViewActions.scrollTo;
 import static android.support.test.espresso.assertion.ViewAssertions.matches;
 import static android.support.test.espresso.matcher.ViewMatchers.isDisplayed;
+import static android.support.test.espresso.matcher.ViewMatchers.withContentDescription;
 import static android.support.test.espresso.matcher.ViewMatchers.withId;
 import static android.support.test.espresso.matcher.ViewMatchers.withText;
 
@@ -133,7 +134,7 @@ public class MainActivityTest {
         onView(withText(R.string.welshoption))
                 .perform(click());
 
-        onView(withId(R.id.greeting)).check(matches(withText("Croeso i r diwrnod agored Prifysgol Aberystwyth")));
+        onView(withText(R.string.app_name)).check(matches(withText("Diwrnod Agored Prifysgol Aberystwyth")));
 
     }
 
@@ -145,7 +146,8 @@ public class MainActivityTest {
         onView(withText(R.string.englishoption))
                 .perform(click());
 
-        onView(withId(R.id.greeting)).check(matches(withText("Welcome to the Aberystwyth University open day")));
+
+        onView(withText(R.string.app_name)).check(matches(withText("Aberystwyth University Open Day")));
 
     }
 

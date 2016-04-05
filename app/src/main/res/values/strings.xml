@@ -19,8 +19,6 @@
     <string name="welshoption">Welsh</string>
     <string name="englishoption">English</string>
 
-    <string name="greeting">Welcome to the Aberystwyth University open day</string>
-
 
     <!-- Activity main strings mainly image button descriptions -->
     <string name="welcomebutton">Image button to navigate to the welcome page</string>

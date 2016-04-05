@@ -37,6 +37,19 @@ public class Getting_Around_ActivityTest {
 
 
 
+
+    @Test
+    public void testMapButton() {
+
+        onView(withId(R.id.mapImageButton))            // withId(R.id.my_view) is a ViewMatcher
+                .perform(click());
+
+
+        onView(withText(R.string.title_activity_maps)).check(matches(withText(R.string.title_activity_maps)));
+
+    }
+
+
     @Test
     public void testCarButton() {
 
