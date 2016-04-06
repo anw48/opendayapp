@@ -23,7 +23,7 @@ public class Nonacademic_Info_Activity extends Activity {
         final String id = intent.getStringExtra("id");
         String name = intent.getStringExtra("name");
         String description = intent.getStringExtra("description");
-        String image = intent.getStringExtra("image");
+        //String image = intent.getStringExtra("image");
 
         ((TextView) findViewById(R.id.deptid)).setText(id);
         ((TextView) findViewById(R.id.name)).setText(name);
