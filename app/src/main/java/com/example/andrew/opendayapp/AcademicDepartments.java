@@ -2,7 +2,6 @@ package com.example.andrew.opendayapp;
 
 import android.app.ListActivity;
 import android.app.ProgressDialog;
-import android.content.Context;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -15,12 +14,10 @@ import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 
-
-import junit.framework.Test;
-
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Locale;
@@ -31,11 +28,11 @@ public class AcademicDepartments extends ListActivity implements AdapterView.OnI
 
     Locale location;
 
-    private static final String TAG_DEPARTMENT_INFO = "AcademicDepartments";
-    private static final String TAG_DEPT_ID = "dept_id";
+    private static final String TAG_DEPARTMENT_INFO = "Departments";
+    private static final String TAG_DEPT_ID = "departmentId";
     private static final String TAG_NAME = "name";
     private static final String TAG_DESCRIPTION = "description";
-    private static final String TAG_IMAGE_NAME = "image_name";
+    private static final String TAG_IMAGE_NAME = "imageName";
 
 
 
@@ -50,9 +47,9 @@ public class AcademicDepartments extends ListActivity implements AdapterView.OnI
         findLocale();
         String param = location.toString();
 
-        urlparam = getString(R.string.serverurl)+ "get_academic_departments.php?code=" + param;
+        //urlparam = getString(R.string.serverurl)+ "get_academic_departments.php?code=" + param;
 
-
+        urlparam = "http://landare.dynamic-dns.net/AberOpenDay/departmentWs.json?lang=" + param + "&academic=Y";
 
         new GetDepartments().execute();
     }

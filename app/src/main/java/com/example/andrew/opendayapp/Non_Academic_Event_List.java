@@ -1,6 +1,5 @@
 package com.example.andrew.opendayapp;
 
-import android.app.Activity;
 import android.app.ListActivity;
 import android.app.ProgressDialog;
 import android.content.Intent;
@@ -30,12 +29,12 @@ public class Non_Academic_Event_List extends ListActivity implements AdapterView
     private static String url;
     Locale location;
 
-    private static final String TAG_EVENT_INFO = "AcademicEvents";
-    private static final String TAG_EVENT_ID = "event_id";
-    private static final String TAG_DEPT_ID = "dept_id";
-    private static final String TAG_EVENT_NAME = "event_name";
-    private static final String TAG_START_TIME = "Start_time";
-    private static final String TAG_END_TIME = "end_time";
+    private static final String TAG_EVENT_INFO = "Events";
+    private static final String TAG_EVENT_ID = "eventId";
+    //private static final String TAG_DEPT_ID = "dept_id";
+    private static final String TAG_EVENT_NAME = "name";
+    private static final String TAG_START_TIME = "startTime";
+    private static final String TAG_END_TIME = "endTime";
     private static final String TAG_LOCATION = "location";
     private static final String TAG_DESCRIPTION = "description";
 
@@ -58,8 +57,9 @@ public class Non_Academic_Event_List extends ListActivity implements AdapterView
 
         String locationparams = location.toString();
 
-        url = getString(R.string.serverurl) + "get_all_nonacademic_events.php?code=" + locationparams + "&id=" + id ;
+        //url = getString(R.string.serverurl) + "get_all_nonacademic_events.php?code=" + locationparams + "&id=" + id ;
 
+        url = "http://landare.dynamic-dns.net/AberOpenDay/eventWs.json?lang=" + locationparams + "&deptid" + id;
 
         new GetDepartments().execute();
     }
@@ -127,14 +127,14 @@ public class Non_Academic_Event_List extends ListActivity implements AdapterView
 
                     String eventid = eventlist.get(position).get(TAG_EVENT_ID);
                     String name = eventlist.get(position).get(TAG_EVENT_NAME);
-                    String deptid = eventlist.get(position).get(TAG_DEPT_ID);
+                    //String deptid = eventlist.get(position).get(TAG_DEPT_ID);
                     String start = eventlist.get(position).get(TAG_START_TIME);
                     String end = eventlist.get(position).get(TAG_END_TIME);
                     String location = eventlist.get(position).get(TAG_LOCATION);
                     String description = eventlist.get(position).get(TAG_DESCRIPTION);
 
                     myIntent.putExtra("eventid", eventid);
-                    myIntent.putExtra("id", deptid);
+                    //myIntent.putExtra("id", deptid);
                     myIntent.putExtra("name", name);
                     myIntent.putExtra("description", description);
                     myIntent.putExtra("start", start);
@@ -175,7 +175,7 @@ public class Non_Academic_Event_List extends ListActivity implements AdapterView
                     JSONObject c = events.getJSONObject(i);
 
                     String event_id = c.getString(TAG_EVENT_ID);
-                    String dept_id = c.getString(TAG_DEPT_ID);
+                    //String dept_id = c.getString(TAG_DEPT_ID);
                     String event_name = c.getString(TAG_EVENT_NAME);
                     String start_time = c.getString(TAG_START_TIME);
                     String end_time = c.getString(TAG_END_TIME);
@@ -188,7 +188,7 @@ public class Non_Academic_Event_List extends ListActivity implements AdapterView
 
                     // adding each child node to HashMap key => value
                     event.put(TAG_EVENT_ID, event_id);
-                    event.put(TAG_DEPT_ID, dept_id);
+                    //event.put(TAG_DEPT_ID, dept_id);
                     event.put(TAG_EVENT_NAME, event_name);
                     event.put(TAG_START_TIME, start_time);
                     event.put(TAG_END_TIME, end_time);

@@ -32,12 +32,12 @@ public class Academic_Event_List_Activity extends ListActivity implements Adapte
 
     Locale location;
 
-    private static final String TAG_EVENT_INFO = "AcademicEvents";
-    private static final String TAG_EVENT_ID = "event_id";
-    private static final String TAG_DEPT_ID = "dept_id";
-    private static final String TAG_EVENT_NAME = "event_name";
-    private static final String TAG_START_TIME = "Start_time";
-    private static final String TAG_END_TIME = "end_time";
+    private static final String TAG_EVENT_INFO = "Events";
+    private static final String TAG_EVENT_ID = "eventId";
+    //private static final String TAG_DEPT_ID = "dept_id";
+    private static final String TAG_EVENT_NAME = "name";
+    private static final String TAG_START_TIME = "startTime";
+    private static final String TAG_END_TIME = "endTime";
     private static final String TAG_LOCATION = "location";
     private static final String TAG_DESCRIPTION = "description";
 
@@ -61,8 +61,9 @@ public class Academic_Event_List_Activity extends ListActivity implements Adapte
         String locationparam = location.toString();
 
 
-        url = getString(R.string.serverurl) + "get_all_academic_events.php?code=" + locationparam + "&id=" + id;
+       // url = getString(R.string.serverurl) + "get_all_academic_events.php?code=" + locationparam + "&id=" + id;
 
+        url = "http://landare.dynamic-dns.net/AberOpenDay/eventWs.json?lang=" + locationparam + "&deptId=" + id;
 
         new GetDepartments().execute();
 
@@ -131,14 +132,14 @@ public class Academic_Event_List_Activity extends ListActivity implements Adapte
 
                     String eventid = eventlist.get(position).get(TAG_EVENT_ID);
                     String name = eventlist.get(position).get(TAG_EVENT_NAME);
-                    String deptid = eventlist.get(position).get(TAG_DEPT_ID);
+                    //String deptid = eventlist.get(position).get(TAG_DEPT_ID);
                     String start = eventlist.get(position).get(TAG_START_TIME);
                     String end = eventlist.get(position).get(TAG_END_TIME);
                     String location = eventlist.get(position).get(TAG_LOCATION);
                     String description = eventlist.get(position).get(TAG_DESCRIPTION);
 
                     myIntent.putExtra("eventid", eventid);
-                    myIntent.putExtra("id", deptid);
+                   // myIntent.putExtra("id", deptid);
                     myIntent.putExtra("name", name);
                     myIntent.putExtra("description", description);
                     myIntent.putExtra("start", start);
@@ -178,7 +179,7 @@ public class Academic_Event_List_Activity extends ListActivity implements Adapte
                     JSONObject c = events.getJSONObject(i);
 
                     String event_id = c.getString(TAG_EVENT_ID);
-                    String dept_id = c.getString(TAG_DEPT_ID);
+                    //String dept_id = c.getString(TAG_DEPT_ID);
                     String event_name = c.getString(TAG_EVENT_NAME);
                     String start_time = c.getString(TAG_START_TIME);
                     String end_time = c.getString(TAG_END_TIME);
@@ -191,7 +192,7 @@ public class Academic_Event_List_Activity extends ListActivity implements Adapte
 
                     // adding each child node to HashMap key => value
                     event.put(TAG_EVENT_ID, event_id);
-                    event.put(TAG_DEPT_ID, dept_id);
+                    //event.put(TAG_DEPT_ID, dept_id);
                     event.put(TAG_EVENT_NAME, event_name);
                     event.put(TAG_START_TIME, start_time);
                     event.put(TAG_END_TIME, end_time);

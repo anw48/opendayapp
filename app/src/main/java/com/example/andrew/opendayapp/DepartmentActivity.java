@@ -1,10 +1,8 @@
 package com.example.andrew.opendayapp;
 
-import android.app.Activity;
 import android.app.ListActivity;
 import android.app.ProgressDialog;
 import android.content.Intent;
-import android.net.Uri;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.NavUtils;
@@ -15,11 +13,6 @@ import android.widget.AdapterView;
 import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
-import android.widget.TextView;
-import android.widget.Toast;
-
-
-import junit.framework.Test;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -27,9 +20,7 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Locale;
-import java.util.Map;
 
 
 public class DepartmentActivity extends ListActivity implements AdapterView.OnItemClickListener {
@@ -39,10 +30,10 @@ public class DepartmentActivity extends ListActivity implements AdapterView.OnIt
     Locale location;
 
     private static final String TAG_DEPARTMENT_INFO = "Departments";
-    private static final String TAG_DEPT_ID = "dept_id";
+    private static final String TAG_DEPT_ID = "departmentId";
     private static final String TAG_NAME = "name";
     private static final String TAG_DESCRIPTION = "description";
-    private static final String TAG_IMAGE_NAME = "image_name";
+    private static final String TAG_IMAGE_NAME = "imageName";
 
 
     @Override
@@ -55,7 +46,9 @@ public class DepartmentActivity extends ListActivity implements AdapterView.OnIt
         findLocale();
         String param = location.toString();
 
-        url = getString(R.string.serverurl) +"get_all_departments.php?code=" + param;
+       // url = getString(R.string.serverurl) +"get_all_departments.php?code=" + param;
+
+        url = "http://landare.dynamic-dns.net/AberOpenDay/departmentWs.json?lang=" + param + "&academic=N";
 
         new GetDepartments().execute();
 
@@ -164,6 +157,7 @@ public class DepartmentActivity extends ListActivity implements AdapterView.OnIt
                     String dept_id = c.getString(TAG_DEPT_ID);
                     String name = c.getString(TAG_NAME);
                     String descrption = c.getString(TAG_DESCRIPTION);
+                    String image_name = c.getString(TAG_IMAGE_NAME);
 
 
                     // tmp hashmap for single student
@@ -173,6 +167,7 @@ public class DepartmentActivity extends ListActivity implements AdapterView.OnIt
                     department.put(TAG_DEPT_ID, dept_id);
                     department.put(TAG_NAME, name);
                     department.put(TAG_DESCRIPTION, descrption);
+                    department.put(TAG_IMAGE_NAME, image_name);
 
 
 

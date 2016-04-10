@@ -1,6 +1,5 @@
 package com.example.andrew.opendayapp;
 
-import android.app.Activity;
 import android.app.ListActivity;
 import android.app.ProgressDialog;
 import android.content.Intent;
@@ -30,12 +29,12 @@ public class Refreshments_Activity extends ListActivity implements AdapterView.O
     Locale location;
 
     private static final String TAG_REFRESHMENTS_INFO = "Refreshments";
-    private static final String TAG_ID = "id";
+    private static final String TAG_ID = "refreshmentId";
     private static final String TAG_NAME = "name";
     private static final String TAG_DESCRIPTION = "description";
-    private static final String TAG_IMAGE_NAME = "image_name";
-    private static final String TAG_OPENING_TIME = "opening_time";
-    private static final String TAG_CLOSING_TIME = "closing_time";
+    private static final String TAG_IMAGE_NAME = "imageName";
+    private static final String TAG_OPENING_TIME = "openingTime";
+    private static final String TAG_CLOSING_TIME = "closingTime";
 
 
 
@@ -51,7 +50,9 @@ public class Refreshments_Activity extends ListActivity implements AdapterView.O
 
         String locationparam = location.toString();
 
-        url = getString(R.string.serverurl) + "get_refreshements.php?code=" + locationparam;
+       // url = getString(R.string.serverurl) + "get_refreshements.php?code=" + locationparam;
+
+        url = "http://landare.dynamic-dns.net/AberOpenDay/refreshmentWs.json?lang=" + locationparam;
 
         new GetDepartments().execute();
 
