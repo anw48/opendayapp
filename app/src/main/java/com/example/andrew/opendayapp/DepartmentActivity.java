@@ -48,7 +48,7 @@ public class DepartmentActivity extends ListActivity implements AdapterView.OnIt
 
        // url = getString(R.string.serverurl) +"get_all_departments.php?code=" + param;
 
-        url = "http://landare.dynamic-dns.net/AberOpenDay/departmentWs.json?lang=" + param + "&academic=N";
+        url = "http://aber.dynamic-dns.net/AberOpenDay/departmentWs.json?lang=" + param + "&academic=N";
 
         new GetDepartments().execute();
 

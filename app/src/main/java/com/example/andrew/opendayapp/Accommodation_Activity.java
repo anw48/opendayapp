@@ -56,7 +56,7 @@ public class Accommodation_Activity extends ListActivity implements AdapterView.
 
       //  url = "http://192.168.1.34:8080/AberOpenDay/accommodationWs.json?lang=" + locationparam;
 
-        url = "http://landare.dynamic-dns.net/AberOpenDay/accommodationWs.json?lang=" + locationparam;
+        url = "http://aber.dynamic-dns.net/AberOpenDay/accommodationWs.json?lang=" + locationparam;
 
         new GetDepartments().execute();
 

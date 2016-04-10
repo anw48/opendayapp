@@ -49,7 +49,7 @@ public class AcademicDepartments extends ListActivity implements AdapterView.OnI
 
         //urlparam = getString(R.string.serverurl)+ "get_academic_departments.php?code=" + param;
 
-        urlparam = "http://landare.dynamic-dns.net/AberOpenDay/departmentWs.json?lang=" + param + "&academic=Y";
+        urlparam = "http://aber.dynamic-dns.net/AberOpenDay/departmentWs.json?lang=" + param + "&academic=Y";
 
         new GetDepartments().execute();
     }

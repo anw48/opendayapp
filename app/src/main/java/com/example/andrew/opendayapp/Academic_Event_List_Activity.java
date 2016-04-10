@@ -63,7 +63,7 @@ public class Academic_Event_List_Activity extends ListActivity implements Adapte
 
        // url = getString(R.string.serverurl) + "get_all_academic_events.php?code=" + locationparam + "&id=" + id;
 
-        url = "http://landare.dynamic-dns.net/AberOpenDay/eventWs.json?lang=" + locationparam + "&deptId=" + id;
+        url = "http://aber.dynamic-dns.net/AberOpenDay/eventWs.json?lang=" + locationparam + "&deptId=" + id;
 
         new GetDepartments().execute();
 

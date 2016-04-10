@@ -52,7 +52,7 @@ public class Refreshments_Activity extends ListActivity implements AdapterView.O
 
        // url = getString(R.string.serverurl) + "get_refreshements.php?code=" + locationparam;
 
-        url = "http://landare.dynamic-dns.net/AberOpenDay/refreshmentWs.json?lang=" + locationparam;
+        url = "http://aber.dynamic-dns.net/AberOpenDay/refreshmentWs.json?lang=" + locationparam;
 
         new GetDepartments().execute();
 
