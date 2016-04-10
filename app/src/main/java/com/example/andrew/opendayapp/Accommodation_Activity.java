@@ -30,10 +30,10 @@ public class Accommodation_Activity extends ListActivity implements AdapterView.
     Locale location;
 
     private static final String TAG_ACCOMMODATION_INFO = "Accommodation";
-    private static final String TAG_ID = "id";
+    private static final String TAG_ID = "accommodationId";
     private static final String TAG_NAME = "name";
     private static final String TAG_DESCRIPTION = "description";
-    private static final String TAG_IMAGE_NAME = "image_name";
+    private static final String TAG_IMAGE_NAME = "imageName";
 
 
 
@@ -50,7 +50,13 @@ public class Accommodation_Activity extends ListActivity implements AdapterView.
 
         String locationparam = location.toString();
 
-        url = getString(R.string.serverurl) + "get_accommodation.php?code=" + locationparam;
+        //url = getString(R.string.serverurl) + "get_accommodation.php?code=" + locationparam;
+
+        //url = "http://localhost:8080/AberOpenDay/accommodationWs.json?lang=" + locationparam;
+
+      //  url = "http://192.168.1.34:8080/AberOpenDay/accommodationWs.json?lang=" + locationparam;
+
+        url = "http://landare.dynamic-dns.net/AberOpenDay/accommodationWs.json?lang=" + locationparam;
 
         new GetDepartments().execute();
 
@@ -162,7 +168,7 @@ private class GetDepartments extends AsyncTask<Void, Void, Void> {
                 for (int i = 0; i < events.length(); i++) {
                     JSONObject c = events.getJSONObject(i);
 
-                    String id = c.getString(TAG_ID);
+                    String accommodationId = c.getString(TAG_ID);
                     String name= c.getString(TAG_NAME);
                     String image_name = c.getString(TAG_IMAGE_NAME);
                     String descrption = c.getString(TAG_DESCRIPTION);
@@ -172,7 +178,7 @@ private class GetDepartments extends AsyncTask<Void, Void, Void> {
                     HashMap<String, String> event = new HashMap<String, String>();
 
                     // adding each child node to HashMap key => value
-                    event.put(TAG_ID, id);
+                    event.put(TAG_ID, accommodationId);
                     event.put(TAG_NAME, name);
                     event.put(TAG_IMAGE_NAME, image_name);
                     event.put(TAG_DESCRIPTION, descrption);

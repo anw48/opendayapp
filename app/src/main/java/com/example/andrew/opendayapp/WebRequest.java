@@ -80,7 +80,7 @@ public class WebRequest {
             }
             int reqresponseCode = conn.getResponseCode();
 
-            if (reqresponseCode == HttpsURLConnection.HTTP_OK) {
+            if (reqresponseCode == HttpsURLConnection.HTTP_OK || reqresponseCode == HttpsURLConnection.HTTP_CREATED) {
                 String line;
                 BufferedReader br = new BufferedReader(new InputStreamReader(conn.getInputStream()));
                 while ((line = br.readLine()) != null) {
