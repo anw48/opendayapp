@@ -8,6 +8,18 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageButton;
 
+
+/**
+ * This class is used as a an options selection screen where the user can
+ * choose between non academic and academic departments which will then lead
+ * to an activity that will load a list of departments
+ *
+ *
+ *
+ * @author Andrew Wynne Williams
+ * @version 1.0
+ * @since 17-4-2016
+ */
 public class Department_Home_Activity extends Activity implements View.OnClickListener{
 
     ImageButton academicbutton, nonacademicbutton;
@@ -31,6 +43,11 @@ public class Department_Home_Activity extends Activity implements View.OnClickLi
     }
 
 
+    /**
+     * This method finds the view selected by the user and loads the specified activity.
+     *
+     * @param v the item in the view
+     */
     public void onClick(View v) {
 
 

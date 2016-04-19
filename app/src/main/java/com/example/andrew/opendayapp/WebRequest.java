@@ -49,13 +49,7 @@ public class WebRequest {
             HttpURLConnection conn = (HttpURLConnection) url.openConnection();
             conn.setReadTimeout(15001);
             conn.setConnectTimeout(15001);
-            conn.setDoInput(true);
-            conn.setDoOutput(true);
-            if (requestmethod == POST) {
-                conn.setRequestMethod("POST");
-            } else if (requestmethod == GET) {
-                conn.setRequestMethod("GET");
-            }
+
 
             if (params != null) {
                 OutputStream ostream = conn.getOutputStream();
@@ -81,7 +75,7 @@ public class WebRequest {
             int reqresponseCode = conn.getResponseCode();
 
             if (reqresponseCode == HttpsURLConnection.HTTP_OK || reqresponseCode == HttpsURLConnection.HTTP_CREATED) {
-                String line;
+               String line;
                 BufferedReader br = new BufferedReader(new InputStreamReader(conn.getInputStream()));
                 while ((line = br.readLine()) != null) {
                     response += line;

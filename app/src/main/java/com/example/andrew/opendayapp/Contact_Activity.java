@@ -11,11 +11,31 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+/**
+ * This class is used as a contact form which sends an email
+ * to the universitys marketing team
+ *
+ *
+ *
+ * @author Andrew Wynne Williams
+ * @version 1.0
+ * @since 17-4-2016
+ */
 public class Contact_Activity extends Activity {
 
     private EditText subject;
     private EditText body;
 
+    /**
+     * This method starts the activity when it is called
+     * The title of the activity is also set here
+     * The back button is also set here
+     *
+     * This method also calls the send email method and sets
+     * the fields to null when the email has been sent
+     *
+     *  @param savedInstanceState auto generated
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,6 +43,7 @@ public class Contact_Activity extends Activity {
 
 
         getActionBar().setDisplayHomeAsUpEnabled(true);
+
 
         subject = (EditText) findViewById(R.id.subject);
         body = (EditText) findViewById(R.id.body);
@@ -40,6 +61,7 @@ public class Contact_Activity extends Activity {
 
 
     protected void sendEmail() {
+
 
         Intent email = new Intent(Intent.ACTION_SEND, Uri.parse("mailto:"));
         // prompts email clients only

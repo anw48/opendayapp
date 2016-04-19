@@ -86,7 +86,6 @@ public class PlannerActivity extends Activity {
 
         catch (java.io.FileNotFoundException e) {
 
-// that's OK, we probably haven't created it yet
 
         }
 

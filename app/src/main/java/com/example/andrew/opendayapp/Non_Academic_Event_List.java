@@ -23,15 +23,30 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Locale;
 
+/**
+ * This class is used to retrieve the list of events for an non academic departments based
+ * on a variable passed on by the department info activity.
+ *
+ * This class also finds the language to retrieve the information in.
+ *
+ * The data retrieve is retrieved from the database by the webservice and encoded as a JSON string and sent to this application
+ *
+ * This class acts as a setup class to define all the variables used in the class to retrieve the data from the database
+ * @author Andrew Wynne Williams
+ * @version 1.0
+ * @since 17-4-2016
+ */
 public class Non_Academic_Event_List extends ListActivity implements AdapterView.OnItemClickListener {
 
-
+    //variable to hold the url
     private static String url;
     Locale location;
 
+    //The following variables are used to store the retrieved data from the webservice
+    //These variables should not be changed unless the JSON string is also changed
+
     private static final String TAG_EVENT_INFO = "Events";
     private static final String TAG_EVENT_ID = "eventId";
-    //private static final String TAG_DEPT_ID = "dept_id";
     private static final String TAG_EVENT_NAME = "name";
     private static final String TAG_START_TIME = "startTime";
     private static final String TAG_END_TIME = "endTime";
@@ -39,6 +54,16 @@ public class Non_Academic_Event_List extends ListActivity implements AdapterView
     private static final String TAG_DESCRIPTION = "description";
 
 
+    /**
+     * This method starts the activity when it is called
+     * The title of the activity is also set here
+     * The back button is also set here
+     *
+     * The department Id is retrieved from the previous activity
+     * and used in the url to know what data to retrieve from the database
+     *
+     *  @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -57,13 +82,18 @@ public class Non_Academic_Event_List extends ListActivity implements AdapterView
 
         String locationparams = location.toString();
 
-        //url = getString(R.string.serverurl) + "get_all_nonacademic_events.php?code=" + locationparams + "&id=" + id ;
-
         url = "http://aber.dynamic-dns.net/AberOpenDay/eventWs.json?lang=" + locationparams + "&deptid" + id;
 
-        new GetDepartments().execute();
+        new GetNonAcademicEvents().execute();
     }
 
+
+    /**
+     * This method defines what happens when the user presses the back button
+     * In this case return to the previous screen
+     * @param item
+     * @return
+     */
     public boolean onOptionsItemSelected(MenuItem item) {
 
         switch (item.getItemId()) {
@@ -74,18 +104,31 @@ public class Non_Academic_Event_List extends ListActivity implements AdapterView
         return false;
     }
 
+
+    /**
+     * This method finds the current locale and is ues in the url
+     * to know what language to retrieve the data in.
+     */
     public void findLocale(){
 
         location = getResources().getConfiguration().locale;
 
     }
 
-
-    private class GetDepartments extends AsyncTask<Void, Void, Void> {
+    /**
+     * This class is used to retrieve the non academic events
+     * this is where the actual logic of retrieving the data occurs
+     * A JSON string is retrieve from the web sevice and the decoded by the following methods
+     */
+    private class GetNonAcademicEvents extends AsyncTask<Void, Void, Void> {
 
         ArrayList<HashMap<String, String>> eventlist;
         ProgressDialog pDialog;
 
+        /**
+         * This method sets the dialoag seen by the user when the data is being retrieved
+         * usually only seen by the user when there is a slow network connection
+         */
         @Override
         protected void onPreExecute() {
             super.onPreExecute();
@@ -94,6 +137,13 @@ public class Non_Academic_Event_List extends ListActivity implements AdapterView
             pDialog.show();
         }
 
+        /**
+         * This method calls the web request class and passes
+         * in the url to make the call to web service
+         *
+         * @param arg0
+         * @return
+         */
         @Override
         protected Void doInBackground(Void... arg0) {
             WebRequest webreq = new WebRequest();
@@ -103,6 +153,11 @@ public class Non_Academic_Event_List extends ListActivity implements AdapterView
             return null;
         }
 
+        /**
+         * This method inserts the retrieved JSON data into a list view and
+         * passes data to the next activity
+         * @param result result of the json string
+         */
         @Override
         protected void onPostExecute(Void result) {
             super.onPostExecute(result);
@@ -119,22 +174,22 @@ public class Non_Academic_Event_List extends ListActivity implements AdapterView
             ListView lv = getListView();
             lv.setTextFilterEnabled(true);
 
+            // sets a click listener for each item in list view
             lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                 public void onItemClick(AdapterView<?> parent, View view,
                                         int position, long id) {
 
+                    // passes data to next activity
                     Intent myIntent = new Intent(Non_Academic_Event_List.this, Event_Info_Activity.class);
 
                     String eventid = eventlist.get(position).get(TAG_EVENT_ID);
                     String name = eventlist.get(position).get(TAG_EVENT_NAME);
-                    //String deptid = eventlist.get(position).get(TAG_DEPT_ID);
                     String start = eventlist.get(position).get(TAG_START_TIME);
                     String end = eventlist.get(position).get(TAG_END_TIME);
                     String location = eventlist.get(position).get(TAG_LOCATION);
                     String description = eventlist.get(position).get(TAG_DESCRIPTION);
 
                     myIntent.putExtra("eventid", eventid);
-                    //myIntent.putExtra("id", deptid);
                     myIntent.putExtra("name", name);
                     myIntent.putExtra("description", description);
                     myIntent.putExtra("start", start);
@@ -153,12 +208,26 @@ public class Non_Academic_Event_List extends ListActivity implements AdapterView
         }
     }
 
+    /**
+     * This method sets the click listener for each list view item
+     * @param adapter
+     * @param arg1
+     * @param position
+     * @param arg3
+     */
     @Override
     public void onItemClick(AdapterView<?> adapter, View arg1, int position, long arg3) {
 
         String item = adapter.getItemAtPosition(position).toString();
     }
 
+    /**
+     * This method passes in the JSON response and loops through
+     * all retrieved events and passes
+     * each event into a JSON object
+     * @param json
+     * @return
+     */
     private ArrayList<HashMap<String, String>> ParseJSON(String json) {
         if (json != null) {
             try {
@@ -170,12 +239,11 @@ public class Non_Academic_Event_List extends ListActivity implements AdapterView
                 // Getting JSON Array node
                 JSONArray events = jsonObj.getJSONArray(TAG_EVENT_INFO);
 
-                // looping through All Students
+                // looping through All events
                 for (int i = 0; i < events.length(); i++) {
                     JSONObject c = events.getJSONObject(i);
 
                     String event_id = c.getString(TAG_EVENT_ID);
-                    //String dept_id = c.getString(TAG_DEPT_ID);
                     String event_name = c.getString(TAG_EVENT_NAME);
                     String start_time = c.getString(TAG_START_TIME);
                     String end_time = c.getString(TAG_END_TIME);
@@ -183,12 +251,11 @@ public class Non_Academic_Event_List extends ListActivity implements AdapterView
                     String descrption = c.getString(TAG_DESCRIPTION);
 
 
-                    // tmp hashmap for single student
+                    // tmp hashmap for single event
                     HashMap<String, String> event = new HashMap<String, String>();
 
                     // adding each child node to HashMap key => value
                     event.put(TAG_EVENT_ID, event_id);
-                    //event.put(TAG_DEPT_ID, dept_id);
                     event.put(TAG_EVENT_NAME, event_name);
                     event.put(TAG_START_TIME, start_time);
                     event.put(TAG_END_TIME, end_time);
@@ -196,7 +263,7 @@ public class Non_Academic_Event_List extends ListActivity implements AdapterView
                     event.put(TAG_DESCRIPTION, descrption);
 
 
-                    // adding student to students list
+                    // adding event to events list
 
                     eventlist.add(event);
                 }

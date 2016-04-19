@@ -22,12 +22,30 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Locale;
 
+/**
+ * This class is used to retrieve the list of academic departments
+ *
+ * This class also finds the language to retrieve the information in.
+ *
+ * The data retrieve is retrieved from the database by the webservice
+ * and encoded as a JSON string and sent to this application
+ *
+ * This class acts as a setup class to define all the variables
+ * used in the class to retrieve the data from the database
+ *
+ * @author Andrew Wynne Williams
+ * @version 1.0
+ * @since 17-4-2016
+ */
 public class AcademicDepartments extends ListActivity implements AdapterView.OnItemClickListener {
 
+    //variable to hold the url
     private static String urlparam;
 
     Locale location;
 
+    //The following variables are used to store the retrieved data from the webservice
+    //These variables should not be changed unless the JSON string is also changed
     private static final String TAG_DEPARTMENT_INFO = "Departments";
     private static final String TAG_DEPT_ID = "departmentId";
     private static final String TAG_NAME = "name";
@@ -35,7 +53,14 @@ public class AcademicDepartments extends ListActivity implements AdapterView.OnI
     private static final String TAG_IMAGE_NAME = "imageName";
 
 
-
+    /**
+     * This method starts the activity when it is called
+     * The title of the activity is also set here
+     * The back button is also set here
+     *
+     *
+     *  @param savedInstanceState auto generated
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,20 +72,28 @@ public class AcademicDepartments extends ListActivity implements AdapterView.OnI
         findLocale();
         String param = location.toString();
 
-        //urlparam = getString(R.string.serverurl)+ "get_academic_departments.php?code=" + param;
 
         urlparam = "http://aber.dynamic-dns.net/AberOpenDay/departmentWs.json?lang=" + param + "&academic=Y";
 
         new GetDepartments().execute();
     }
 
+    /**
+     * This method finds the current locale and is ues in the url
+     * to know what language to retrieve the data in.
+     */
     public void findLocale(){
 
         location  = getResources().getConfiguration().locale;
     }
 
 
-
+    /**
+     * This method defines what happens when the user presses the back button
+     * In this case return to the previous screen
+     * @param item item in the action bar
+     * @return the return action
+     */
     public boolean onOptionsItemSelected(MenuItem item) {
 
         switch (item.getItemId()) {
@@ -71,11 +104,20 @@ public class AcademicDepartments extends ListActivity implements AdapterView.OnI
         return false;
     }
 
+    /**
+     * This class is used to retrieve the academic departments
+     * this is where the actual logic of retrieving the data occurs
+     * A JSON string is retrieve from the web service and the decoded by the following methods
+     */
     private class GetDepartments extends AsyncTask<Void, Void, Void> {
 
         ArrayList<HashMap<String, String>> departmentlist;
         ProgressDialog pDialog;
 
+        /**
+         * This method sets the dioloag seen by the user when the data is being retrieved
+         * usually only seen by the user when there is a slow network connection
+         */
         @Override
         protected void onPreExecute(){
             super.onPreExecute();
@@ -84,6 +126,12 @@ public class AcademicDepartments extends ListActivity implements AdapterView.OnI
             pDialog.show();
         }
 
+        /**
+         * This method calls the web request class and passes in the url to make the call to web service
+         *
+         * @param arg0 argument
+         * @return returns
+         */
         @Override
         protected Void doInBackground(Void... arg0) {
             WebRequest webreq = new WebRequest();
@@ -97,6 +145,11 @@ public class AcademicDepartments extends ListActivity implements AdapterView.OnI
             return null;
         }
 
+        /**
+         * This method inserts the retrieved JSON data into a list view and
+         * passes data to the next activity
+         * @param result result of the json string
+         */
         @Override
         protected void onPostExecute(Void result) {
             super.onPostExecute(result);
@@ -113,10 +166,12 @@ public class AcademicDepartments extends ListActivity implements AdapterView.OnI
             ListView lv = getListView();
             lv.setTextFilterEnabled(true);
 
+            // sets a click listener for each item in list view
             lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
                 public void onItemClick(AdapterView<?> parent, View view,
                                         int position, long id) {
 
+                    // passes data to next activity
                     Intent myIntent = new Intent(AcademicDepartments.this, AcademicDepartmentInfoActivity.class);
 
                     String name = departmentlist.get(position).get(TAG_NAME);
@@ -141,12 +196,26 @@ public class AcademicDepartments extends ListActivity implements AdapterView.OnI
         }
     }
 
+    /**
+     * This method sets the click listener for each list view item
+     * @param adapter item adapter
+     * @param arg1 argument
+     * @param position position of item
+     * @param arg3 argument
+     */
     @Override
     public void onItemClick(AdapterView<?> adapter, View arg1, int position, long arg3) {
 
         String item = adapter.getItemAtPosition(position).toString();
     }
 
+    /**
+     * This method passes in the JSON response and loops through
+     * all retrieved departments and passes
+     * each event into a JSON object
+     * @param json json string used
+     * @return returns error message
+     */
     private ArrayList<HashMap<String, String>> ParseJSON(String json) {
         if (json != null) {
             try {
@@ -158,7 +227,7 @@ public class AcademicDepartments extends ListActivity implements AdapterView.OnI
                 // Getting JSON Array node
                 JSONArray departments = jsonObj.getJSONArray(TAG_DEPARTMENT_INFO);
 
-                // looping through All Students
+                // looping through All departments
                 for (int i = 0; i < departments.length(); i++) {
                     JSONObject c = departments.getJSONObject(i);
 
@@ -168,7 +237,7 @@ public class AcademicDepartments extends ListActivity implements AdapterView.OnI
                     String image_name = c.getString(TAG_IMAGE_NAME);
 
 
-                    // tmp hashmap for single student
+                    // tmp hashmap for single department
                     HashMap<String, String> department = new HashMap<String, String>();
 
                     // adding each child node to HashMap key => value
@@ -178,7 +247,7 @@ public class AcademicDepartments extends ListActivity implements AdapterView.OnI
                     department.put(TAG_IMAGE_NAME, image_name);
 
 
-                    // adding student to students list
+                    // adding department to departments list
 
                     departmentlist.add(department);
                 }
