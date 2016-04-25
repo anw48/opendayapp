@@ -149,6 +149,11 @@
     <string name="sendbutton">Anfon</string>
 
 
+    <string name="departmentoption">adrannau</string>
+    <string name="accommodationoption">llety</string>
+    <string name="refreshmentoption">lluniaeth</string>
+
+
     <!--Student experience page strings-->
 
     <string name="studentexperiencedescription">Yma yn Aberystwyth rydym yn ymfalchïo yn ein profiad myfyrwyr.

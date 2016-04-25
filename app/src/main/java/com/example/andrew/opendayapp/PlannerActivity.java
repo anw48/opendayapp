@@ -42,14 +42,11 @@ public class PlannerActivity extends Activity {
     public void clickedSave(View v){
 
         try{
-            OutputStreamWriter out=
-                    new OutputStreamWriter(openFileOutput(STORETEXT,0));
+            OutputStreamWriter out = new OutputStreamWriter(openFileOutput(STORETEXT,0));
             out.write(txtEditor.getText().toString());
             out.close();
 
-            Toast
-                    .makeText(this, "The contents are saved",Toast.LENGTH_LONG)
-                    .show();
+            Toast.makeText(this, "The contents are saved",Toast.LENGTH_LONG).show();
         }
         catch (Throwable t){
             Toast

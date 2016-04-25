@@ -165,6 +165,10 @@
     <string name="eventsbutton">View Events</string>
     <string name="sendbutton">Send</string>
 
+    <string name="departmentoption">Departments</string>
+    <string name="accommodationoption">Accommodation</string>
+    <string name="refreshmentoption">Refreshments</string>
+
 
     <!--Student experience page strings-->
 

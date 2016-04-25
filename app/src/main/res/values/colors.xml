@@ -7,4 +7,6 @@
     <color name="primary_material_dark">#ffcb05</color>
     <color name="primary_material_light">#ffcb05</color>
     <color name="holo_light_primary">#ffcb05</color>
+    <color name="holo_light_primary_dark">#56318e</color>
+    <color name="primary_text_holo_light">#56318e</color>
 </resources>

@@ -3,6 +3,7 @@ package com.example.andrew.opendayapp;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
 import android.support.v4.app.NavUtils;
+import android.view.Menu;
 import android.view.MenuItem;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -32,14 +33,43 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
     }
 
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.map_menu, menu);
+        return true;
+    }
+
+
     public boolean onOptionsItemSelected(MenuItem item) {
 
-        switch (item.getItemId()) {
-            case android.R.id.home:
-                NavUtils.navigateUpFromSameTask(this);
-                return true;
+
+        if (item.getItemId()== android.R.id.home) {
+
+            NavUtils.navigateUpFromSameTask(this);
+            return true;
         }
-        return false;
+
+        if (item.getItemId()== R.id.departmentoption) {
+
+            mMap.clear();
+            getAcademicMarkers();
+            return true;
+        }
+
+        if (item.getItemId()== R.id.accommodationoption) {
+            mMap.clear();
+            getAccommodatiomMarkers();
+            return true;
+        }
+
+        if (item.getItemId()== R.id.refreshmentoption) {
+            mMap.clear();
+            getRefreshmentMarkers();
+            return true;
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 
 
@@ -55,15 +85,48 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
     @Override
     public void onMapReady(GoogleMap googleMap) {
        setTitle(getResources().getString(R.string.title_activity_maps));
+
         mMap = googleMap;
         mMap.getUiSettings().setZoomControlsEnabled(true);
         mMap.getUiSettings().setZoomGesturesEnabled(true);
-
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(new LatLng(52.415549, -4.063668), 16.0f));
+
         getAcademicMarkers();
-        getAccommodatiomMarkers();
 
     }
+
+
+
+    public void getRefreshmentMarkers(){
+
+        String refreshmentmarkers [][] = {
+
+
+                { "52.417892", "-4.065041", "TaMed Da Restaurant" },
+                { "52.417756", "-4.064891", "TaMed Bach Café Bar" },
+                { "52.416361", "-4.066775", "IBER bach" },
+                { "52.420868", "-4.060332", "SGUBORfach" },
+                { "52.410525", "-4.055534", "Blas Padarn" },
+                { "52.415616", "-4.063142", "Arts Centre Café" },
+                { "52.415056", "-4.063110", "Piazza Café" },
+                { "52.415920", "-4.062579", "Theatre Bar" },
+                { "52.415179", "-4.062920", "Student Shop" },
+                { "52.415060", "-4.062952", "Cwtch Bar" },
+                { "52.415664", "-4.061113", "Brynamlwg Tavern" }
+        };
+
+        for (int i = 0; i <refreshmentmarkers.length; i++){
+            Marker refreshment = mMap.addMarker(new MarkerOptions()
+                    .position(new LatLng(Double.parseDouble(refreshmentmarkers[i][0]),Double.parseDouble(refreshmentmarkers[i][1])))
+                    .title(refreshmentmarkers[i][2])
+                    .icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN)));
+        }
+
+
+
+    }
+
+
 
     public void getAccommodatiomMarkers(){
         String accomomdationmarkers[][] = {

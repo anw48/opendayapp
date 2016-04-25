@@ -20,6 +20,9 @@
 
     <string name="welshoption">Welsh</string>
     <string name="englishoption">English</string>
+    <string name="departmentoption">Departments</string>
+    <string name="accommodationoption">Accommodation</string>
+    <string name="refreshmentoption">Refreshments</string>
 
 
     <!-- Activity main strings mainly image button descriptions -->

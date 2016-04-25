@@ -82,7 +82,7 @@ public class Non_Academic_Event_List extends ListActivity implements AdapterView
 
         String locationparams = location.toString();
 
-        url = "http://aber.dynamic-dns.net/AberOpenDay/eventWs.json?lang=" + locationparams + "&deptid" + id;
+        url = "http://aber.dynamic-dns.net/AberOpenDay/eventWs.json?lang=" + locationparams + "&deptId=" + id;
 
         new GetNonAcademicEvents().execute();
     }

@@ -1,20 +1,12 @@
 package com.example.andrew.opendayapp;
 
 import android.content.Intent;
-import android.support.test.espresso.assertion.ViewAssertions;
-import android.support.test.espresso.matcher.ViewMatchers;
 import android.support.test.rule.ActivityTestRule;
 import android.support.test.runner.AndroidJUnit4;
-import android.widget.ListView;
 
 import org.junit.Before;
 import org.junit.Rule;
-import org.junit.Test;
 import org.junit.runner.RunWith;
-
-import static android.support.test.espresso.Espresso.onData;
-import static android.support.test.espresso.matcher.ViewMatchers.withId;
-import static org.hamcrest.CoreMatchers.anything;
 
 /**
  * Created by Andrew on 4/6/2016.
@@ -49,7 +41,7 @@ public class AcademicDepartmentsTest {
      * .onChildView(withId(R.id.name))
      * .check(matches(isDisplayed()));
      * }
-     */
+     *
 
     @Test
     public void testListIsDisplayed() {
@@ -65,5 +57,6 @@ public class AcademicDepartmentsTest {
 
 
     }
+*/
 
 }
