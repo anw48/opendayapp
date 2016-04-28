@@ -33,6 +33,10 @@ import java.util.Locale;
  * This class acts as a setup class to define all the variables
  * used in the class to retrieve the data from the database
  *
+ *
+ * Part of this class was constructed using code form the following website
+ * http://mobilesiri.com/json-parsing-in-android-using-android-studio/
+ *
  * @author Andrew Wynne Williams
  * @version 1.0
  * @since 17-4-2016

@@ -1,8 +1,6 @@
 package com.example.andrew.opendayapp;
 
-import android.content.Context;
 import android.content.Intent;
-import android.support.test.InstrumentationRegistry;
 import android.support.test.rule.ActivityTestRule;
 import android.support.test.runner.AndroidJUnit4;
 
@@ -12,13 +10,13 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 
 import static android.support.test.espresso.Espresso.onView;
+import static android.support.test.espresso.action.ViewActions.click;
 import static android.support.test.espresso.assertion.ViewAssertions.matches;
 import static android.support.test.espresso.matcher.ViewMatchers.withId;
 import static android.support.test.espresso.matcher.ViewMatchers.withText;
-import static android.support.test.espresso.action.ViewActions.click;
-import static org.junit.Assert.*;
 
 /**
+ * This class is used to test the information displayed in the department information class
  * Created by Andrew on 4/5/2016.
  *
  */
@@ -30,7 +28,10 @@ public class AcademicDepartmentInfoActivityTest {
     public ActivityTestRule<AcademicDepartmentInfoActivity> activityTestRule
             = new ActivityTestRule<>(AcademicDepartmentInfoActivity.class, true, false);
 
-
+    /**
+     * Set up the data to be used in the test
+     * @throws Exception
+     */
     @Before
     public void setUp() throws Exception {
         Intent intent = new Intent();
@@ -47,15 +48,19 @@ public class AcademicDepartmentInfoActivityTest {
     }
 
 
+    /**
+     * Tests the correct content is displayed
+     */
     @Test
     public void testContentIsDisplayedFromIntent() {
 
         onView(withId(R.id.name)).check(matches(withText("Art")));
         onView(withId(R.id.description)).check(matches(withText("test description")));
-        // onView(withId(R.id.image)).check(matches(withId(R.drawable.welcome)));
     }
 
-
+    /**
+     * tests to check if the events button works correctly
+     */
     @Test
     public void testEventsButton() {
 

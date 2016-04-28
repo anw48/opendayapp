@@ -8,6 +8,14 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageButton;
 
+/**
+ * This class is used to display some image buttons
+ * which link to the accommodation and refreshemnt options
+ *
+ * @author Andrew Wynne Williams
+ * @version 1.0
+ * @since 17-4-2016
+ */
 public class Student_Experience_Activity extends Activity implements View.OnClickListener {
 
     ImageButton accommodationbutton, refreshementsbutton;

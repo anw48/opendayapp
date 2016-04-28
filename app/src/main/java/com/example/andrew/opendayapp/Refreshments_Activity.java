@@ -22,12 +22,31 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Locale;
 
+/**
+ * This class is used to retrieve the list of refreshment options
+ *
+ * This class also finds the language to retrieve the information in.
+ *
+ * The data retrieve is retrieved from the database by the webservice
+ * and encoded as a JSON string and sent to this application
+ *
+ * This class acts as a setup class to define all the variables used in the class to retrieve the data from the database
+ *
+ * Part of this class was constructed using code form the following website
+ * http://mobilesiri.com/json-parsing-in-android-using-android-studio/
+ *
+ * @author Andrew Wynne Williams
+ * @version 1.0
+ * @since 17-4-2016
+ */
 public class Refreshments_Activity extends ListActivity implements AdapterView.OnItemClickListener {
 
 
     private static String url;
     Locale location;
 
+    //The following variables are used to store the retrieved data from the webservice
+    //These variables should not be changed unless the JSON string is also changed
     private static final String TAG_REFRESHMENTS_INFO = "Refreshments";
     private static final String TAG_ID = "refreshmentId";
     private static final String TAG_NAME = "name";
@@ -50,11 +69,9 @@ public class Refreshments_Activity extends ListActivity implements AdapterView.O
 
         String locationparam = location.toString();
 
-       // url = getString(R.string.serverurl) + "get_refreshements.php?code=" + locationparam;
-
         url = "http://aber.dynamic-dns.net/AberOpenDay/refreshmentWs.json?lang=" + locationparam;
 
-        new GetDepartments().execute();
+        new GetRefreshments().execute();
 
 
     }
@@ -70,12 +87,20 @@ public class Refreshments_Activity extends ListActivity implements AdapterView.O
     }
 
 
+    /**
+     * Finds the current locale of the application
+     */
     public void findLocale(){
 
         location = getResources().getConfiguration().locale;
     }
 
-    private class GetDepartments extends AsyncTask<Void, Void, Void> {
+    /**
+     * This class is used to retrieve the refreshments
+     * this is where the actual logic of retrieving the data occurs
+     * A JSON string is retrieve from the web sevice and the decoded by the following methods
+     */
+    private class GetRefreshments extends AsyncTask<Void, Void, Void> {
 
         ArrayList<HashMap<String, String>> refreshmentlist;
         ProgressDialog pDialog;
@@ -163,7 +188,7 @@ public class Refreshments_Activity extends ListActivity implements AdapterView.O
                 // Getting JSON Array node
                 JSONArray refresehments = jsonObj.getJSONArray(TAG_REFRESHMENTS_INFO);
 
-                // looping through All Students
+                // looping through All refreshments
                 for (int i = 0; i < refresehments.length(); i++) {
                     JSONObject c = refresehments.getJSONObject(i);
 
@@ -175,7 +200,7 @@ public class Refreshments_Activity extends ListActivity implements AdapterView.O
                     String closing_time = c.getString(TAG_CLOSING_TIME);
 
 
-                    // tmp hashmap for single student
+                    // tmp hashmap for single refreshment
                     HashMap<String, String> refreshment = new HashMap<String, String>();
 
                     // adding each child node to HashMap key => value
@@ -188,8 +213,7 @@ public class Refreshments_Activity extends ListActivity implements AdapterView.O
 
 
 
-                    // adding student to students list
-
+                    // adding refreshment to list
                     refreshmentlist.add(refreshment);
                 }
                 return refreshmentlist;

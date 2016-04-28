@@ -5,8 +5,22 @@ import android.os.Bundle;
 import android.support.v4.app.NavUtils;
 import android.view.MenuItem;
 
+/**
+ * This class is used to display the disclaimers activity page.
+ * this page will contain health and saftey information as well
+ * as what to do in an emergency.
+ *
+ * @author Andrew Wynne Williams
+ * @version 1.0
+ * @since 17-4-2016
+ */
 public class DiscliamersActivity extends Activity {
 
+    /**
+     * Auto generated androaid method allows the activity to be started.
+     * this method also sets the title, layout file and the back button.
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -15,6 +29,11 @@ public class DiscliamersActivity extends Activity {
         getActionBar().setDisplayHomeAsUpEnabled(true);
     }
 
+    /**
+     * This method defines what action to take when the back button is pressed.
+     * @param item item in the menu
+     * @return return selected item
+     */
     public boolean onOptionsItemSelected(MenuItem item) {
 
         switch (item.getItemId()) {

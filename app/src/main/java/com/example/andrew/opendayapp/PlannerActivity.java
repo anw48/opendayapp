@@ -13,6 +13,18 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 
+/**
+ * This class is used to create the personal planner activity
+ * To do this the class craetes a txt file and performs inpuout put methods
+ * on tha file
+ *
+ * to aid in the construction of this class code form the following resource was used
+ * http://www.sitepoint.com/store-user-data-using-simple-text-files-and-apis-in-android/
+ *
+ * @author Andrew Wynne Williams
+ * @version 1.0
+ * @since 17-4-2016
+ */
 public class PlannerActivity extends Activity {
 
     private final static String STORETEXT="storetext.txt";
@@ -39,29 +51,30 @@ public class PlannerActivity extends Activity {
         return false;
     }
 
+    /**
+     * This method is used to save the content of the text field
+     * @param v
+     */
     public void clickedSave(View v){
-
         try{
+            //creates an output stream writer to write to the text file
             OutputStreamWriter out = new OutputStreamWriter(openFileOutput(STORETEXT,0));
             out.write(txtEditor.getText().toString());
             out.close();
-
             Toast.makeText(this, "The contents are saved",Toast.LENGTH_LONG).show();
         }
         catch (Throwable t){
             Toast
                     .makeText(this, "Exception: " + t.toString(), Toast.LENGTH_LONG)
-        .show();
+                    .show();
         }
-
     }
 
-    public void readFileInEditor()
-
-    {
-
+    /**
+     * This method is used to read the data from the file
+     */
+    public void readFileInEditor() {
         try {
-
             InputStream in = openFileInput(STORETEXT);
             if (in != null) {
 
@@ -71,29 +84,17 @@ public class PlannerActivity extends Activity {
                 StringBuilder buf=new StringBuilder();
                 while ((str = reader.readLine()) != null) {
                     buf.append(str);
-
                 }
-
                 in.close();
                 txtEditor.setText(buf.toString());
-
             }
-
         }
-
         catch (java.io.FileNotFoundException e) {
-
-
         }
-
         catch (Throwable t) {
             Toast
                     .makeText(this, "Exception: " + t.toString(), Toast.LENGTH_LONG)
                     .show();
-
         }
-
     }
-
-
 }

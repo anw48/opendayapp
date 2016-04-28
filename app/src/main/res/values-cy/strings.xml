@@ -1,6 +1,6 @@
 <resources>
     <!-- App title Details-->
-    <string name="app_name">Diwrnod Agored Prifysgol Aberystwyth</string>
+    <string name="app_name">Prifysgol Aberystwyth</string>
     <string name="welcomepage"> Croeso i Brifysgol Aberystwyth</string>
     <string name="departments">Adrannau Di Academaidd</string>
     <string name="academicdepartments">Adrannau academaidd</string>

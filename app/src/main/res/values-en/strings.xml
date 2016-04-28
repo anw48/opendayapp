@@ -1,6 +1,6 @@
 <resources>
     <!-- App title Details-->
-    <string name="app_name">Aberystwyth University Open Day</string>
+    <string name="app_name">Aberystwyth University</string>
     <string name="welcomepage">Welcome To Aberystwyth</string>
     <string name="departments">Non Academic Departments</string>
     <string name="academicdepartments">Academic Departments</string>

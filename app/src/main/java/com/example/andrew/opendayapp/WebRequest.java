@@ -1,8 +1,4 @@
 package com.example.andrew.opendayapp;
-
-/**
- * Created by Andrew on 3/13/2016.
- */
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.InputStreamReader;
@@ -16,6 +12,17 @@ import java.util.Map;
 
 import javax.net.ssl.HttpsURLConnection;
 
+/**
+ * This class is used to make the web request to the
+ * web application using the URl constructed in the list classes
+ *
+ * This class was constructed by following a guide located here:
+ * http://mobilesiri.com/json-parsing-in-android-using-android-studio/
+ *
+ * @author Andrew Wynne Williams
+ * @version 1.0
+ * @since 17-4-2016
+ */
 public class WebRequest {
     static String response = null;
     public final static int GET = 1;

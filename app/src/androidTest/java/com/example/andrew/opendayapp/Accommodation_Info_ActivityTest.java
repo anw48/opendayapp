@@ -13,9 +13,10 @@ import static android.support.test.espresso.Espresso.onView;
 import static android.support.test.espresso.assertion.ViewAssertions.matches;
 import static android.support.test.espresso.matcher.ViewMatchers.withId;
 import static android.support.test.espresso.matcher.ViewMatchers.withText;
-import static org.junit.Assert.*;
 
 /**
+ * This test class tests the accommodation info activity to see if the correct data is displayed
+ *
  * Created by Andrew on 4/6/2016.
  *
  */
@@ -27,7 +28,10 @@ public class Accommodation_Info_ActivityTest {
     public ActivityTestRule<Accommodation_Info_Activity> activityTestRule
             = new ActivityTestRule<Accommodation_Info_Activity>(Accommodation_Info_Activity.class, true, false);
 
-
+    /**
+     * sets the data to be used in the test
+     * @throws Exception
+     */
 
     @Before
     public void setUp() throws Exception {
@@ -45,6 +49,9 @@ public class Accommodation_Info_ActivityTest {
     }
 
 
+    /**
+     * test to see if the correct content is diplayed
+     */
     @Test
     public void testContentIsDisplayedFromIntent() {
 

@@ -34,6 +34,10 @@ import java.util.Locale;
  * This class acts as a setup class to define all the variables
  * used in the class to retrieve the data from the database
  *
+ *
+ * Part of this class was constructed using code form the following website
+ * http://mobilesiri.com/json-parsing-in-android-using-android-studio/
+ *
  * @author Andrew Wynne Williams
  * @version 1.0
  * @since 17-4-2016
@@ -174,10 +178,12 @@ public class DepartmentActivity extends ListActivity implements AdapterView.OnIt
                     String name = departmentlist.get(position).get(TAG_NAME);
                     String deptid = departmentlist.get(position).get(TAG_DEPT_ID);
                     String description = departmentlist.get(position).get(TAG_DESCRIPTION);
+                    String image = departmentlist.get(position).get(TAG_IMAGE_NAME);
 
                     myIntent.putExtra("id", deptid);
                     myIntent.putExtra("name", name);
                     myIntent.putExtra("description", description);
+                    myIntent.putExtra("image", image);
 
                     Bundle extras = new Bundle();
                     extras.putString("status", "Data Received!");

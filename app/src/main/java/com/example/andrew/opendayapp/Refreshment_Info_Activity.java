@@ -8,6 +8,15 @@ import android.view.MenuItem;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+/**
+ * This class is used to display detailed information about a refreshment option
+ *
+ * This information is retreived by intents from the previous activity
+ *
+ * @author Andrew Wynne Williams
+ * @version 1.0
+ * @since 17-4-2016
+ */
 public class Refreshment_Info_Activity extends Activity {
 
     @Override
@@ -18,7 +27,7 @@ public class Refreshment_Info_Activity extends Activity {
         getActionBar().setDisplayHomeAsUpEnabled(true);
 
 
-
+        //gets the intent values
         Intent intent = getIntent();
         final String id = intent.getStringExtra("id");
         String name = intent.getStringExtra("name");
@@ -34,21 +43,21 @@ public class Refreshment_Info_Activity extends Activity {
         ((TextView)findViewById(R.id.closetime)).setText(close);
 
 
+        //sets the image
         ImageView imgView = (ImageView) findViewById(R.id.image);
-
         int resID = getResources().getIdentifier(image, "drawable", getPackageName());
-
         imgView.setImageResource(resID);
 
         Bundle bundle = intent.getExtras();
         String status = bundle.getString("status");
-
-
-
-
-
     }
 
+
+    /**
+     * Sets the home button value
+     * @param item
+     * @return
+     */
     public boolean onOptionsItemSelected(MenuItem item) {
 
         switch (item.getItemId()) {

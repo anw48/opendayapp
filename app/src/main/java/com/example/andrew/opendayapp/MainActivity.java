@@ -55,7 +55,6 @@ public class MainActivity extends Activity implements View.OnClickListener {
         //sets the title on the action bar of the activity
         setTitle(getResources().getString(R.string.app_name));
 
-
         // Initialises the image button variable to map to the correct image button in the layout xml file
         welcomebutton = (ImageButton) findViewById(R.id.welcomeimageButton);
         welcomebutton.setOnClickListener(this);
@@ -80,8 +79,6 @@ public class MainActivity extends Activity implements View.OnClickListener {
 
         studentbutton = (ImageButton) findViewById(R.id.refreshementsimageButton);
         studentbutton.setOnClickListener(this);
-
-
     }
 
     /**
@@ -89,12 +86,12 @@ public class MainActivity extends Activity implements View.OnClickListener {
      * This method sets defines what action to preform when the user clicks on a specific view of the activity
      * In this case all the images buttons are defined to navigate away from MainActivity to another Activity
      *
+     * in order to add a click listner foreach button some code was used fom the following resource
+     * http://stackoverflow.com/questions/14232961/android-button-onclicklistener-does-not-working
      *
      * @param v   Variable to define what part of the view is being used by the user
      */
     public void onClick(View v) {
-
-
         switch (v.getId()) {
             case R.id.welcomeimageButton: {
                 Intent myIntent = new Intent(MainActivity.this,
@@ -145,16 +142,18 @@ public class MainActivity extends Activity implements View.OnClickListener {
                 startActivity(myIntent);
                 break;
             }
-
-
         }
-
     }
 
 
     /**
      *
      * This method creates a options menu for the language selection
+     *
+     * Some information from the following source was used to create the menu for the languages
+     * http://www.techotopia.com/index.php/Creating_and_Managing_Overflow_Menus_on_Android
+     *
+     * this has also been replicated in other classes
      *
      * @param menu  menu parameter to create a menu
      * @return returns true to create a options menu

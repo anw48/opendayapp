@@ -15,7 +15,8 @@ import android.widget.Toast;
  * This class is used as a contact form which sends an email
  * to the universitys marketing team
  *
- *
+ * To aid in the construction of this class code form the following website was used
+ * http://www.tutorialspoint.com/android/android_sending_email.htm
  *
  * @author Andrew Wynne Williams
  * @version 1.0

@@ -8,6 +8,15 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageButton;
 
+/**
+ * This class is used to display some image buttons
+ * which navigate to other activities.
+ * e.g. Maps
+ *
+ * @author Andrew Wynne Williams
+ * @version 1.0
+ * @since 17-4-2016
+ */
 public class Getting_Around_Activity extends Activity implements View.OnClickListener {
 
     ImageButton mapbutton, carbutton, trainbutton, busbutton;
@@ -43,8 +52,11 @@ public class Getting_Around_Activity extends Activity implements View.OnClickLis
         return false;
     }
 
+    /**
+     * This method sets a clcik listner for each item
+     * @param v
+     */
     public void onClick(View v) {
-
 
         switch (v.getId()) {
             case R.id.mapImageButton: {

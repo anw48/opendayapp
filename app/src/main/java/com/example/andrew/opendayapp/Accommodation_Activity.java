@@ -33,6 +33,10 @@ import java.util.Locale;
  * and encoded as a JSON string and sent to this application
  *
  * This class acts as a setup class to define all the variables used in the class to retrieve the data from the database
+ *
+ * Part of this class was constructed using code form the following website
+ * http://mobilesiri.com/json-parsing-in-android-using-android-studio/
+ *
  * @author Andrew Wynne Williams
  * @version 1.0
  * @since 17-4-2016
@@ -58,9 +62,7 @@ public class Accommodation_Activity extends ListActivity implements AdapterView.
      * This method starts the activity when it is called
      * The title of the activity is also set here
      * The back button is also set here
-     *
-     * The department Id is retrieved from the previous activity
-     * and used in the url to know what data to retrieve from the database
+
      *
      *  @param savedInstanceState auto generated
      */

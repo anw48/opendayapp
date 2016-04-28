@@ -7,8 +7,26 @@ import android.support.v4.app.NavUtils;
 import android.view.MenuItem;
 import android.widget.TextView;
 
+/**
+ * This class is used to display the event information.
+ * This is where content is recieved from the previous
+ * screen and the event information diplayed.
+ *
+ * @author Andrew Wynne Williams
+ * @version 1.0
+ * @since 17-4-2016
+ */
+
 public class Event_Info_Activity extends Activity {
 
+    /**
+     * Auto generated method to create the activity.
+     * also defines the title, layout file and the back button
+     *
+     * The information that is passed to this activity via intents
+     * is also retrieved in this method.
+     * @param savedInstanceState
+     */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -17,9 +35,10 @@ public class Event_Info_Activity extends Activity {
 
         getActionBar().setDisplayHomeAsUpEnabled(true);
 
-
+        //gets the intent from the previous screen
         Intent intent = getIntent();
 
+        //sets the intents to a variable
         String eventid = intent.getStringExtra("eventid");
         String id = intent.getStringExtra("deptid");
         String name = intent.getStringExtra("name");
@@ -28,6 +47,7 @@ public class Event_Info_Activity extends Activity {
         String end = intent.getStringExtra("end");
         String location = intent.getStringExtra("location");
 
+        //sets the variables to a view so that it can be displayed
         ((TextView) findViewById(R.id.eventid)).setText(eventid);
         ((TextView) findViewById(R.id.deptid)).setText(id);
         ((TextView) findViewById(R.id.eventname)).setText(name);
@@ -36,14 +56,17 @@ public class Event_Info_Activity extends Activity {
         ((TextView) findViewById(R.id.endtime)).setText(end);
         ((TextView) findViewById(R.id.location)).setText(location);
 
-
-
         Bundle bundle = intent.getExtras();
         String status = bundle.getString("status");
     }
 
-    public boolean onOptionsItemSelected(MenuItem item) {
 
+    /**
+     * This method defines the action of the back button
+     * @param item
+     * @return
+     */
+    public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case android.R.id.home:
                 NavUtils.navigateUpFromSameTask(this);
@@ -51,6 +74,4 @@ public class Event_Info_Activity extends Activity {
         }
         return false;
     }
-
-
 }

@@ -49,10 +49,9 @@ public class AcademicDepartmentInfoActivity extends Activity {
         ((TextView)findViewById(R.id.name)).setText(name);
         ((TextView)findViewById(R.id.description)).setText(description);
 
+        //sets the image
         ImageView imgView = (ImageView) findViewById(R.id.image);
-
         int resID = getResources().getIdentifier(image, "drawable", getPackageName());
-
         imgView.setImageResource(resID);
 
         Bundle bundle = intent.getExtras();
