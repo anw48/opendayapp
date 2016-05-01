@@ -102,10 +102,10 @@
                             Cambrian Hills and down to the coast, and from the north or south the A487 offers
                             spectacular views over Cardigan Bay.</string>
     <string name="addressheading">Campus post codes</string>
-    <string name="campusaddress">Penglais Campus:   SY23 3BY
-                                Llanbadarn Campus:   SY23 3AS
+    <string name="campusaddress">Penglais Campus:   SY23 3BY\n
+                                Llanbadarn Campus:   SY23 3AS\n
                                 Gogerddan Campus:   SY23 3EB\n
-                                Old College:   SY23 2AY</string>
+                                    Old College:   SY23 2AY</string>
     <string name="trainheading">Arriving by train</string>
     <string name="trainbody">There are regular train services to Aberystwyth from north Wales and the Midlands
                             (travelling from the east all services pass through Shrewsbury).

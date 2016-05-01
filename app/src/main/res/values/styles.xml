@@ -12,6 +12,7 @@
         <item name="android:background">#ffcb05</item>
         <item name="android:textColor">#56318e</item>
         <item name="android:icon">@drawable/logo</item>
+        <item name="android:textStyle">bold</item>
     </style>
 
 

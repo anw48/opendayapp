@@ -23,7 +23,6 @@
         android:layout_width="match_parent"
         android:layout_height="110dp"
         android:id="@+id/refreshementsimageButton"
-        android:contentDescription="@string/disclaimersbutton"
         android:background="@drawable/refreshments"
         android:padding="2dp"
         android:scaleType="fitCenter"
@@ -35,14 +34,9 @@
         android:layout_width="match_parent"
         android:layout_height="110dp"
         android:id="@+id/accommodationbutton"
-        android:contentDescription="@string/disclaimersbutton"
         android:background="@drawable/accommodation"
         android:padding="2dp"
         android:scaleType="fitCenter"
         android:adjustViewBounds="true"
         />
-
-
-
-
 </LinearLayout>
