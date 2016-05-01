@@ -13,7 +13,11 @@ import org.junit.runner.RunWith;
  * this class is supposed to test the list view of the academic departments
  * however it is uncompleted.
  *
+ * @author Andrew Wynne Williams
+ * @version 1.0
+ * @since 17-4-2016
  */
+
 @RunWith(AndroidJUnit4.class)
 public class AcademicDepartmentsTest {
 

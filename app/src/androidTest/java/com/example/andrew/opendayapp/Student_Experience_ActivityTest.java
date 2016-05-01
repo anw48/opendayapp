@@ -14,13 +14,15 @@ import static android.support.test.espresso.action.ViewActions.click;
 import static android.support.test.espresso.assertion.ViewAssertions.matches;
 import static android.support.test.espresso.matcher.ViewMatchers.withId;
 import static android.support.test.espresso.matcher.ViewMatchers.withText;
-import static org.junit.Assert.*;
 
 /**
  *
- * Created by Andrew on 4/6/2016.
+ * This test class is used to test the student experience activity
+ *
+ * @author Andrew Wynne Williams
+ * @version 1.0
+ * @since 17-4-2016
  */
-
 @RunWith(AndroidJUnit4.class)
 public class Student_Experience_ActivityTest {
 
@@ -29,6 +31,10 @@ public class Student_Experience_ActivityTest {
             = new ActivityTestRule<Student_Experience_Activity>(Student_Experience_Activity.class);
 
 
+    /**
+     * This method starts the activity
+     * @throws Exception
+     */
     @Before
     public void setUp() throws Exception {
         Intent myIntent = new Intent();
@@ -36,6 +42,10 @@ public class Student_Experience_ActivityTest {
     }
 
 
+    /**
+     * This method checks that the refreshments button
+     * opens the refreshments activity
+     */
     @Test
     public void testRefreshementsButton() {
 
@@ -45,14 +55,14 @@ public class Student_Experience_ActivityTest {
 
 
 
+    /**
+     * This method checks that the accommodation button
+     * opens the accommodation activity
+     */
     @Test
     public void testAccommodationButton() {
 
         onView(withId(R.id.accommodationbutton)).perform(click());
         onView(withText(R.string.accommodationlist)).check(matches(withText(R.string.accommodationlist)));
     }
-
-
-
-
 }

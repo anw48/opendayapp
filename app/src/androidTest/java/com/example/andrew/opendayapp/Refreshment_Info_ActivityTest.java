@@ -13,11 +13,16 @@ import static android.support.test.espresso.Espresso.onView;
 import static android.support.test.espresso.assertion.ViewAssertions.matches;
 import static android.support.test.espresso.matcher.ViewMatchers.withId;
 import static android.support.test.espresso.matcher.ViewMatchers.withText;
-import static org.junit.Assert.*;
 
 /**
- * Created by Andrew on 4/6/2016.
  *
+ * This test class is used to test the refreshment info activity
+ * this class requires information to be passed to it in order to
+ * display the information
+ *
+ * @author Andrew Wynne Williams
+ * @version 1.0
+ * @since 17-4-2016
  */
 @RunWith(AndroidJUnit4.class)
 public class Refreshment_Info_ActivityTest {
@@ -28,6 +33,11 @@ public class Refreshment_Info_ActivityTest {
             = new ActivityTestRule<Refreshment_Info_Activity>(Refreshment_Info_Activity.class, true, false);
 
 
+    /**
+     * This method starts the activity and defines
+     * what information is passed to the activity to be displayed
+     * @throws Exception
+     */
     @Before
     public void setUp() throws Exception {
         Intent intent = new Intent();
@@ -46,6 +56,9 @@ public class Refreshment_Info_ActivityTest {
     }
 
 
+    /**
+     * This method checks that the passed information matches the displayed information
+     */
     @Test
     public void testContentIsDisplayedFromIntent() {
 
@@ -53,11 +66,5 @@ public class Refreshment_Info_ActivityTest {
         onView(withId(R.id.description)).check(matches(withText("Description of TaMed Da")));
         onView(withId(R.id.opentime)).check(matches(withText("09:00:00")));
         onView(withId(R.id.closetime)).check(matches(withText("17:00:00")));
-
-
     }
-
-
-
-
 }

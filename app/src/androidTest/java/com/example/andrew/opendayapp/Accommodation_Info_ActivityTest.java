@@ -17,9 +17,11 @@ import static android.support.test.espresso.matcher.ViewMatchers.withText;
 /**
  * This test class tests the accommodation info activity to see if the correct data is displayed
  *
- * Created by Andrew on 4/6/2016.
- *
+ * @author Andrew Wynne Williams
+ * @version 1.0
+ * @since 17-4-2016
  */
+
 
 @RunWith(AndroidJUnit4.class)
 public class Accommodation_Info_ActivityTest {

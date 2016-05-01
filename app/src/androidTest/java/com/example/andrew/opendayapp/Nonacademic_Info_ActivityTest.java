@@ -14,14 +14,18 @@ import static android.support.test.espresso.action.ViewActions.click;
 import static android.support.test.espresso.assertion.ViewAssertions.matches;
 import static android.support.test.espresso.matcher.ViewMatchers.withId;
 import static android.support.test.espresso.matcher.ViewMatchers.withText;
-import static org.junit.Assert.*;
+
+
 
 /**
- * Created by Andrew on 4/6/2016.
  *
+ * This test class is used to test the non academic info activity
+ * this class requires information to be passed to it in order to display the information
+ *
+ * @author Andrew Wynne Williams
+ * @version 1.0
+ * @since 17-4-2016
  */
-
-
 @RunWith(AndroidJUnit4.class)
 public class Nonacademic_Info_ActivityTest {
 
@@ -30,6 +34,11 @@ public class Nonacademic_Info_ActivityTest {
             = new ActivityTestRule<Nonacademic_Info_Activity>(Nonacademic_Info_Activity.class, true, false);
 
 
+    /**
+     * This method starts the activity and defines
+     * what information is passed to the activity to be displayed
+     * @throws Exception
+     */
     @Before
     public void setUp()throws Exception{
         Intent intent = new Intent();
@@ -44,6 +53,9 @@ public class Nonacademic_Info_ActivityTest {
     }
 
 
+    /**
+     * This method checks that the passed information matches the displayed information
+     */
     @Test
     public void testContentIsDisplayedFromIntent() {
 
@@ -51,6 +63,9 @@ public class Nonacademic_Info_ActivityTest {
         onView(withId(R.id.description)).check(matches(withText("This is a test description for the accommodation office")));
     }
 
+    /**
+     * This method checks that the events button opens the events activity when clicked
+     */
     @Test
     public void testEventsButton() {
 

@@ -5,28 +5,28 @@ import android.support.test.InstrumentationRegistry;
 import android.support.test.rule.ActivityTestRule;
 import android.support.test.runner.AndroidJUnit4;
 
-import static android.support.test.espresso.Espresso.onData;
-import static android.support.test.espresso.Espresso.onView;
-import static android.support.test.espresso.Espresso.openActionBarOverflowOrOptionsMenu;
-import static android.support.test.espresso.action.ViewActions.click;
-import static android.support.test.espresso.action.ViewActions.scrollTo;
-import static android.support.test.espresso.assertion.ViewAssertions.matches;
-import static android.support.test.espresso.matcher.ViewMatchers.isDisplayed;
-import static android.support.test.espresso.matcher.ViewMatchers.withContentDescription;
-import static android.support.test.espresso.matcher.ViewMatchers.withId;
-import static android.support.test.espresso.matcher.ViewMatchers.withText;
-
 import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
+import static android.support.test.espresso.Espresso.onView;
+import static android.support.test.espresso.Espresso.openActionBarOverflowOrOptionsMenu;
+import static android.support.test.espresso.action.ViewActions.click;
+import static android.support.test.espresso.action.ViewActions.scrollTo;
+import static android.support.test.espresso.assertion.ViewAssertions.matches;
+import static android.support.test.espresso.matcher.ViewMatchers.withId;
+import static android.support.test.espresso.matcher.ViewMatchers.withText;
+
 
 /**
- * Created by Andrew on 4/1/2016.
  *
+ * This test class is used to test the main activity
+ *
+ * @author Andrew Wynne Williams
+ * @version 1.0
+ * @since 17-4-2016
  */
-
 @RunWith(AndroidJUnit4.class)
 public class MainActivityTest {
     //Rule to launch the activity to run the tests.
@@ -34,7 +34,10 @@ public class MainActivityTest {
     public ActivityTestRule<MainActivity> activityTestRule
             = new ActivityTestRule<MainActivity>(MainActivity.class);
 
-
+    /**
+     * This method starts the main activity
+     * @throws Exception
+     */
     @Before
     public void setUp() throws Exception {
         Intent myIntent = new Intent();
@@ -43,48 +46,71 @@ public class MainActivityTest {
 
 
 
+
+    /**
+     * This method checks that the welcome button works correctly
+     * it checks that the welcome activity has been started
+     */
     @Test
     public void testWelcomeImageButton() {
 
-        onView(withId(R.id.welcomeimageButton))            // withId(R.id.my_view) is a ViewMatcher
+        onView(withId(R.id.welcomeimageButton))
                 .perform(click());
 
         onView(withId(R.id.welcome)).check(matches(withText(R.string.welcome)));
     }
 
 
+
+    /**
+     * This method checks that the department button works correctly
+     * it checks that the department activity has been started
+     */
     @Test
     public void testDepartmentImageButton() {
 
-        onView(withId(R.id.talksimageButton))            // withId(R.id.my_view) is a ViewMatcher
+        onView(withId(R.id.talksimageButton))
                 .perform(click());
 
         onView(withId(R.id.academicimagebutton)).check(matches(withId(R.id.academicimagebutton)));
     }
 
 
+
+    /**
+     * This method checks that the student experience button works correctly
+     * it checks that the student experience activity has been started
+     */
     @Test
     public void testStudentExperienceImageButton() {
 
-        onView(withId(R.id.refreshementsimageButton))            // withId(R.id.my_view) is a ViewMatcher
+        onView(withId(R.id.refreshementsimageButton))
                 .perform(click());
 
         onView(withId(R.id.studentexperienceheader)).check(matches(withText(R.string.studentexperiencedescription)));
     }
 
 
-    //fails because of scroll view look for solution
 
-
+    /**
+     * This method checks that the tours button works correctly
+     * it checks that the tours activity has been started
+     */
     @Test
     public void testToursImageButton() {
 
-        onView(withId(R.id.toursimageButton))            // withId(R.id.my_view) is a ViewMatcher
+        onView(withId(R.id.toursimageButton))
                 .perform(click());
 
         onView(withId(R.id.penglaistoursheading)).check(matches(withText(R.string.penglaistoursheading)));
     }
 
+
+
+    /**
+     * This method checks that the getting around button works correctly
+     * it checks that the getting around activity has been started
+     */
     @Test
     public void testGettingAroundImageButton() {
 
@@ -95,6 +121,11 @@ public class MainActivityTest {
     }
 
 
+
+    /**
+     * This method checks that the planner button works correctly
+     * it checks that the planner activity has been started
+     */
     @Test
     public void testPlannerImageButton() {
 
@@ -105,6 +136,11 @@ public class MainActivityTest {
     }
 
 
+
+    /**
+     * This method checks that the contact button works correctly
+     * it checks that the contact activity has been started
+     */
     @Test
     public void testContactImageButton() {
 
@@ -116,6 +152,11 @@ public class MainActivityTest {
 
 
 
+
+    /**
+     * This method checks that the disclaimers button works correctly
+     * it checks that the disclaimers activity has been started
+     */
     @Test
     public void testDisclaimersImageButton() {
 
@@ -126,7 +167,11 @@ public class MainActivityTest {
     }
 
 
-
+    /**
+     * This method is used to test the language selection
+     * This method opens the menu and selects the welsh option
+     * the method then checks if the displayed content is in Welsh
+     */
     @Test
     public void testWelshMenu(){
 
@@ -138,7 +183,11 @@ public class MainActivityTest {
 
     }
 
-
+    /**
+     * This method is used to test the language selection
+     * This method opens the menu and selects the english option
+     * the method then checks if the displayed content is in english
+     */
     @Test
     public void testEnglishMenu(){
 

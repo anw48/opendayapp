@@ -11,12 +11,17 @@ import static android.support.test.espresso.Espresso.onView;
 import static android.support.test.espresso.assertion.ViewAssertions.matches;
 import static android.support.test.espresso.matcher.ViewMatchers.withId;
 import static android.support.test.espresso.matcher.ViewMatchers.withText;
-import static org.junit.Assert.*;
 
 /**
- * Created by Andrew on 4/3/2016.
  *
+ * This test class is uesed to check of all the information is displayed correctly in the bus activity.
+ *
+ * @author Andrew Wynne Williams
+ * @version 1.0
+ * @since 17-4-2016
  */
+
+
 public class BusActivityTest {
 
 
@@ -25,6 +30,10 @@ public class BusActivityTest {
             = new ActivityTestRule<BusActivity>(BusActivity.class);
 
 
+    /**
+     * Starts the activity so it can be tested
+     * @throws Exception
+     */
     @Before
     public void setUp() throws Exception {
         Intent myIntent = new Intent();
@@ -32,6 +41,9 @@ public class BusActivityTest {
     }
 
 
+    /**
+     * This test checks if the headings on the page are displayed correctly
+     */
     @Test
     public void testHeadings(){
 
@@ -42,6 +54,9 @@ public class BusActivityTest {
     }
 
 
+    /**
+     * This test checks if the content is displayed correctly
+     */
     @Test
     public void testContentBusActivity(){
 
@@ -50,7 +65,4 @@ public class BusActivityTest {
         onView(withId(R.id.llanbadarnbody)).check(matches(withText(R.string.llanbadarnbody)));
         onView(withId(R.id.gogerddanbody)).check(matches(withText(R.string.gogerddanbody)));
     }
-
-
-
 }

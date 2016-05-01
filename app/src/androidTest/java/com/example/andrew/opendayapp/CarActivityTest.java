@@ -13,14 +13,15 @@ import static android.support.test.espresso.Espresso.onView;
 import static android.support.test.espresso.assertion.ViewAssertions.matches;
 import static android.support.test.espresso.matcher.ViewMatchers.withId;
 import static android.support.test.espresso.matcher.ViewMatchers.withText;
-import static org.junit.Assert.*;
 
 /**
- * Created by Andrew on 4/3/2016.
-
-
+ *
+ * This test class is used to test the user interface of the car activity.
+ *
+ * @author Andrew Wynne Williams
+ * @version 1.0
+ * @since 17-4-2016
  */
-
 @RunWith(AndroidJUnit4.class)
 public class CarActivityTest {
 
@@ -28,8 +29,10 @@ public class CarActivityTest {
     public ActivityTestRule<CarActivity> activityTestRule
             = new ActivityTestRule<>(CarActivity.class);
 
-
-
+    /**
+     * Set up class to start the activity for the test.
+     * @throws Exception
+     */
     @Before
     public void setUp() throws Exception{
         Intent myIntent = new Intent();
@@ -37,6 +40,9 @@ public class CarActivityTest {
     }
 
 
+    /**
+     * This test checks that the heading are displayed correctly
+     */
     @Test
     public void testCarHeadingDisplayed(){
 
@@ -45,7 +51,9 @@ public class CarActivityTest {
     }
 
 
-
+    /**
+     * This method tests that the information displayed is correct
+     */
     @Test
     public void testCarContentDisplayed(){
 

@@ -17,9 +17,12 @@ import static android.support.test.espresso.matcher.ViewMatchers.withText;
 
 /**
  * This class is used to test the information displayed in the department information class
- * Created by Andrew on 4/5/2016.
  *
+ * @author Andrew Wynne Williams
+ * @version 1.0
+ * @since 17-4-2016
  */
+
 
 @RunWith(AndroidJUnit4.class)
 public class AcademicDepartmentInfoActivityTest {
